@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bhsyfqyb4h382"]
 
 [ext_resource type="Texture2D" uid="uid://xpeagdiyk1nb" path="res://Assets/Backgrounds/Sheet.png" id="1_sb8jg"]
+[ext_resource type="FontFile" uid="uid://d37u2vjhyv1h3" path="res://Assets/Kelvinch.otf" id="2_fas08"]
 [ext_resource type="Script" uid="uid://bh1j7p3r5ct0b" path="res://Scripts/Menues/IntroButton.gd" id="2_sb8jg"]
 [ext_resource type="AudioStream" uid="uid://dr7a8kb02khx1" path="res://Assets/Music/Quirky Dog.mp3" id="3_iwjj0"]
 
@@ -42,14 +43,16 @@ expand_mode = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="TextureRect" unique_id=43439088]
 layout_mode = 0
-offset_left = 240.0
-offset_top = 170.0
-offset_right = 921.0
-offset_bottom = 471.0
+offset_left = 115.0
+offset_top = 148.0
+offset_right = 878.0
+offset_bottom = 483.0
 theme = SubResource("Theme_vltdc")
 theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_fas08")
+theme_override_fonts/bold_font = ExtResource("2_fas08")
 bbcode_enabled = true
-text = "[center] [font_size=30] Bajama, a human-fish, and their son Pacal, a fish, suffer from a difficult divorce. But Bajama won't let themself be defeated and decides to work hard to provide for their child.  From now on, they work as a barman in a human submarine and will have to bust a gut to show their worth [/font_size] [/center]"
+text = "[font_size=35]Bajama, a human-fish, and their son Pacal, a fish, suffer from a difficult divorce. But Bajama won't let themself be defeated and decides to work hard to provide for their child. From now on, Bajama works as a barman in a human submarine and will have to bust a gut to show their worth [/font_size]"
 script = SubResource("GDScript_33sem")
 
 [node name="Button" type="Button" parent="." unique_id=415330654]
@@ -59,6 +62,7 @@ offset_top = 470.0
 offset_right = 1098.0
 offset_bottom = 520.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_fas08")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxEmpty_sb8jg")
 text = "NEXT"
