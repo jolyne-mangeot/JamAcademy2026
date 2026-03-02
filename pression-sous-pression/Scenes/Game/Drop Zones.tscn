@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://1udcru88tone"]
+
+[ext_resource type="Texture2D" uid="uid://nfli2yg5tvq6" path="res://Assets/Drive/Bar_Front.png" id="1_j6c84"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_j6c84"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_fsq6q"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_s6131"]
+
+[node name="Node2D" type="Node2D" unique_id=1512892928]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=560983466]
+offset_right = 1153.0
+offset_bottom = 646.0
+texture = ExtResource("1_j6c84")
+expand_mode = 1
+
+[node name="Area2D" type="Area2D" parent="." unique_id=178661421]
+position = Vector2(0, 2)
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="Area2D" unique_id=1761449850]
+position = Vector2(784.3125, 318.00003)
+scale = Vector2(68.625015, 147.25)
+mesh = SubResource("QuadMesh_j6c84")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="Area2D" unique_id=1239518679]
+position = Vector2(867, 318.64203)
+scale = Vector2(-64.66464, 144.83488)
+mesh = SubResource("QuadMesh_fsq6q")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Area2D" unique_id=1729801348]
+position = Vector2(948, 317.46304)
+scale = Vector2(-59.94879, 147.1928)
+mesh = SubResource("QuadMesh_s6131")
