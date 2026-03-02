@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cii4kvy2n2u2d"]
+
+[ext_resource type="AudioStream" uid="uid://dla0mx78w3ugn" path="res://Assets/Music/otherworldly_oceanside.mp3" id="1_1bf53"]
+
+[node name="Menu son" type="Node" unique_id=62868079]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1852221822]
+stream = ExtResource("1_1bf53")
+volume_db = -10.0
+autoplay = true

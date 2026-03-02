@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://4dapgurhapnk"]
+
+[ext_resource type="PackedScene" uid="uid://chbs18uwxdku" path="res://Scenes/Game/Client.tscn" id="1_5lj7r"]
+
+[node name="Level" type="Control" unique_id=327468503]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Commands" type="HBoxContainer" parent="." unique_id=597652860]
+layout_mode = 1
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Command Hook 1" type="Node" parent="Commands" unique_id=1361618937 groups=["Command Hooks"]]
+
+[node name="Command Hook 2" type="Node" parent="Commands" unique_id=1929449025 groups=["Command Hooks"]]
+
+[node name="Command Hook 3" type="Node" parent="Commands" unique_id=1043053107 groups=["Command Hooks"]]
+
+[node name="Client Chairs" type="HBoxContainer" parent="." unique_id=546806626]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Client 1" parent="Client Chairs" unique_id=1302065012 groups=["Chairs"] instance=ExtResource("1_5lj7r")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Client 2" parent="Client Chairs" unique_id=173897783 groups=["Chairs"] instance=ExtResource("1_5lj7r")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Client 3" parent="Client Chairs" unique_id=259540046 groups=["Chairs"] instance=ExtResource("1_5lj7r")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Client 4" parent="Client Chairs" unique_id=2056105353 groups=["Chairs"] instance=ExtResource("1_5lj7r")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Timer" type="Timer" parent="." unique_id=1501621741]
+wait_time = 180.0
+one_shot = true
+autostart = true
+
+[node name="Client Spawn Manager" type="Node" parent="." unique_id=805578297]
+
+[node name="Timer" type="Timer" parent="Client Spawn Manager" unique_id=1847688653]
