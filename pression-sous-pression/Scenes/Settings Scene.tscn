@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://oeuner457q0f" path="res://Scripts/Menues/SettingsScene.gd" id="1_ktb8s"]
 [ext_resource type="Texture2D" uid="uid://bcs3xai1pw6f2" path="res://Assets/Backgrounds/BG.png" id="2_hfnpu"]
 [ext_resource type="Texture2D" uid="uid://xpeagdiyk1nb" path="res://Assets/Backgrounds/Sheet.png" id="2_sbpj2"]
+[ext_resource type="AudioStream" uid="uid://dla0mx78w3ugn" path="res://Assets/Music/otherworldly_oceanside.mp3" id="4_shka7"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m2duy"]
 
@@ -66,5 +67,10 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_sbpj2")
 theme_override_styles/hover = SubResource("StyleBoxFlat_m2duy")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_sbpj2")
 text = "Go Back to Menu"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=331028033]
+stream = ExtResource("4_shka7")
+volume_db = -10.0
+autoplay = true
 
 [connection signal="pressed" from="backMenu_button" to="." method="_on_back_menu_button_pressed"]

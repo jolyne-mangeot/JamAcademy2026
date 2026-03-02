@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://4dapgurhapnk"]
 
 [ext_resource type="PackedScene" uid="uid://chbs18uwxdku" path="res://Scenes/Game/Client.tscn" id="1_5lj7r"]
+[ext_resource type="AudioStream" uid="uid://dr7a8kb02khx1" path="res://Assets/Music/Quirky Dog.mp3" id="2_ovske"]
 
 [node name="Level" type="Control" unique_id=327468503]
 layout_mode = 3
@@ -54,3 +55,8 @@ autostart = true
 [node name="Client Spawn Manager" type="Node" parent="." unique_id=805578297]
 
 [node name="Timer" type="Timer" parent="Client Spawn Manager" unique_id=1847688653]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=942091044]
+stream = ExtResource("2_ovske")
+volume_db = -10.0
+autoplay = true
