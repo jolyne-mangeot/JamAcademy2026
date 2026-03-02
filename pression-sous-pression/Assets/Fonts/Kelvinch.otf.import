@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://d37u2vjhyv1h3"
-path="res://.godot/imported/Kelvinch.otf-7fa254a74d412787951776ae3052d6bf.fontdata"
+path="res://.godot/imported/Kelvinch.otf-a127fa6bc6f629d2cc05135e91935d50.fontdata"
 
 [deps]
 
-source_file="res://Assets/Kelvinch.otf"
-dest_files=["res://.godot/imported/Kelvinch.otf-7fa254a74d412787951776ae3052d6bf.fontdata"]
+source_file="res://Assets/Fonts/Kelvinch.otf"
+dest_files=["res://.godot/imported/Kelvinch.otf-a127fa6bc6f629d2cc05135e91935d50.fontdata"]
 
 [params]
 
