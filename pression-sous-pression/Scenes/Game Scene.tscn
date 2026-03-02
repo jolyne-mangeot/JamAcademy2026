@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://4dapgurhapnk"]
 
 [ext_resource type="PackedScene" uid="uid://chbs18uwxdku" path="res://Scenes/Game/Client.tscn" id="1_5lj7r"]
+[ext_resource type="PackedScene" uid="uid://bcngn65vsdjmk" path="res://Scenes/Drag And Drop.tscn" id="1_emcm8"]
 [ext_resource type="AudioStream" uid="uid://dr7a8kb02khx1" path="res://Assets/Music/Quirky Dog.mp3" id="2_ovske"]
 
 [node name="Level" type="Control" unique_id=327468503]
@@ -10,6 +11,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Beer Glass" parent="." unique_id=957678165 instance=ExtResource("1_emcm8")]
+position = Vector2(319, 271)
+origin_position = Vector2(320, 270)
 
 [node name="Commands" type="HBoxContainer" parent="." unique_id=597652860]
 layout_mode = 1
