@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bxqwitbudkek"]
+
+[node name="Control" type="Control" unique_id=1763797416]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Drink Type" type="TextureRect" parent="." unique_id=383505057]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Amount" type="Label" parent="." unique_id=557290928]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Background" type="TextureRect" parent="." unique_id=2046478195]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Command Timer" type="TextureProgressBar" parent="." unique_id=1972626165]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

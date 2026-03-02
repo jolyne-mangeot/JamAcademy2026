@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://d32ds1u0wbr3o"]
+
+[ext_resource type="AudioStream" path="../Assets/Music/at_work.mp3" id="1_kssu7"]
+
+[node name="End Of Day" type="Node" unique_id=2144417167]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1199638123]
+stream = ExtResource("1_kssu7")
+autoplay = true
