@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://disqevisvjjqc"]
+
+[ext_resource type="Script" uid="uid://oeuner457q0f" path="res://Scripts/Menues/SettingsScene.gd" id="1_ktb8s"]
+[ext_resource type="Texture2D" uid="uid://bcs3xai1pw6f2" path="res://Assets/Backgrounds/BG.png" id="2_hfnpu"]
+[ext_resource type="Texture2D" uid="uid://xpeagdiyk1nb" path="res://Assets/Backgrounds/Sheet.png" id="2_sbpj2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m2duy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_76bmw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sbpj2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m2duy"]
+bg_color = Color(0.1503036, 0.18118337, 0.17041507, 1)
+corner_detail = 20
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sbpj2"]
+
+[node name="Settings" type="Control" unique_id=403622405]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ktb8s")
+
+[node name="Background" type="TextureRect" parent="." unique_id=423851755]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_hfnpu")
+expand_mode = 2
+
+[node name="SheetBackground" type="TextureRect" parent="." unique_id=1160465629]
+layout_mode = 0
+offset_left = 128.0
+offset_top = -36.0
+offset_right = 1002.0
+offset_bottom = 690.0
+texture = ExtResource("2_sbpj2")
+expand_mode = 1
+
+[node name="CheckButton" type="CheckButton" parent="." unique_id=580038096]
+layout_mode = 0
+offset_left = 403.0
+offset_top = 212.0
+offset_right = 723.0
+offset_bottom = 265.0
+theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = SubResource("StyleBoxEmpty_m2duy")
+text = "Mute Audio"
+
+[node name="backMenu_button" type="Button" parent="." unique_id=411588060]
+layout_mode = 0
+offset_left = 399.0
+offset_top = 313.0
+offset_right = 751.0
+offset_bottom = 368.0
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxEmpty_76bmw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_sbpj2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_m2duy")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_sbpj2")
+text = "Go Back to Menu"
+
+[connection signal="pressed" from="backMenu_button" to="." method="_on_back_menu_button_pressed"]
