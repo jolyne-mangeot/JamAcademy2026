@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bvx46004gqirc" path="res://Scripts/Menues/MenuScene.gd" id="1_5vbwr"]
 [ext_resource type="Texture2D" uid="uid://bcs3xai1pw6f2" path="res://Assets/Backgrounds/BG.png" id="2_111ux"]
+[ext_resource type="AudioStream" uid="uid://dla0mx78w3ugn" path="res://Assets/Music/otherworldly_oceanside.mp3" id="3_s3ykx"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_5vbwr"]
 font_size = 50
@@ -54,6 +55,11 @@ text = "Settings"
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Quit"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=421790454]
+stream = ExtResource("3_s3ykx")
+volume_db = -10.0
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/Start_button" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Settings_button" to="." method="_on_settings_button_pressed"]
