@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://disqevisvjjqc"]
+
+[ext_resource type="Script" uid="uid://vi6gtohy826g" path="res://settings_scene.gd" id="1_ktb8s"]
+
+[node name="Settings" type="Control" unique_id=403622405]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ktb8s")
+
+[node name="CheckButton" type="CheckButton" parent="." unique_id=580038096]
+layout_mode = 0
+offset_left = 403.0
+offset_top = 212.0
+offset_right = 723.0
+offset_bottom = 265.0
+theme_override_font_sizes/font_size = 32
+text = "Mute Audio"
+
+[node name="backMenu_button" type="Button" parent="." unique_id=411588060]
+layout_mode = 0
+offset_left = 399.0
+offset_top = 312.0
+offset_right = 751.0
+offset_bottom = 367.0
+text = "Go Back to Menu"
+
+[connection signal="pressed" from="backMenu_button" to="." method="_on_back_menu_button_pressed"]
