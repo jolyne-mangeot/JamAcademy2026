@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://blm4f15xoka3u"]
 
-[ext_resource type="Script" uid="uid://dkp4gb7ofgcer" path="res://node_2d.gd" id="1_dsyj5"]
+[ext_resource type="Script" uid="uid://dkp4gb7ofgcer" path="res://clients.gd" id="1_dsyj5"]
 [ext_resource type="Script" uid="uid://b6lyx1x5po76s" path="res://command.gd" id="2_5jl23"]
 [ext_resource type="Texture2D" uid="uid://cl3ed03lipjye" path="res://Assets/Drive/Barman.png" id="3_vjkiq"]
 

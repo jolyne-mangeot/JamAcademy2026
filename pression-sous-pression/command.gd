@@ -8,6 +8,8 @@ var types: String = ""
 
 var list_types: Array[String] = ["red", "brown", "blond", "coffee"]
 
+signal orders_created(types: String, num_orders: int)
+
 func get_random_int(min_val: int, max_val: int) -> int:
 	return RNG.randi_range(min_val, max_val)
 
@@ -17,6 +19,7 @@ func _ready() -> void:
 	print(num_orders)
 	types = list_types.pick_random()
 	print(types)
+	orders_created.emit(types, num_orders)
 	
 
 func _process(delta: float) -> void:

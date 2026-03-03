@@ -13,6 +13,7 @@ var time_left: float = wait_time
 var progress_percent: float = 0.0
 
 func _ready() -> void:
+
 	timer.wait_time = wait_time
 	timer.one_shot = true
 	timer.timeout.connect(_on_timer_timeout)
@@ -35,6 +36,7 @@ func spawn_orders() -> void:
 	var orders = orders_scene.instantiate()
 	get_tree().root.add_child(orders)
 	orders.global_position = Vector2(0,0)
+	
 
 func _on_button_pressed() -> void:
 	if timer.is_stopped():
