@@ -34,7 +34,6 @@ var day_duration:float = 180.0
 func start_game() -> void:
 	max_drinks_ordered_supp = [1, 1, 2, 2, 3, 4]
 	client_spawn_delay_supp = [1.5, 2.0, 2.5, 2.5, 3.0, 3.0]
-	
 	day_count = 1
 	current_day = days[day_count]
 	customer_present = 0
