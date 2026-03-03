@@ -32,6 +32,21 @@
 [ext_resource type="Texture2D" uid="uid://cl6e2l150x6vw" path="res://Assets/Sprites/CofeeMug.png" id="17_26ygd"]
 [ext_resource type="Texture2D" uid="uid://bktvw45be5kok" path="res://Assets/Sprites/PastisGlass.png" id="18_gaucp"]
 [ext_resource type="Texture2D" uid="uid://cg0wts3a4ssuy" path="res://Assets/Sprites/Fishbowl.png" id="21_26ygd"]
+[ext_resource type="FontFile" uid="uid://d37u2vjhyv1h3" path="res://Assets/Fonts/Kelvinch.otf" id="31_yqalu"]
+
+[sub_resource type="GDScript" id="GDScript_pj0fw"]
+script/source = "extends Label
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
 
 [sub_resource type="Gradient" id="Gradient_pj0fw"]
 colors = PackedColorArray(0.5343956, 0.25409824, 0.1394135, 1, 1, 1, 1, 1)
@@ -484,6 +499,17 @@ autostart = true
 stream = ExtResource("2_ovske")
 volume_db = -10.0
 autoplay = true
+
+[node name="Label" type="Label" parent="." unique_id=1910615106]
+layout_mode = 0
+offset_left = 2179.0
+offset_top = 20.0
+offset_right = 2547.0
+offset_bottom = 80.0
+theme_override_fonts/font = ExtResource("31_yqalu")
+theme_override_font_sizes/font_size = 35
+text = "COIN COUNT:"
+script = SubResource("GDScript_pj0fw")
 
 [connection signal="order_accepted" from="Command Hook 1" to="Client Chairs/Client 1" method="_on_command_hook_order_accepted"]
 [connection signal="order_accepted" from="Command Hook 1" to="Client Chairs/Client 2" method="_on_command_hook_order_accepted"]
