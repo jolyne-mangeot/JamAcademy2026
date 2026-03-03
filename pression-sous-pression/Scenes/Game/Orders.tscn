@@ -7,83 +7,90 @@
 [ext_resource type="Texture2D" uid="uid://c6rsicshrg5sw" path="res://Assets/Drive/Coffee Cup.png" id="4_23sgj"]
 [ext_resource type="FontFile" uid="uid://d37u2vjhyv1h3" path="res://Assets/Fonts/Kelvinch.otf" id="5_wyg4n"]
 
-[node name="Order" type="Node2D" unique_id=514450677 node_paths=PackedStringArray("amount_label")]
+[node name="Order" type="Control" unique_id=1545625154]
 visible = false
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_8b401")
-amount_label = NodePath("Label")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=789439060]
-offset_left = 504.0
-offset_top = 228.0
-offset_right = 655.0
-offset_bottom = 373.0
+layout_mode = 0
+offset_right = 151.0
+offset_bottom = 145.0
 texture = ExtResource("2_lj7ow")
 expand_mode = 2
 stretch_mode = 4
 
-[node name="brown" type="TextureRect" parent="." unique_id=2119886699]
+[node name="brown" type="TextureRect" parent="." unique_id=2119886699 groups=["drink_type"]]
 visible = false
-offset_left = 547.0
-offset_top = 272.0
-offset_right = 601.0
-offset_bottom = 334.0
+layout_mode = 0
+offset_left = 43.0
+offset_top = 44.0
+offset_right = 97.0
+offset_bottom = 106.0
 texture = ExtResource("2_e8770")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="red" type="TextureRect" parent="." unique_id=1193044659]
+[node name="red" type="TextureRect" parent="." unique_id=1193044659 groups=["drink_type"]]
 visible = false
-offset_left = 547.0
-offset_top = 270.0
-offset_right = 601.0
-offset_bottom = 332.0
+layout_mode = 0
+offset_left = 43.0
+offset_top = 42.0
+offset_right = 97.0
+offset_bottom = 104.0
 texture = ExtResource("2_e8770")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="blond" type="TextureRect" parent="." unique_id=128665556]
+[node name="blond" type="TextureRect" parent="." unique_id=128665556 groups=["drink_type"]]
 visible = false
-offset_left = 546.0
-offset_top = 270.0
-offset_right = 600.0
-offset_bottom = 332.0
+layout_mode = 0
+offset_left = 42.0
+offset_top = 42.0
+offset_right = 96.0
+offset_bottom = 104.0
 texture = ExtResource("2_e8770")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="pastis" type="TextureRect" parent="." unique_id=300789546]
+[node name="pastis" type="TextureRect" parent="." unique_id=300789546 groups=["drink_type"]]
 visible = false
-offset_left = 553.0
-offset_top = 273.0
-offset_right = 602.0
-offset_bottom = 333.0
+layout_mode = 0
+offset_left = 49.0
+offset_top = 45.0
+offset_right = 98.0
+offset_bottom = 105.0
 texture = ExtResource("3_8b401")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="coffee" type="TextureRect" parent="." unique_id=1955363505]
+[node name="coffee" type="TextureRect" parent="." unique_id=1955363505 groups=["drink_type"]]
 visible = false
-offset_left = 539.0
-offset_top = 270.0
-offset_right = 606.0
-offset_bottom = 337.0
+layout_mode = 0
+offset_left = 35.0
+offset_top = 42.0
+offset_right = 102.0
+offset_bottom = 109.0
 texture = ExtResource("4_23sgj")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="Label" type="Label" parent="." unique_id=634206884]
-offset_left = 573.0
-offset_top = 325.0
-offset_right = 613.0
-offset_bottom = 358.0
+[node name="koko" type="Label" parent="." unique_id=634206884 groups=["drink_type"]]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 97.0
+offset_right = 109.0
+offset_bottom = 130.0
 theme_override_fonts/font = ExtResource("5_wyg4n")
 theme_override_font_sizes/font_size = 24
 text = "x1"
 
-[node name="ProgressBar" type="ProgressBar" parent="." unique_id=213651992]
-offset_left = 536.0
-offset_top = 371.0
-offset_right = 616.0
-offset_bottom = 387.0
-fill_mode = 1
+[node name="order_bar" type="ProgressBar" parent="." unique_id=213651992]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 143.0
+offset_right = 112.0
+offset_bottom = 159.0
+max_value = 1.0
 show_percentage = false
