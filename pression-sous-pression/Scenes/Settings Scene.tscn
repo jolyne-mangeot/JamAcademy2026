@@ -3,17 +3,16 @@
 [ext_resource type="Script" uid="uid://oeuner457q0f" path="res://Scripts/Menues/SettingsScene.gd" id="1_ktb8s"]
 [ext_resource type="Texture2D" uid="uid://4dd2aus5rxel" path="res://Assets/Sprites/BG.png" id="2_hfnpu"]
 [ext_resource type="Texture2D" uid="uid://b3p5tr58c26vb" path="res://Assets/Sprites/Sheet.png" id="2_sbpj2"]
+[ext_resource type="FontFile" uid="uid://d37u2vjhyv1h3" path="res://Assets/Fonts/Kelvinch.otf" id="4_6k6jm"]
 [ext_resource type="AudioStream" uid="uid://dla0mx78w3ugn" path="res://Assets/Music/otherworldly_oceanside.mp3" id="4_shka7"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m2duy"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_76bmw"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sbpj2"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6k6jm"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m2duy"]
-bg_color = Color(0.1503036, 0.18118337, 0.17041507, 1)
-corner_detail = 20
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l5xqr"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sbpj2"]
 
@@ -51,6 +50,7 @@ offset_left = 403.0
 offset_top = 212.0
 offset_right = 723.0
 offset_bottom = 265.0
+theme_override_fonts/font = ExtResource("4_6k6jm")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/focus = SubResource("StyleBoxEmpty_m2duy")
 text = "Mute Audio"
@@ -61,10 +61,11 @@ offset_left = 399.0
 offset_top = 313.0
 offset_right = 751.0
 offset_bottom = 368.0
+theme_override_fonts/font = ExtResource("4_6k6jm")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxEmpty_76bmw")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_sbpj2")
-theme_override_styles/hover = SubResource("StyleBoxFlat_m2duy")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_6k6jm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_l5xqr")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_sbpj2")
 text = "Go Back to Menu"
 
