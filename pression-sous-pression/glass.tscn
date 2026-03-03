@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bvipgu5ls78rq"]
+
+[ext_resource type="Texture2D" uid="uid://b6qjlj00vieug" path="res://Assets/Drive/Beer.png" id="1_fvmfx"]
+
+[node name="Node2D" type="Node2D" unique_id=599460431]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1791619335]
+position = Vector2(143.25, 541.24994)
+scale = Vector2(0.06958007, 0.05883786)
+texture = ExtResource("1_fvmfx")
