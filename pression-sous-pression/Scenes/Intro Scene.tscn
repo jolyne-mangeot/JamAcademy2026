@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bhsyfqyb4h382"]
 
-[ext_resource type="Texture2D" uid="uid://xpeagdiyk1nb" path="res://Assets/Backgrounds/Sheet.png" id="1_sb8jg"]
+[ext_resource type="Texture2D" uid="uid://b3p5tr58c26vb" path="res://Assets/Sprites/Sheet.png" id="1_sb8jg"]
 [ext_resource type="FontFile" uid="uid://d37u2vjhyv1h3" path="res://Assets/Fonts/Kelvinch.otf" id="2_fas08"]
 [ext_resource type="Script" uid="uid://bh1j7p3r5ct0b" path="res://Scripts/Menues/IntroButton.gd" id="2_sb8jg"]
 [ext_resource type="AudioStream" uid="uid://dr7a8kb02khx1" path="res://Assets/Music/Quirky Dog.mp3" id="3_iwjj0"]
