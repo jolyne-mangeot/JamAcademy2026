@@ -1,9 +1,121 @@
 [gd_scene format=3 uid="uid://d32ds1u0wbr3o"]
 
-[ext_resource type="AudioStream" path="../Assets/Music/at_work.mp3" id="1_kssu7"]
+[ext_resource type="Script" uid="uid://dnxkamo4mpmg6" path="res://Scenes/end_of_day.gd" id="1_55r4e"]
+[ext_resource type="AudioStream" uid="uid://bvyeq7vuuivp1" path="res://Assets/Music/at_work.mp3" id="1_kssu7"]
+[ext_resource type="Texture2D" uid="uid://5jll7exu031l" path="res://Assets/Drive/BG.png" id="3_fowem"]
+[ext_resource type="Texture2D" uid="uid://xpeagdiyk1nb" path="res://Assets/Backgrounds/Sheet.png" id="4_q8jam"]
+[ext_resource type="Texture2D" uid="uid://ctyluwmxhynqp" path="res://Assets/Drive/Money.png" id="5_bodib"]
+[ext_resource type="Texture2D" uid="uid://dmfsfxxle0isc" path="res://Assets/Drive/Fishbowl.png" id="6_hn8ea"]
+[ext_resource type="Texture2D" uid="uid://cl3ed03lipjye" path="res://Assets/Drive/Barman.png" id="7_fowem"]
+[ext_resource type="Texture2D" uid="uid://dx6tvt5kwav0h" path="res://Assets/Drive/BabyFish.png" id="7_l2j3q"]
 
 [node name="End Of Day" type="Node" unique_id=2144417167]
+script = ExtResource("1_55r4e")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1199638123]
 stream = ExtResource("1_kssu7")
 autoplay = true
+
+[node name="Background" type="TextureRect" parent="." unique_id=1522631625]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 56.444458
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_fowem")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="DayReport" type="TextureRect" parent="." unique_id=132165630]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_q8jam")
+expand_mode = 2
+
+[node name="Title" type="Label" parent="." unique_id=1489368191]
+offset_left = 61.0
+offset_top = 36.0
+offset_right = 164.0
+offset_bottom = 59.0
+theme_override_font_sizes/font_size = 26
+text = "Day's Report:"
+
+[node name="Earnings Title" type="Label" parent="." unique_id=1461458327]
+offset_left = 58.0
+offset_top = 87.0
+offset_right = 134.0
+offset_bottom = 110.0
+text = "Earnings:"
+
+[node name="Rent Title" type="Label" parent="." unique_id=2001075867]
+offset_left = 61.0
+offset_top = 130.0
+offset_right = 102.0
+offset_bottom = 153.0
+text = "Rent:"
+
+[node name="message" type="Label" parent="." unique_id=2107215797]
+offset_left = 813.0
+offset_top = 578.0
+offset_right = 1056.0
+offset_bottom = 627.0
+horizontal_alignment = 1
+
+[node name="satisfaction title" type="Label" parent="." unique_id=521213653]
+offset_left = 62.0
+offset_top = 171.0
+offset_right = 252.0
+offset_bottom = 194.0
+text = "Customer's satisfaction: "
+
+[node name="money" type="TextureRect" parent="." unique_id=800522061]
+offset_left = 185.0
+offset_top = 78.0
+offset_right = 225.0
+offset_bottom = 118.0
+texture = ExtResource("5_bodib")
+expand_mode = 2
+
+[node name="moneyy" type="TextureRect" parent="." unique_id=2131490459]
+offset_left = 186.0
+offset_top = 120.0
+offset_right = 226.0
+offset_bottom = 160.0
+texture = ExtResource("5_bodib")
+expand_mode = 2
+
+[node name="fish bowl" type="TextureRect" parent="." unique_id=322686622]
+offset_left = 814.99994
+offset_top = 350.99997
+offset_right = 854.99994
+offset_bottom = 390.99997
+scale = Vector2(5.0384016, 5.948263)
+texture = ExtResource("6_hn8ea")
+expand_mode = 2
+
+[node name="bajama" type="TextureRect" parent="." unique_id=1083015091]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 447.0
+offset_top = 102.0
+offset_right = -223.0
+offset_bottom = -61.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_fowem")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="pacal" type="TextureRect" parent="." unique_id=455969433]
+offset_left = 832.0
+offset_top = 411.00003
+offset_right = 872.0
+offset_bottom = 451.00003
+scale = Vector2(4.0092425, 4.0343566)
+texture = ExtResource("7_l2j3q")
+expand_mode = 2

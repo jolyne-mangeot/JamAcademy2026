@@ -78,6 +78,7 @@ offset_bottom = 40.0
 
 [node name="Command Hook 3" type="Node" parent="Commands" unique_id=1043053107 groups=["Command Hooks"]]
 
+<<<<<<< HEAD
 [node name="Stools" type="TextureRect" parent="." unique_id=1391185693]
 layout_mode = 1
 anchors_preset = 15
@@ -215,6 +216,12 @@ scale = Vector2(0.169, 0.169)
 texture = ExtResource("10_8ca1q")
 script = ExtResource("8_s5gn0")
 glass_type = "pastis glass"
+=======
+[node name="Timer" type="Timer" parent="Commands" unique_id=1647761365]
+process_callback = 0
+autostart = true
+script = ExtResource("1_emcm8")
+>>>>>>> origin/ady
 
 [node name="Client Chairs" type="HBoxContainer" parent="." unique_id=546806626]
 layout_mode = 1
@@ -257,6 +264,7 @@ stream = ExtResource("2_ovske")
 volume_db = -10.0
 autoplay = true
 
+<<<<<<< HEAD
 [connection signal="mouse_entered" from="BrownBeerTap" to="BrownBeerTap" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="BrownBeerTap" to="BrownBeerTap" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="RedBeerTap" to="RedBeerTap" method="_on_mouse_entered"]
@@ -275,3 +283,6 @@ autoplay = true
 [connection signal="glass_dropped" from="Glasses/Beer Glass 2" to="RedBeerTap" method="_on_beer_glass_dropped"]
 [connection signal="glass_dropped" from="Glasses/Beer Glass 2" to="BlondBeerTap" method="_on_beer_glass_dropped"]
 [connection signal="glass_dropped" from="Glasses/Pastis Glass" to="PastisBottle" method="_on_pastis_glass_dropped"]
+=======
+[connection signal="timeout" from="Commands/Timer" to="Commands/Timer" method="_on_timeout"]
+>>>>>>> origin/ady
