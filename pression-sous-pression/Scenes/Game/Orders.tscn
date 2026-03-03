@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://c7nilg33fkkli"]
+
+[ext_resource type="Script" uid="uid://b6lyx1x5po76s" path="res://Scripts/Game/Commands.gd" id="1_8b401"]
+[ext_resource type="Texture2D" uid="uid://tfdpac8v454s" path="res://Assets/Sprites/BeerAmbré.png" id="2_e8770"]
+[ext_resource type="Texture2D" uid="uid://cuwksr6pou2lk" path="res://Assets/Sprites/HookSheet.png" id="2_lj7ow"]
+[ext_resource type="Texture2D" uid="uid://bktvw45be5kok" path="res://Assets/Sprites/PastisGlass.png" id="3_8b401"]
+[ext_resource type="Texture2D" uid="uid://tmjin4c015rd" path="res://Assets/Sprites/BeerBrune.png" id="3_wyg4n"]
+[ext_resource type="Texture2D" uid="uid://cl6e2l150x6vw" path="res://Assets/Sprites/CofeeMug.png" id="4_23sgj"]
+[ext_resource type="Texture2D" uid="uid://dnh8n2oacvfh3" path="res://Assets/Sprites/BeerBlonde.png" id="5_5vg42"]
+[ext_resource type="FontFile" uid="uid://d37u2vjhyv1h3" path="res://Assets/Fonts/Kelvinch.otf" id="5_wyg4n"]
+
+[node name="Order" type="Control" unique_id=1545625154]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_8b401")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=789439060]
+layout_mode = 0
+offset_right = 151.0
+offset_bottom = 145.0
+texture = ExtResource("2_lj7ow")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="brown" type="TextureRect" parent="." unique_id=2119886699 groups=["drink_type"]]
+visible = false
+layout_mode = 0
+offset_left = 43.0
+offset_top = 44.0
+offset_right = 97.0
+offset_bottom = 106.0
+texture = ExtResource("3_wyg4n")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="red" type="TextureRect" parent="." unique_id=1193044659 groups=["drink_type"]]
+visible = false
+layout_mode = 0
+offset_left = 43.0
+offset_top = 42.0
+offset_right = 97.0
+offset_bottom = 104.0
+texture = ExtResource("2_e8770")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="blond" type="TextureRect" parent="." unique_id=128665556 groups=["drink_type"]]
+visible = false
+layout_mode = 0
+offset_left = 42.0
+offset_top = 42.0
+offset_right = 96.0
+offset_bottom = 104.0
+texture = ExtResource("5_5vg42")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="pastis" type="TextureRect" parent="." unique_id=300789546 groups=["drink_type"]]
+visible = false
+layout_mode = 0
+offset_left = 49.0
+offset_top = 45.0
+offset_right = 98.0
+offset_bottom = 105.0
+texture = ExtResource("3_8b401")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="coffee" type="TextureRect" parent="." unique_id=1955363505 groups=["drink_type"]]
+visible = false
+layout_mode = 0
+offset_left = 35.0
+offset_top = 42.0
+offset_right = 102.0
+offset_bottom = 109.0
+texture = ExtResource("4_23sgj")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="koko" type="Label" parent="." unique_id=634206884 groups=["drink_type"]]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 97.0
+offset_right = 109.0
+offset_bottom = 130.0
+theme_override_fonts/font = ExtResource("5_wyg4n")
+theme_override_font_sizes/font_size = 24
+text = "x1"
+
+[node name="order_bar" type="ProgressBar" parent="." unique_id=213651992]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 143.0
+offset_right = 112.0
+offset_bottom = 159.0
+max_value = 1.0
+show_percentage = false
