@@ -22,7 +22,6 @@
 [ext_resource type="PackedScene" uid="uid://fibkjibmm8i0" path="res://Scenes/Game/Workstations/Coffee Machine.tscn" id="11_s5gn0"]
 [ext_resource type="Texture2D" uid="uid://cmgwve7q6ogjo" path="res://Assets/Sprites/Table.png" id="11_yqalu"]
 [ext_resource type="PackedScene" uid="uid://162po0cqemj3" path="res://Scenes/Game/Workstations/Pastis Bottle.tscn" id="12_11pef"]
-[ext_resource type="FontFile" uid="uid://d37u2vjhyv1h3" path="res://Assets/Fonts/Kelvinch.otf" id="12_pj0fw"]
 [ext_resource type="Texture2D" uid="uid://tmjin4c015rd" path="res://Assets/Sprites/BeerBrune.png" id="13_jelqd"]
 [ext_resource type="Texture2D" uid="uid://btrbfn33hxjxw" path="res://Assets/Sprites/separator.png" id="13_yqalu"]
 [ext_resource type="PackedScene" uid="uid://blm4f15xoka3u" path="res://Scenes/Game/Clients.tscn" id="14_s4ps2"]
@@ -33,6 +32,12 @@
 [ext_resource type="Texture2D" uid="uid://bktvw45be5kok" path="res://Assets/Sprites/PastisGlass.png" id="18_gaucp"]
 [ext_resource type="Texture2D" uid="uid://cg0wts3a4ssuy" path="res://Assets/Sprites/Fishbowl.png" id="21_26ygd"]
 [ext_resource type="FontFile" uid="uid://d37u2vjhyv1h3" path="res://Assets/Fonts/Kelvinch.otf" id="31_yqalu"]
+
+[sub_resource type="Gradient" id="Gradient_pj0fw"]
+colors = PackedColorArray(0.5343956, 0.25409824, 0.1394135, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_6crsu"]
+gradient = SubResource("Gradient_pj0fw")
 
 [sub_resource type="GDScript" id="GDScript_pj0fw"]
 script/source = "extends Label
@@ -47,12 +52,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 "
-
-[sub_resource type="Gradient" id="Gradient_pj0fw"]
-colors = PackedColorArray(0.5343956, 0.25409824, 0.1394135, 1, 1, 1, 1, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_6crsu"]
-gradient = SubResource("Gradient_pj0fw")
 
 [node name="Level" type="Control" unique_id=327468503]
 layout_mode = 3
@@ -209,7 +208,7 @@ offset_top = 54.811325
 offset_right = 635.4341
 offset_bottom = 355.81134
 theme_override_colors/font_color = Color(0.69789743, 0.5952235, 0, 1)
-theme_override_fonts/font = ExtResource("12_pj0fw")
+theme_override_fonts/font = ExtResource("31_yqalu")
 theme_override_font_sizes/font_size = 220
 text = "1"
 
@@ -221,7 +220,7 @@ offset_right = 1986.3774
 offset_bottom = 367.13208
 rotation = -0.17577347
 theme_override_colors/font_color = Color(0.69789743, 0.5952235, 0, 1)
-theme_override_fonts/font = ExtResource("12_pj0fw")
+theme_override_fonts/font = ExtResource("31_yqalu")
 theme_override_font_sizes/font_size = 220
 text = "2"
 
@@ -249,7 +248,7 @@ offset_top = 47.264153
 offset_right = 639.20764
 offset_bottom = 348.26416
 theme_override_colors/font_color = Color(0.69789743, 0.5952235, 0, 1)
-theme_override_fonts/font = ExtResource("12_pj0fw")
+theme_override_fonts/font = ExtResource("31_yqalu")
 theme_override_font_sizes/font_size = 220
 text = "3"
 
@@ -261,7 +260,7 @@ offset_right = 1975.0566
 offset_bottom = 352.03775
 rotation = -0.17046736
 theme_override_colors/font_color = Color(0.69789743, 0.5952235, 0, 1)
-theme_override_fonts/font = ExtResource("12_pj0fw")
+theme_override_fonts/font = ExtResource("31_yqalu")
 theme_override_font_sizes/font_size = 220
 text = "4"
 
