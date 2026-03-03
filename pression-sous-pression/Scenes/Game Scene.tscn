@@ -1,8 +1,13 @@
 [gd_scene format=3 uid="uid://4dapgurhapnk"]
 
+[ext_resource type="Texture2D" uid="uid://de6pciln3opaw" path="res://Assets/Drive/Bar_Back.png" id="1_0km67"]
 [ext_resource type="PackedScene" uid="uid://chbs18uwxdku" path="res://Scenes/Game/Client.tscn" id="1_5lj7r"]
 [ext_resource type="PackedScene" uid="uid://bcngn65vsdjmk" path="res://Scenes/Drag And Drop.tscn" id="1_emcm8"]
+[ext_resource type="Texture2D" uid="uid://nfli2yg5tvq6" path="res://Assets/Drive/Bar_Front.png" id="2_0rvqk"]
+[ext_resource type="Texture2D" uid="uid://cl3ed03lipjye" path="res://Assets/Drive/Barman.png" id="2_h35fg"]
 [ext_resource type="AudioStream" uid="uid://dr7a8kb02khx1" path="res://Assets/Music/Quirky Dog.mp3" id="2_ovske"]
+[ext_resource type="PackedScene" uid="uid://h2ofuvb2raus" path="res://Scenes/Game/Beer Tap.tscn" id="4_h35fg"]
+[ext_resource type="Texture2D" uid="uid://dlhlf57t5fuit" path="res://Assets/Drive/Stool.png" id="5_h35fg"]
 
 [node name="Level" type="Control" unique_id=327468503]
 layout_mode = 3
@@ -12,9 +17,37 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Beer Glass" parent="." unique_id=957678165 instance=ExtResource("1_emcm8")]
-position = Vector2(319, 271)
-origin_position = Vector2(320, 270)
+[node name="Bar Back" type="TextureRect" parent="." unique_id=605635055]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0km67")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Bajama" type="TextureRect" parent="." unique_id=1426634032]
+layout_mode = 0
+offset_left = 345.055
+offset_top = 133.445
+offset_right = 795.05493
+offset_bottom = 583.4449
+texture = ExtResource("2_h35fg")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="Bar Front" type="TextureRect" parent="." unique_id=1661074544]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_0rvqk")
+expand_mode = 2
+stretch_mode = 4
 
 [node name="Commands" type="HBoxContainer" parent="." unique_id=597652860]
 layout_mode = 1
@@ -33,6 +66,8 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -273.995
+offset_bottom = -53.99475
 grow_horizontal = 2
 grow_vertical = 0
 
@@ -52,6 +87,31 @@ size_flags_horizontal = 3
 layout_mode = 2
 size_flags_horizontal = 3
 
+[node name="Stools" type="TextureRect" parent="." unique_id=1391185693]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 77.525
+offset_bottom = 77.525024
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_h35fg")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="BlondBeerTap" parent="." unique_id=1463512649 instance=ExtResource("4_h35fg")]
+layout_mode = 1
+offset_left = 741.0
+offset_top = 194.0
+offset_right = -337.99902
+offset_bottom = -233.79999
+
+[node name="Beer Glass" parent="." unique_id=957678165 instance=ExtResource("1_emcm8")]
+position = Vector2(345, 337)
+origin_position = Vector2(345, 337)
+glass_type = "beer"
+
 [node name="Timer" type="Timer" parent="." unique_id=1501621741]
 wait_time = 180.0
 one_shot = true
@@ -65,3 +125,7 @@ autostart = true
 stream = ExtResource("2_ovske")
 volume_db = -10.0
 autoplay = true
+
+[connection signal="mouse_entered" from="BlondBeerTap" to="BlondBeerTap" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="BlondBeerTap" to="BlondBeerTap" method="_on_mouse_exited"]
+[connection signal="glass_dropped" from="Beer Glass" to="BlondBeerTap" method="_on_beer_glass_glass_dropped"]

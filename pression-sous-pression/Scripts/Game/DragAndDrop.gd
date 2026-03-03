@@ -1,10 +1,11 @@
 extends Sprite2D
 
 @export var origin_position:Vector2
-var is_dragging = false
+@export var glass_type:String
+var is_dragging:bool = false
 var mouse_offset
-var delay = .2
-var drop_spots
+var delay = 3
+signal glass_dropped(glass_type:String)
 
 func _ready():
 	drop_spots = get_three().get_nodes_in_group("drop_spot_group")
@@ -22,5 +23,6 @@ func _input(event):
 		if event.pressed:
 			if get_rect().has_point(to_local(event.position)):
 				is_dragging = true
-		else:
+		elif is_dragging == true:
 			is_dragging = false
+			glass_dropped.emit(glass_type)
