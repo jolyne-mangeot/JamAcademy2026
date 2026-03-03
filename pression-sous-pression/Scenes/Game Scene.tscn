@@ -1,19 +1,21 @@
 [gd_scene format=3 uid="uid://4dapgurhapnk"]
 
 [ext_resource type="Texture2D" uid="uid://de6pciln3opaw" path="res://Assets/Drive/Bar_Back.png" id="1_0km67"]
-[ext_resource type="PackedScene" uid="uid://chbs18uwxdku" path="res://Scenes/Game/Client.tscn" id="1_5lj7r"]
 [ext_resource type="Texture2D" uid="uid://5jll7exu031l" path="res://Assets/Drive/BG.png" id="1_hlnq6"]
 [ext_resource type="Texture2D" uid="uid://nfli2yg5tvq6" path="res://Assets/Drive/Bar_Front.png" id="2_0rvqk"]
 [ext_resource type="Texture2D" uid="uid://cl3ed03lipjye" path="res://Assets/Drive/Barman.png" id="2_h35fg"]
 [ext_resource type="AudioStream" uid="uid://dr7a8kb02khx1" path="res://Assets/Music/Quirky Dog.mp3" id="2_ovske"]
 [ext_resource type="PackedScene" uid="uid://h2ofuvb2raus" path="res://Scenes/Game/Beer Tap.tscn" id="4_h35fg"]
 [ext_resource type="Texture2D" uid="uid://dlhlf57t5fuit" path="res://Assets/Drive/Stool.png" id="5_h35fg"]
+[ext_resource type="Texture2D" uid="uid://30ut4cuvfupg" path="res://Assets/Drive/Hook.png" id="5_s4ps2"]
+[ext_resource type="Script" uid="uid://74uditbk48ik" path="res://Scripts/Game/CommandHook.gd" id="6_erls1"]
 [ext_resource type="Texture2D" uid="uid://b6qjlj00vieug" path="res://Assets/Drive/Beer.png" id="7_4ad7p"]
 [ext_resource type="Script" uid="uid://ji0lxuim6nta" path="res://Scripts/Game/DragAndDrop.gd" id="8_s5gn0"]
 [ext_resource type="Texture2D" uid="uid://c6rsicshrg5sw" path="res://Assets/Drive/Coffee Cup.png" id="9_4ad7p"]
 [ext_resource type="Texture2D" uid="uid://g0gxtbvouv48" path="res://Assets/Drive/Pastis Glass.png" id="10_8ca1q"]
 [ext_resource type="PackedScene" uid="uid://fibkjibmm8i0" path="res://Scenes/Game/Coffee Machine.tscn" id="11_s5gn0"]
 [ext_resource type="PackedScene" uid="uid://162po0cqemj3" path="res://Scenes/Game/Pastis Bottle.tscn" id="12_11pef"]
+[ext_resource type="PackedScene" uid="uid://blm4f15xoka3u" path="res://Scenes/Game/Clients.tscn" id="14_s4ps2"]
 
 [node name="Level" type="Control" unique_id=327468503]
 layout_mode = 3
@@ -67,29 +69,123 @@ texture = ExtResource("2_0rvqk")
 expand_mode = 2
 stretch_mode = 4
 
-[node name="Commands" type="HBoxContainer" parent="." unique_id=597652860]
-layout_mode = 1
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Commands" type="Node" parent="." unique_id=651537064]
 
-[node name="Command Hook 1" type="Node" parent="Commands" unique_id=1361618937 groups=["Command Hooks"]]
+[node name="Command Hook 1" type="TextureRect" parent="Commands" unique_id=351767748 node_paths=PackedStringArray("hook_1", "hook_2") groups=["Command Hooks"]]
+offset_left = -17.0
+offset_top = -8.0
+offset_right = 179.47
+offset_bottom = 188.47
+texture = ExtResource("5_s4ps2")
+expand_mode = 2
+stretch_mode = 4
+script = ExtResource("6_erls1")
+hook_1 = NodePath("../Command Hook 2")
+hook_2 = NodePath("../Command Hook 3")
 
-[node name="Command Hook 2" type="Node" parent="Commands" unique_id=1929449025 groups=["Command Hooks"]]
+[node name="Command Hook 2" type="TextureRect" parent="Commands" unique_id=342541975 node_paths=PackedStringArray("hook_1", "hook_2") groups=["Command Hooks"]]
+offset_left = 106.0
+offset_top = -20.0
+offset_right = 302.47
+offset_bottom = 176.47
+texture = ExtResource("5_s4ps2")
+expand_mode = 2
+stretch_mode = 4
+script = ExtResource("6_erls1")
+hook_1 = NodePath("../Command Hook 1")
+hook_2 = NodePath("../Command Hook 3")
 
-[node name="Command Hook 3" type="Node" parent="Commands" unique_id=1043053107 groups=["Command Hooks"]]
+[node name="Command Hook 3" type="TextureRect" parent="Commands" unique_id=317894685 node_paths=PackedStringArray("hook_1", "hook_2") groups=["Command Hooks"]]
+offset_left = 230.0
+offset_top = -2.0
+offset_right = 426.47
+offset_bottom = 194.47
+texture = ExtResource("5_s4ps2")
+expand_mode = 2
+stretch_mode = 4
+script = ExtResource("6_erls1")
+hook_1 = NodePath("../Command Hook 1")
+hook_2 = NodePath("../Command Hook 2")
 
-[node name="Stools" type="TextureRect" parent="." unique_id=1391185693]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 77.525
-offset_bottom = 77.525024
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Stools" type="Node" parent="." unique_id=296392863]
+
+[node name="Stools" type="TextureRect" parent="Stools" unique_id=1391185693]
+offset_left = 39.0
+offset_top = 589.0
+offset_right = 234.23999
+offset_bottom = 742.55
+size_flags_horizontal = 6
 texture = ExtResource("5_h35fg")
 expand_mode = 2
 stretch_mode = 4
+
+[node name="Stools2" type="TextureRect" parent="Stools" unique_id=1760518478]
+offset_left = 328.0
+offset_top = 589.0
+offset_right = 523.24
+offset_bottom = 742.55
+size_flags_horizontal = 6
+texture = ExtResource("5_h35fg")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Stools3" type="TextureRect" parent="Stools" unique_id=908513947]
+offset_left = 617.0
+offset_top = 589.0
+offset_right = 812.24
+offset_bottom = 742.55
+size_flags_horizontal = 6
+texture = ExtResource("5_h35fg")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Stools4" type="TextureRect" parent="Stools" unique_id=874494846]
+offset_left = 906.0
+offset_top = 589.0
+offset_right = 1101.24
+offset_bottom = 742.55
+size_flags_horizontal = 6
+texture = ExtResource("5_h35fg")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Client Chairs" type="Node" parent="." unique_id=266510457]
+
+[node name="Client 1" parent="Client Chairs" unique_id=1767717981 instance=ExtResource("14_s4ps2")]
+anchors_preset = -1
+offset_left = 59.000004
+offset_top = 428.0
+offset_right = 248.0
+offset_bottom = 661.0
+scale = Vector2(0.845, 0.845)
+size_flags_horizontal = 3
+
+[node name="Client 2" parent="Client Chairs" unique_id=1528582113 instance=ExtResource("14_s4ps2")]
+anchors_preset = -1
+offset_left = 351.0
+offset_top = 426.00003
+offset_right = 540.0
+offset_bottom = 659.0
+scale = Vector2(0.845, 0.845)
+size_flags_horizontal = 3
+
+[node name="Client 3" parent="Client Chairs" unique_id=356995161 instance=ExtResource("14_s4ps2")]
+anchors_preset = -1
+offset_left = 641.0
+offset_top = 423.00003
+offset_right = 830.0
+offset_bottom = 656.0
+scale = Vector2(0.845, 0.845)
+size_flags_horizontal = 3
+
+[node name="Client 4" parent="Client Chairs" unique_id=1825313883 instance=ExtResource("14_s4ps2")]
+anchors_preset = -1
+offset_left = 922.0
+offset_top = 428.00003
+offset_right = 1111.0
+offset_bottom = 661.0
+scale = Vector2(0.845, 0.845)
+size_flags_horizontal = 3
 
 [node name="BrownBeerTap" parent="." unique_id=1463512649 node_paths=PackedStringArray("full_glass") instance=ExtResource("4_h35fg")]
 layout_mode = 0
@@ -216,33 +312,6 @@ texture = ExtResource("10_8ca1q")
 script = ExtResource("8_s5gn0")
 glass_type = "pastis glass"
 
-[node name="Client Chairs" type="HBoxContainer" parent="." unique_id=546806626]
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -273.995
-offset_bottom = -53.99475
-grow_horizontal = 2
-grow_vertical = 0
-
-[node name="Client 1" parent="Client Chairs" unique_id=1302065012 groups=["Chairs"] instance=ExtResource("1_5lj7r")]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Client 2" parent="Client Chairs" unique_id=173897783 groups=["Chairs"] instance=ExtResource("1_5lj7r")]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Client 3" parent="Client Chairs" unique_id=259540046 groups=["Chairs"] instance=ExtResource("1_5lj7r")]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Client 4" parent="Client Chairs" unique_id=2056105353 groups=["Chairs"] instance=ExtResource("1_5lj7r")]
-layout_mode = 2
-size_flags_horizontal = 3
-
 [node name="Timer" type="Timer" parent="." unique_id=1501621741]
 wait_time = 180.0
 one_shot = true
@@ -257,6 +326,30 @@ stream = ExtResource("2_ovske")
 volume_db = -10.0
 autoplay = true
 
+[connection signal="order_accepted" from="Commands/Command Hook 1" to="Client Chairs/Client 1" method="_on_command_hook_order_accepted"]
+[connection signal="order_accepted" from="Commands/Command Hook 1" to="Client Chairs/Client 2" method="_on_command_hook_order_accepted"]
+[connection signal="order_accepted" from="Commands/Command Hook 1" to="Client Chairs/Client 3" method="_on_command_hook_order_accepted"]
+[connection signal="order_accepted" from="Commands/Command Hook 1" to="Client Chairs/Client 4" method="_on_command_hook_order_accepted"]
+[connection signal="order_accepted" from="Commands/Command Hook 2" to="Client Chairs/Client 1" method="_on_command_hook_order_accepted"]
+[connection signal="order_accepted" from="Commands/Command Hook 2" to="Client Chairs/Client 2" method="_on_command_hook_order_accepted"]
+[connection signal="order_accepted" from="Commands/Command Hook 2" to="Client Chairs/Client 3" method="_on_command_hook_order_accepted"]
+[connection signal="order_accepted" from="Commands/Command Hook 2" to="Client Chairs/Client 4" method="_on_command_hook_order_accepted"]
+[connection signal="order_accepted" from="Commands/Command Hook 3" to="Client Chairs/Client 1" method="_on_command_hook_order_accepted"]
+[connection signal="order_accepted" from="Commands/Command Hook 3" to="Client Chairs/Client 2" method="_on_command_hook_order_accepted"]
+[connection signal="order_accepted" from="Commands/Command Hook 3" to="Client Chairs/Client 3" method="_on_command_hook_order_accepted"]
+[connection signal="order_accepted" from="Commands/Command Hook 3" to="Client Chairs/Client 4" method="_on_command_hook_order_accepted"]
+[connection signal="order_accept" from="Client Chairs/Client 1" to="Commands/Command Hook 1" method="_on_client_order_accept"]
+[connection signal="order_accept" from="Client Chairs/Client 1" to="Commands/Command Hook 2" method="_on_client_order_accept"]
+[connection signal="order_accept" from="Client Chairs/Client 1" to="Commands/Command Hook 3" method="_on_client_order_accept"]
+[connection signal="order_accept" from="Client Chairs/Client 2" to="Commands/Command Hook 1" method="_on_client_order_accept"]
+[connection signal="order_accept" from="Client Chairs/Client 2" to="Commands/Command Hook 2" method="_on_client_order_accept"]
+[connection signal="order_accept" from="Client Chairs/Client 2" to="Commands/Command Hook 3" method="_on_client_order_accept"]
+[connection signal="order_accept" from="Client Chairs/Client 3" to="Commands/Command Hook 1" method="_on_client_order_accept"]
+[connection signal="order_accept" from="Client Chairs/Client 3" to="Commands/Command Hook 2" method="_on_client_order_accept"]
+[connection signal="order_accept" from="Client Chairs/Client 3" to="Commands/Command Hook 3" method="_on_client_order_accept"]
+[connection signal="order_accept" from="Client Chairs/Client 4" to="Commands/Command Hook 1" method="_on_client_order_accept"]
+[connection signal="order_accept" from="Client Chairs/Client 4" to="Commands/Command Hook 2" method="_on_client_order_accept"]
+[connection signal="order_accept" from="Client Chairs/Client 4" to="Commands/Command Hook 3" method="_on_client_order_accept"]
 [connection signal="mouse_entered" from="BrownBeerTap" to="BrownBeerTap" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="BrownBeerTap" to="BrownBeerTap" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="RedBeerTap" to="RedBeerTap" method="_on_mouse_entered"]
@@ -267,6 +360,26 @@ autoplay = true
 [connection signal="mouse_exited" from="CoffeeMachine" to="CoffeeMachine" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="PastisBottle" to="PastisBottle" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="PastisBottle" to="PastisBottle" method="_on_mouse_exited"]
+[connection signal="glass_dropped" from="Brown Full Glass" to="Client Chairs/Client 1" method="_on_glass_dropped"]
+[connection signal="glass_dropped" from="Brown Full Glass" to="Client Chairs/Client 2" method="_on_glass_dropped"]
+[connection signal="glass_dropped" from="Brown Full Glass" to="Client Chairs/Client 3" method="_on_glass_dropped"]
+[connection signal="glass_dropped" from="Brown Full Glass" to="Client Chairs/Client 4" method="_on_glass_dropped"]
+[connection signal="glass_dropped" from="Red Full Glass" to="Client Chairs/Client 1" method="_on_glass_dropped"]
+[connection signal="glass_dropped" from="Red Full Glass" to="Client Chairs/Client 2" method="_on_glass_dropped"]
+[connection signal="glass_dropped" from="Red Full Glass" to="Client Chairs/Client 3" method="_on_glass_dropped"]
+[connection signal="glass_dropped" from="Red Full Glass" to="Client Chairs/Client 4" method="_on_glass_dropped"]
+[connection signal="glass_dropped" from="Blond Full Glass" to="Client Chairs/Client 1" method="_on_glass_dropped"]
+[connection signal="glass_dropped" from="Blond Full Glass" to="Client Chairs/Client 2" method="_on_glass_dropped"]
+[connection signal="glass_dropped" from="Blond Full Glass" to="Client Chairs/Client 3" method="_on_glass_dropped"]
+[connection signal="glass_dropped" from="Blond Full Glass" to="Client Chairs/Client 4" method="_on_glass_dropped"]
+[connection signal="glass_dropped" from="Coffee Full Cup" to="Client Chairs/Client 1" method="_on_glass_dropped"]
+[connection signal="glass_dropped" from="Coffee Full Cup" to="Client Chairs/Client 2" method="_on_glass_dropped"]
+[connection signal="glass_dropped" from="Coffee Full Cup" to="Client Chairs/Client 3" method="_on_glass_dropped"]
+[connection signal="glass_dropped" from="Coffee Full Cup" to="Client Chairs/Client 4" method="_on_glass_dropped"]
+[connection signal="glass_dropped" from="Pastis Full Glass" to="Client Chairs/Client 1" method="_on_glass_dropped"]
+[connection signal="glass_dropped" from="Pastis Full Glass" to="Client Chairs/Client 2" method="_on_glass_dropped"]
+[connection signal="glass_dropped" from="Pastis Full Glass" to="Client Chairs/Client 3" method="_on_glass_dropped"]
+[connection signal="glass_dropped" from="Pastis Full Glass" to="Client Chairs/Client 4" method="_on_glass_dropped"]
 [connection signal="glass_dropped" from="Glasses/Coffee Cup" to="CoffeeMachine" method="_on_coffee_cup_dropped"]
 [connection signal="glass_dropped" from="Glasses/Beer Glass 1" to="BrownBeerTap" method="_on_beer_glass_dropped"]
 [connection signal="glass_dropped" from="Glasses/Beer Glass 1" to="RedBeerTap" method="_on_beer_glass_dropped"]
