@@ -7,6 +7,7 @@ var id_label:Label
 var progress_bar:ProgressBar
 var drinks:Array[Node]
 var drink_amount: int = 0
+var total_drinks: int
 var drink_id:int
 var types: String = ""
 var list_types: Array[String] = ["red", "brown", "blond", "coffee", "pastis"]
@@ -34,6 +35,7 @@ func init_order() -> void:
 	drinks = [get_node("red"), get_node("brown"), get_node("blond"), get_node("coffee"), get_node("pastis")]
 	RNG.randomize()
 	drink_amount = get_random_int(1,4)
+	total_drinks = drink_amount
 	print(drink_amount)
 	drink_id = get_random_int(0,4)
 	types = list_types[drink_id]

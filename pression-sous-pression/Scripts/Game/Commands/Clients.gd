@@ -1,8 +1,8 @@
 extends Node
 
 @onready var timer_bar: ProgressBar = $Timer_progress
-var accept_count_down: float
-var order_count_down: float
+var accept_count_down: float = randi_range(5, 25)
+var order_count_down: float = accept_count_down * 2
 @onready var timer: Timer = $Timer_leaving
 @export var client_id:int
 var client_alive:bool = false
@@ -13,9 +13,9 @@ var time_left: float = accept_count_down
 var progress_percent: float = 0.0
 var is_hovered:bool = false
 var is_count_down: bool = false
+var drinks_paid: float
 
 
-signal client_left()
 signal order_fulfilled()
 signal order_failed()
 signal order_accept(id: int, order)
@@ -24,14 +24,13 @@ signal drink_given(glass_type: String)
 
 
 func init_client() -> void:
-	accept_count_down = randi_range(GameManager.client_patience - 5, GameManager.client_patience + 5)
-	order_count_down = accept_count_down * 2
 	timer.wait_time = accept_count_down
 	timer.start()
 	client_alive = true
 	self.visible = true
 	timer_bar.value = 1.0
 	timer_bar.visible = true
+	order_in_progress = false
 	spawn_orders()
 
 
@@ -41,7 +40,6 @@ func _process(delta: float) -> void:
 		order.progress_bar.value = order_time_left / order_count_down
 		if order_time_left <= 0.0:
 			order_failed.emit()
-			order_over.emit(client_id)
 			_on_timer_timeout()
 	if timer.is_stopped() || client_alive == false:
 		time_left = accept_count_down
@@ -52,10 +50,18 @@ func _process(delta: float) -> void:
 
 
 func _on_timer_timeout() -> void:
-	if client_alive == false:
+	if client_alive == false || order_in_progress == false:
 		return
-	print("Time stop")
-	client_left.emit()
+	if order.drink_amount < order.total_drinks:
+		if order.drink_amount == 0:
+			drinks_paid = order.total_drinks
+		else:
+			drinks_paid = (order.total_drinks - order.drink_amount) * 0.8
+		if order.types == "red" || order.types == "brown" || order.types == "blond":
+			GameManager.money_count += int(5 * drinks_paid)
+		else:
+			GameManager.money_count += int(3 * drinks_paid)
+	order_over.emit(client_id)
 	order.free()
 	client_alive = false
 	self.visible = false
@@ -88,19 +94,17 @@ func _on_command_hook_order_accepted(id: int) -> void:
 
 
 func _on_glass_dropped(glass_type: String) -> void:
-	if client_alive == false:
+	if order_in_progress == false:
 		return
 	if is_hovered == true:
 		drink_given.emit(glass_type)
 		if order.check_drink(glass_type) == false:
 			order_failed.emit()
-			order_over.emit(client_id)
 			_on_timer_timeout()
 		else:
 			order.update_order()
 			if order.drink_amount <= 0:
 				order_fulfilled.emit()
-				order_over.emit(client_id)
 				_on_timer_timeout()
 
 
