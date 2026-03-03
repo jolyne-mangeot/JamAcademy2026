@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://blm4f15xoka3u"]
 
-[ext_resource type="Script" uid="uid://dkp4gb7ofgcer" path="res://clients.gd" id="1_dsyj5"]
-[ext_resource type="Script" uid="uid://b6lyx1x5po76s" path="res://command.gd" id="2_5jl23"]
-[ext_resource type="Texture2D" uid="uid://cl3ed03lipjye" path="res://Assets/Drive/Barman.png" id="3_vjkiq"]
+[ext_resource type="Script" uid="uid://dkp4gb7ofgcer" path="res://Scripts/Game/Clients.gd" id="1_6myro"]
+[ext_resource type="Script" uid="uid://b6lyx1x5po76s" path="res://Scripts/Game/Commands.gd" id="2_k3ns6"]
+[ext_resource type="Texture2D" uid="uid://bylkan2y3yu10" path="res://Assets/Drive/FishGirl.png" id="3_6myro"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vjkiq"]
 
@@ -24,36 +24,45 @@ func _process(delta: float) -> void:
 	pass
 "
 
-[node name="Node2D" type="Node2D" unique_id=368458069]
-position = Vector2(486, 199)
-script = ExtResource("1_dsyj5")
+[node name="Node2D" type="Control" unique_id=1767717981]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 207.0
+offset_bottom = 278.0
+script = ExtResource("1_6myro")
 
 [node name="Timer_leaving" type="Timer" parent="." unique_id=1770227453]
-wait_time = 0.001
+one_shot = true
 
 [node name="Timer_progress" type="ProgressBar" parent="." unique_id=96709679]
-offset_left = 35.0
-offset_top = 14.0
-offset_right = 208.0
-offset_bottom = 48.0
+layout_mode = 0
+offset_left = 1.0
+offset_right = 174.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+max_value = 1.0
+show_percentage = false
 
-[node name="orders" type="Node2D" parent="." unique_id=1391161649]
-script = ExtResource("2_5jl23")
+[node name="orders" type="Control" parent="." unique_id=34469857]
+anchors_preset = 0
+script = ExtResource("2_k3ns6")
 
 [node name="Client_texture" type="TextureRect" parent="." unique_id=194036211]
-offset_left = 22.0
-offset_top = 82.0
-offset_right = 223.0
-offset_bottom = 415.0
-texture = ExtResource("3_vjkiq")
+layout_mode = 0
+offset_left = -27.0
+offset_top = 22.0
+offset_right = 218.0
+offset_bottom = 270.0
+texture = ExtResource("3_6myro")
 expand_mode = 1
+stretch_mode = 4
 
 [node name="Client_get_orders" type="Button" parent="Client_texture" unique_id=63892538]
 layout_mode = 0
-offset_left = 36.0
-offset_top = 3.0
-offset_right = 170.0
-offset_bottom = 334.0
+offset_left = 17.0
+offset_top = 15.0
+offset_right = 223.0
+offset_bottom = 230.0
 theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_disabled_color = Color(1, 1, 1, 0.5019608)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
