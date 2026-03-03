@@ -13,7 +13,7 @@ func get_random_int(min_val: int, max_val: int) -> int:
 
 func _ready() -> void:
 	RNG.randomize()
-	num_orders = get_random_int(0,9)
+	num_orders = get_random_int(1,9)
 	print(num_orders)
 	types = list_types.pick_random()
 	print(types)

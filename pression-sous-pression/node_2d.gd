@@ -6,6 +6,8 @@ extends Node2D
 
 @onready var timer: Timer = $Timer_leaving
 
+@onready var orders_scene = preload("res://Orders.tscn")
+
 var time_left: float = wait_time
 
 var progress_percent: float = 0.0
@@ -28,3 +30,17 @@ func _process(delta: float) -> void:
 func _on_timer_timeout() -> void:
 	print("Time stop")
 	queue_free()
+
+func spawn_orders() -> void:
+	var orders = orders_scene.instantiate()
+	get_tree().root.add_child(orders)
+	orders.global_position = Vector2(0,0)
+
+func _on_button_pressed() -> void:
+	if timer.is_stopped():
+		return
+	else:
+		spawn_orders()
+		timer.stop()
+		timer_bar.free()
+		print("Buttom")
