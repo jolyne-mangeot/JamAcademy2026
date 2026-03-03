@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://blm4f15xoka3u"]
 
-[ext_resource type="Script" uid="uid://dkp4gb7ofgcer" path="res://Scripts/Game/Clients.gd" id="1_6myro"]
-[ext_resource type="Script" uid="uid://b6lyx1x5po76s" path="res://Scripts/Game/Commands.gd" id="2_k3ns6"]
+[ext_resource type="Script" uid="uid://dkp4gb7ofgcer" path="res://Scripts/Game/Commands/Clients.gd" id="1_6myro"]
+[ext_resource type="Script" uid="uid://b6lyx1x5po76s" path="res://Scripts/Game/Commands/Commands.gd" id="2_k3ns6"]
 [ext_resource type="Texture2D" uid="uid://b744ulnvjtvfv" path="res://Assets/Sprites/Human_A_Sit.png" id="3_6myro"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vjkiq"]

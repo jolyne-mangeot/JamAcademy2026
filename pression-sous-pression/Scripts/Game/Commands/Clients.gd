@@ -20,6 +20,7 @@ signal order_fulfilled()
 signal order_failed()
 signal order_accept(id: int, order)
 signal order_over(id: int)
+signal drink_given(glass_type: String)
 
 
 func init_client() -> void:
@@ -60,8 +61,8 @@ func _on_timer_timeout() -> void:
 func spawn_orders() -> void:
 	order_time_left = order_count_down
 	order = preload("res://Scenes/Game/Orders.tscn").instantiate()
-	order.init_order()
 	order.client_id = client_id
+	order.init_order()
 	get_tree().root.add_child(order)
 
 
@@ -86,6 +87,7 @@ func _on_glass_dropped(glass_type: String) -> void:
 	if client_alive == false:
 		return
 	if is_hovered == true:
+		drink_given.emit(glass_type)
 		if order.check_drink(glass_type) == false:
 			order_failed.emit()
 			order_over.emit(client_id)

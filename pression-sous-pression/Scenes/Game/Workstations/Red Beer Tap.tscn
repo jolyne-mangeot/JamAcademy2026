@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cdu5q7t0eg6ik"]
 
-[ext_resource type="Script" uid="uid://devstmytgd4ul" path="res://Scripts/Game/TapScript.gd" id="1_jc04a"]
+[ext_resource type="Script" uid="uid://devstmytgd4ul" path="res://Scripts/Game/Workspaces/TapScript.gd" id="1_jc04a"]
 [ext_resource type="Texture2D" uid="uid://cmg8wnvqs2jmd" path="res://Assets/Sprites/ambre.png" id="2_3324u"]
 [ext_resource type="Texture2D" uid="uid://b8gscfdskerku" path="res://Assets/Sprites/BeerEmpty.png" id="3_l287s"]
 [ext_resource type="Texture2D" uid="uid://2adooyup738q" path="res://Assets/Sprites/BeerDispenserM.png" id="3_mfgmn"]
@@ -40,9 +40,9 @@ stretch_mode = 4
 visible = false
 layout_mode = 0
 offset_left = 6.0
-offset_top = 167.0
-offset_right = 1383.7778
-offset_bottom = 1811.4443
+offset_top = 168.0
+offset_right = 1517.1111
+offset_bottom = 1901.3333
 scale = Vector2(0.045, 0.045)
 texture = ExtResource("3_l287s")
 expand_mode = 1
