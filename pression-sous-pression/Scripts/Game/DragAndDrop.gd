@@ -3,13 +3,10 @@ extends Sprite2D
 @export var origin_position:Vector2
 @export var glass_type:String
 var is_dragging:bool = false
-var mouse_offset
 var delay = 3
 signal glass_dropped(glass_type:String)
 
-func _ready():
-	drop_spots = get_three().get_nodes_in_group("drop_spot_group")
-	print(drop_spots)
+
 func _physics_process(delta):
 	if is_dragging == true:
 		var tween = get_tree().create_tween()
