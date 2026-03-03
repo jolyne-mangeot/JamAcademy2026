@@ -1,6 +1,6 @@
 extends Node
 
-var prep_time:float = 5.0
+var prep_time:float = 3.0
 var timer:float = 0.0
 var is_pouring:bool = false
 var is_occupied:bool = false
@@ -26,8 +26,8 @@ func _process(delta: float) -> void:
 			full_glass.visible = true
 
 
-func _on_beer_glass_dropped(glass_type: String) -> void:
-	if glass_type == "beer" && is_occupied == false && is_pouring == false && mouse_hovering == true:
+func _on_pastis_glass_dropped(glass_type: String) -> void:
+	if glass_type == "pastis glass" && is_occupied == false && is_pouring == false && mouse_hovering == true:
 		empty_glass.visible = true
 		is_pouring = true
 		is_occupied = true

@@ -2,12 +2,18 @@
 
 [ext_resource type="Texture2D" uid="uid://de6pciln3opaw" path="res://Assets/Drive/Bar_Back.png" id="1_0km67"]
 [ext_resource type="PackedScene" uid="uid://chbs18uwxdku" path="res://Scenes/Game/Client.tscn" id="1_5lj7r"]
-[ext_resource type="PackedScene" uid="uid://bcngn65vsdjmk" path="res://Scenes/Drag And Drop.tscn" id="1_emcm8"]
+[ext_resource type="Texture2D" uid="uid://5jll7exu031l" path="res://Assets/Drive/BG.png" id="1_hlnq6"]
 [ext_resource type="Texture2D" uid="uid://nfli2yg5tvq6" path="res://Assets/Drive/Bar_Front.png" id="2_0rvqk"]
 [ext_resource type="Texture2D" uid="uid://cl3ed03lipjye" path="res://Assets/Drive/Barman.png" id="2_h35fg"]
 [ext_resource type="AudioStream" uid="uid://dr7a8kb02khx1" path="res://Assets/Music/Quirky Dog.mp3" id="2_ovske"]
 [ext_resource type="PackedScene" uid="uid://h2ofuvb2raus" path="res://Scenes/Game/Beer Tap.tscn" id="4_h35fg"]
 [ext_resource type="Texture2D" uid="uid://dlhlf57t5fuit" path="res://Assets/Drive/Stool.png" id="5_h35fg"]
+[ext_resource type="Texture2D" uid="uid://b6qjlj00vieug" path="res://Assets/Drive/Beer.png" id="7_4ad7p"]
+[ext_resource type="Script" uid="uid://ji0lxuim6nta" path="res://Scripts/Game/DragAndDrop.gd" id="8_s5gn0"]
+[ext_resource type="Texture2D" uid="uid://c6rsicshrg5sw" path="res://Assets/Drive/Coffee Cup.png" id="9_4ad7p"]
+[ext_resource type="Texture2D" uid="uid://g0gxtbvouv48" path="res://Assets/Drive/Pastis Glass.png" id="10_8ca1q"]
+[ext_resource type="PackedScene" uid="uid://fibkjibmm8i0" path="res://Scenes/Game/Coffee Machine.tscn" id="11_s5gn0"]
+[ext_resource type="PackedScene" uid="uid://162po0cqemj3" path="res://Scenes/Game/Pastis Bottle.tscn" id="12_11pef"]
 
 [node name="Level" type="Control" unique_id=327468503]
 layout_mode = 3
@@ -16,6 +22,18 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="." unique_id=144055639]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_hlnq6")
+expand_mode = 2
+stretch_mode = 4
+flip_h = true
 
 [node name="Bar Back" type="TextureRect" parent="." unique_id=605635055]
 layout_mode = 1
@@ -33,7 +51,7 @@ layout_mode = 0
 offset_left = 345.055
 offset_top = 133.445
 offset_right = 795.05493
-offset_bottom = 583.4449
+offset_bottom = 583.44495
 texture = ExtResource("2_h35fg")
 expand_mode = 4
 stretch_mode = 4
@@ -59,6 +77,144 @@ offset_bottom = 40.0
 [node name="Command Hook 2" type="Node" parent="Commands" unique_id=1929449025 groups=["Command Hooks"]]
 
 [node name="Command Hook 3" type="Node" parent="Commands" unique_id=1043053107 groups=["Command Hooks"]]
+
+[node name="Stools" type="TextureRect" parent="." unique_id=1391185693]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 77.525
+offset_bottom = 77.525024
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_h35fg")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="BrownBeerTap" parent="." unique_id=1463512649 node_paths=PackedStringArray("full_glass") instance=ExtResource("4_h35fg")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 922.0
+offset_top = 193.0
+offset_right = 1002.0
+offset_bottom = 418.0
+grow_horizontal = 1
+grow_vertical = 1
+full_glass = NodePath("../Brown Full Glass")
+
+[node name="RedBeerTap" parent="." unique_id=1738840302 node_paths=PackedStringArray("full_glass") instance=ExtResource("4_h35fg")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 832.0
+offset_top = 193.0
+offset_right = 912.0
+offset_bottom = 418.0
+grow_horizontal = 1
+grow_vertical = 1
+full_glass = NodePath("../Red Full Glass")
+
+[node name="BlondBeerTap" parent="." unique_id=1673147438 node_paths=PackedStringArray("full_glass") instance=ExtResource("4_h35fg")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 742.0
+offset_top = 193.0
+offset_right = 822.0
+offset_bottom = 418.0
+grow_horizontal = 1
+grow_vertical = 1
+full_glass = NodePath("../Blond Full Glass")
+
+[node name="CoffeeMachine" parent="." unique_id=1464255273 node_paths=PackedStringArray("full_glass") instance=ExtResource("11_s5gn0")]
+layout_mode = 1
+offset_left = 173.0
+offset_top = 270.0
+offset_right = -883.405
+offset_bottom = -227.56
+full_glass = NodePath("../Coffee Full Cup")
+
+[node name="PastisBottle" parent="." unique_id=1198390330 node_paths=PackedStringArray("full_glass") instance=ExtResource("12_11pef")]
+layout_mode = 1
+offset_left = 1023.0
+offset_top = 193.0
+offset_right = -43.0
+offset_bottom = -226.0
+full_glass = NodePath("../Pastis Full Glass")
+
+[node name="Brown Full Glass" type="Sprite2D" parent="." unique_id=1755523614]
+visible = false
+position = Vector2(963.5, 386)
+scale = Vector2(0.044, 0.044)
+texture = ExtResource("7_4ad7p")
+script = ExtResource("8_s5gn0")
+glass_type = "brown"
+
+[node name="Red Full Glass" type="Sprite2D" parent="." unique_id=1012011842]
+visible = false
+position = Vector2(873.5, 386)
+scale = Vector2(0.044, 0.044)
+texture = ExtResource("7_4ad7p")
+script = ExtResource("8_s5gn0")
+glass_type = "red"
+
+[node name="Blond Full Glass" type="Sprite2D" parent="." unique_id=369252389]
+visible = false
+position = Vector2(783.5, 386)
+scale = Vector2(0.044, 0.044)
+texture = ExtResource("7_4ad7p")
+script = ExtResource("8_s5gn0")
+glass_type = "blond"
+
+[node name="Coffee Full Cup" type="Sprite2D" parent="." unique_id=1360055253]
+visible = false
+position = Vector2(225, 379.99997)
+scale = Vector2(0.077, 0.077)
+texture = ExtResource("9_4ad7p")
+script = ExtResource("8_s5gn0")
+glass_type = "coffee"
+
+[node name="Pastis Full Glass" type="Sprite2D" parent="." unique_id=1403460008]
+visible = false
+position = Vector2(1062.7032, 389.531)
+scale = Vector2(0.172, 0.169)
+texture = ExtResource("10_8ca1q")
+script = ExtResource("8_s5gn0")
+glass_type = "pastis"
+
+[node name="Glasses" type="Node" parent="." unique_id=996044032]
+
+[node name="Coffee Cup" type="Sprite2D" parent="Glasses" unique_id=957678165]
+position = Vector2(368, 251)
+scale = Vector2(0.077, 0.077)
+texture = ExtResource("9_4ad7p")
+script = ExtResource("8_s5gn0")
+glass_type = "coffee"
+
+[node name="Beer Glass 1" type="Sprite2D" parent="Glasses" unique_id=881984705]
+position = Vector2(345, 337)
+scale = Vector2(0.039184578, 0.039184578)
+texture = ExtResource("7_4ad7p")
+script = ExtResource("8_s5gn0")
+glass_type = "beer"
+
+[node name="Beer Glass 2" type="Sprite2D" parent="Glasses" unique_id=1340793118]
+position = Vector2(408.76, 337)
+scale = Vector2(0.039, 0.039)
+texture = ExtResource("7_4ad7p")
+script = ExtResource("8_s5gn0")
+glass_type = "beer"
+
+[node name="Pastis Glass" type="Sprite2D" parent="Glasses" unique_id=724972156]
+position = Vector2(428.00003, 257)
+scale = Vector2(0.169, 0.169)
+texture = ExtResource("10_8ca1q")
+script = ExtResource("8_s5gn0")
+glass_type = "pastis glass"
 
 [node name="Client Chairs" type="HBoxContainer" parent="." unique_id=546806626]
 layout_mode = 1
@@ -87,31 +243,6 @@ size_flags_horizontal = 3
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Stools" type="TextureRect" parent="." unique_id=1391185693]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 77.525
-offset_bottom = 77.525024
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("5_h35fg")
-expand_mode = 2
-stretch_mode = 4
-
-[node name="BlondBeerTap" parent="." unique_id=1463512649 instance=ExtResource("4_h35fg")]
-layout_mode = 1
-offset_left = 741.0
-offset_top = 194.0
-offset_right = -337.99902
-offset_bottom = -233.79999
-
-[node name="Beer Glass" parent="." unique_id=957678165 instance=ExtResource("1_emcm8")]
-position = Vector2(345, 337)
-origin_position = Vector2(345, 337)
-glass_type = "beer"
-
 [node name="Timer" type="Timer" parent="." unique_id=1501621741]
 wait_time = 180.0
 one_shot = true
@@ -126,6 +257,21 @@ stream = ExtResource("2_ovske")
 volume_db = -10.0
 autoplay = true
 
+[connection signal="mouse_entered" from="BrownBeerTap" to="BrownBeerTap" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="BrownBeerTap" to="BrownBeerTap" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="RedBeerTap" to="RedBeerTap" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="RedBeerTap" to="RedBeerTap" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="BlondBeerTap" to="BlondBeerTap" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="BlondBeerTap" to="BlondBeerTap" method="_on_mouse_exited"]
-[connection signal="glass_dropped" from="Beer Glass" to="BlondBeerTap" method="_on_beer_glass_glass_dropped"]
+[connection signal="mouse_entered" from="CoffeeMachine" to="CoffeeMachine" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CoffeeMachine" to="CoffeeMachine" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PastisBottle" to="PastisBottle" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PastisBottle" to="PastisBottle" method="_on_mouse_exited"]
+[connection signal="glass_dropped" from="Glasses/Coffee Cup" to="CoffeeMachine" method="_on_coffee_cup_dropped"]
+[connection signal="glass_dropped" from="Glasses/Beer Glass 1" to="BrownBeerTap" method="_on_beer_glass_dropped"]
+[connection signal="glass_dropped" from="Glasses/Beer Glass 1" to="RedBeerTap" method="_on_beer_glass_dropped"]
+[connection signal="glass_dropped" from="Glasses/Beer Glass 1" to="BlondBeerTap" method="_on_beer_glass_dropped"]
+[connection signal="glass_dropped" from="Glasses/Beer Glass 2" to="BrownBeerTap" method="_on_beer_glass_dropped"]
+[connection signal="glass_dropped" from="Glasses/Beer Glass 2" to="RedBeerTap" method="_on_beer_glass_dropped"]
+[connection signal="glass_dropped" from="Glasses/Beer Glass 2" to="BlondBeerTap" method="_on_beer_glass_dropped"]
+[connection signal="glass_dropped" from="Glasses/Pastis Glass" to="PastisBottle" method="_on_pastis_glass_dropped"]
