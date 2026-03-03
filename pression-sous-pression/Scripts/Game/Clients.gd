@@ -1,14 +1,15 @@
 extends Node
 
 @onready var timer_bar: ProgressBar = $Timer_progress
-@export var count_down: float = 25.0
+var accept_count_down: float = 25.0
+var order_count_down: float = accept_count_down * 2
 @onready var timer: Timer = $Timer_leaving
 @export var client_id:int
 var client_alive:bool = false
 var order
-var order_time_left: float = count_down
+var order_time_left: float = order_count_down
 var order_in_progress:bool = false
-var time_left: float = count_down
+var time_left: float = accept_count_down
 var progress_percent: float = 0.0
 var is_hovered:bool = false
 
@@ -20,7 +21,7 @@ signal order_over(id: int)
 
 
 func init_client() -> void:
-	timer.wait_time = count_down
+	timer.wait_time = accept_count_down
 	timer.start()
 	client_alive = true
 	self.visible = true
@@ -32,7 +33,7 @@ func init_client() -> void:
 func _process(delta: float) -> void:
 	if order_in_progress == true:
 		order_time_left -= delta
-		order.progress_bar.value = order_time_left / count_down
+		order.progress_bar.value = order_time_left / order_count_down
 		if order_time_left <= 0.0:
 			order_failed.emit()
 			order_over.emit(client_id)
@@ -40,7 +41,7 @@ func _process(delta: float) -> void:
 	if timer.is_stopped() || client_alive == false:
 		return
 	time_left -= delta
-	timer_bar.value = time_left / count_down
+	timer_bar.value = time_left / accept_count_down
 
 
 func _on_timer_timeout() -> void:
@@ -53,7 +54,7 @@ func _on_timer_timeout() -> void:
 
 
 func spawn_orders() -> void:
-	order_time_left = count_down
+	order_time_left = order_count_down
 	order = preload("res://Scenes/Game/Orders.tscn").instantiate()
 	order.init_order()
 	order.client_id = client_id

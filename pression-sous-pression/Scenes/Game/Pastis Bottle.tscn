@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://162po0cqemj3"]
 
 [ext_resource type="Script" uid="uid://mb0agjqgvp0b" path="res://Scripts/Game/PastisBottleScript.gd" id="1_lhs42"]
-[ext_resource type="Texture2D" uid="uid://dh4cegvdj5qqr" path="res://Assets/Drive/Pastis Bottle.png" id="2_lhs42"]
-[ext_resource type="Texture2D" uid="uid://g0gxtbvouv48" path="res://Assets/Drive/Pastis Glass.png" id="3_2ecmw"]
+[ext_resource type="Texture2D" uid="uid://dweb1o0x164xc" path="res://Assets/Sprites/PastisBottle.png" id="2_lhs42"]
+[ext_resource type="Texture2D" uid="uid://bmu8q62xumpp0" path="res://Assets/Sprites/PastisGlassEmpty.png" id="3_lhs42"]
 
 [node name="BeerTap" type="Control" unique_id=1463512649 node_paths=PackedStringArray("progress", "empty_glass")]
 layout_mode = 3
@@ -19,10 +19,10 @@ empty_glass = NodePath("Empty Glass")
 
 [node name="Tap Texture" type="TextureRect" parent="." unique_id=1189930431]
 layout_mode = 0
-offset_left = 1.0
-offset_top = 1.0
-offset_right = 84.09497
-offset_bottom = 217.0
+offset_left = 11.0
+offset_top = 5.0
+offset_right = 72.53847
+offset_bottom = 221.0
 scale = Vector2(1.04, 1.04)
 texture = ExtResource("2_lhs42")
 expand_mode = 1
@@ -31,21 +31,18 @@ stretch_mode = 4
 [node name="Empty Glass" type="TextureRect" parent="." unique_id=855018561]
 visible = false
 layout_mode = 0
-offset_left = 22.0
-offset_top = 169.0
-offset_right = 1698.4707
-offset_bottom = 1805.2354
-scale = Vector2(0.034, 0.034)
-texture = ExtResource("3_2ecmw")
-expand_mode = 1
+offset_left = 19.0
+offset_top = 178.0
+offset_right = 645.0
+offset_bottom = 1130.0
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("3_lhs42")
 stretch_mode = 4
 
 [node name="Prep Progress" type="ProgressBar" parent="." unique_id=1033103695]
 visible = false
 layout_mode = 0
-offset_left = -5.0
-offset_top = -29.0
-offset_right = 85.0
-offset_bottom = -2.0
+offset_top = -27.0
+offset_right = 90.0
 max_value = 1.0
 show_percentage = false
