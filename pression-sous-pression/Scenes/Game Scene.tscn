@@ -354,7 +354,7 @@ texture = ExtResource("10_8ca1q")
 script = ExtResource("8_s5gn0")
 glass_type = "pastis glass"
 
-[node name="Timer" type="Timer" parent="." unique_id=1501621741]
+[node name="timer_day" type="Timer" parent="." unique_id=1501621741]
 wait_time = 180.0
 one_shot = true
 autostart = true
