@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://4dapgurhapnk"]
 
 [ext_resource type="PackedScene" uid="uid://chbs18uwxdku" path="res://Scenes/Game/Client.tscn" id="1_5lj7r"]
+[ext_resource type="Script" uid="uid://4sj7aqrfr17n" path="res://Scripts/Game/timer.gd" id="1_emcm8"]
 [ext_resource type="AudioStream" uid="uid://dr7a8kb02khx1" path="res://Assets/Music/Quirky Dog.mp3" id="2_ovske"]
 
 [node name="Level" type="Control" unique_id=327468503]
@@ -21,6 +22,11 @@ offset_bottom = 40.0
 [node name="Command Hook 2" type="Node" parent="Commands" unique_id=1929449025 groups=["Command Hooks"]]
 
 [node name="Command Hook 3" type="Node" parent="Commands" unique_id=1043053107 groups=["Command Hooks"]]
+
+[node name="Timer" type="Timer" parent="Commands" unique_id=1647761365]
+process_callback = 0
+autostart = true
+script = ExtResource("1_emcm8")
 
 [node name="Client Chairs" type="HBoxContainer" parent="." unique_id=546806626]
 layout_mode = 1
@@ -60,3 +66,5 @@ autostart = true
 stream = ExtResource("2_ovske")
 volume_db = -10.0
 autoplay = true
+
+[connection signal="timeout" from="Commands/Timer" to="Commands/Timer" method="_on_timeout"]
