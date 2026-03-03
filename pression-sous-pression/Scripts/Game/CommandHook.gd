@@ -17,3 +17,9 @@ func _on_client_order_accept(id: int, order: Variant) -> void:
 		is_free = false
 		order.position = command_pos
 		order.visible = true
+
+
+func _on_client_order_over(id: int) -> void:
+	if id == current_id:
+		current_id = 0
+		is_free = true
