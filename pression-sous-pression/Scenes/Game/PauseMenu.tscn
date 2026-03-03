@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://poifjhi42r6a"]
 
-[ext_resource type="Script" uid="uid://26rfcj307fqc" path="res://pause_menu.gd" id="1_nov15"]
+[ext_resource type="Script" uid="uid://26rfcj307fqc" path="res://Scripts/Game/PauseMenu.gd" id="1_nov15"]
 [ext_resource type="FontFile" uid="uid://d37u2vjhyv1h3" path="res://Assets/Fonts/Kelvinch.otf" id="2_etnfi"]
 
 [sub_resource type="GDScript" id="GDScript_nov15"]
@@ -22,34 +22,50 @@ func _process(delta: float) -> void:
 [node name="PauseMenu" type="Control" parent="." unique_id=951712142]
 process_mode = 2
 layout_mode = 3
-anchors_preset = 0
-offset_right = 122.0
-offset_bottom = 165.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_nov15")
 
 [node name="MarginContainer" type="MarginContainer" parent="PauseMenu" unique_id=737804615]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 850
+theme_override_constants/margin_top = 500
+theme_override_constants/margin_right = 850
+theme_override_constants/margin_bottom = 500
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu/MarginContainer" unique_id=1800150215]
 layout_mode = 2
-size_flags_stretch_ratio = 13.85
+size_flags_stretch_ratio = 7.01
+theme_override_constants/separation = 63
 
 [node name="ResumeButton" type="Button" parent="PauseMenu/MarginContainer/VBoxContainer" unique_id=346392276]
 layout_mode = 2
+size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("2_etnfi")
+theme_override_font_sizes/font_size = 56
 text = "Resume Game"
 script = SubResource("GDScript_nov15")
 
 [node name="MainMenuButton" type="Button" parent="PauseMenu/MarginContainer/VBoxContainer" unique_id=953577852]
 layout_mode = 2
+size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("2_etnfi")
+theme_override_font_sizes/font_size = 56
 text = "Main Menu"
 
 [node name="QuitButton" type="Button" parent="PauseMenu/MarginContainer/VBoxContainer" unique_id=1292778987]
 layout_mode = 2
+size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("2_etnfi")
+theme_override_font_sizes/font_size = 56
 text = "Quit"
 
 [connection signal="pressed" from="PauseMenu/MarginContainer/VBoxContainer/ResumeButton" to="PauseMenu" method="_on_resume_button_pressed"]
