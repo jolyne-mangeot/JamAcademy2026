@@ -12,6 +12,7 @@ var order_in_progress:bool = false
 var time_left: float = accept_count_down
 var progress_percent: float = 0.0
 var is_hovered:bool = false
+var is_count_down: bool = false
 
 signal client_left()
 signal order_fulfilled()
@@ -66,6 +67,8 @@ func _on_button_pressed() -> void:
 		return
 	else:
 		order_accept.emit(client_id, order)
+		time_left = accept_count_down
+		timer_bar.value = time_left / accept_count_down
 
 
 func _on_command_hook_order_accepted(id: int) -> void:

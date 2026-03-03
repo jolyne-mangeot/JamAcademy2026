@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://4dapgurhapnk"]
 
 [ext_resource type="Texture2D" uid="uid://cij1wklfkqmq0" path="res://Assets/Sprites/Bar_Back.png" id="1_0km67"]
+[ext_resource type="Script" uid="uid://bridn1eq17kg1" path="res://Scenes/game_scene.gd" id="1_gaucp"]
 [ext_resource type="Texture2D" uid="uid://4dd2aus5rxel" path="res://Assets/Sprites/BG.png" id="1_hlnq6"]
 [ext_resource type="Texture2D" uid="uid://bfqf2ajkcevxs" path="res://Assets/Sprites/Bar_Front.png" id="2_0rvqk"]
 [ext_resource type="Texture2D" uid="uid://c0q23a170gbgi" path="res://Assets/Sprites/Barman.png" id="2_h35fg"]
@@ -9,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cwo4dshqjqv3k" path="res://Assets/Sprites/AllStool.png" id="5_h35fg"]
 [ext_resource type="Texture2D" uid="uid://cnxoahf07js8s" path="res://Assets/Sprites/Hook.png" id="5_s4ps2"]
 [ext_resource type="Script" uid="uid://74uditbk48ik" path="res://Scripts/Game/CommandHook.gd" id="6_erls1"]
+[ext_resource type="PackedScene" uid="uid://poifjhi42r6a" path="res://PauseMenu.tscn" id="6_f4f5n"]
 [ext_resource type="Texture2D" uid="uid://b8gscfdskerku" path="res://Assets/Sprites/BeerEmpty.png" id="7_4ad7p"]
 [ext_resource type="Texture2D" uid="uid://yfbdphdl6hme" path="res://Assets/Sprites/AllTable.png" id="7_cxldr"]
 [ext_resource type="Script" uid="uid://ji0lxuim6nta" path="res://Scripts/Game/DragAndDrop.gd" id="8_s5gn0"]
@@ -34,6 +36,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_gaucp")
 
 [node name="Background" type="TextureRect" parent="." unique_id=144055639]
 layout_mode = 1
@@ -78,6 +81,8 @@ grow_vertical = 2
 texture = ExtResource("2_0rvqk")
 expand_mode = 2
 stretch_mode = 4
+
+[node name="CanvasLayer" parent="." unique_id=2086796289 instance=ExtResource("6_f4f5n")]
 
 [node name="Commands" type="Node" parent="." unique_id=2131376500]
 
