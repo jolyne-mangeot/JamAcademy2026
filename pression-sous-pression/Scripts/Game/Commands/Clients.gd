@@ -58,9 +58,9 @@ func _on_timer_timeout() -> void:
 		else:
 			drinks_paid = (order.total_drinks - order.drink_amount) * 0.8
 		if order.types == "red" || order.types == "brown" || order.types == "blond":
-			GameManager.money_count += int(5 * drinks_paid)
+			GameManager.money_count += int(5 * drinks_paid * GameManager.pourboire_enhancement)
 		else:
-			GameManager.money_count += int(3 * drinks_paid)
+			GameManager.money_count += int(3 * drinks_paid * GameManager.pourboire_enhancement)
 	order_over.emit(client_id)
 	order.free()
 	client_alive = false

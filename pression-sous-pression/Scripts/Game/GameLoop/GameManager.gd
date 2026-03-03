@@ -28,7 +28,7 @@ var max_drinks_ordered: int = 2
 var client_spawn_delay:float = 13.5
 var pourboire_enhancement:float = 1.0
 
-var day_duration:float = 180.0
+var day_duration:float
 
 
 func start_game() -> void:
@@ -43,6 +43,7 @@ func start_game() -> void:
 	failed_orders = 0
 	money_count = 0
 	daily_rent = 30
+	day_duration = 180.0
 
 	pakal_smoked_days = 0
 	coffee_in_bokal = 0

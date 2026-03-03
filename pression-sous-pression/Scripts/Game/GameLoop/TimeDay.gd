@@ -1,7 +1,7 @@
 extends Timer
-@export var working_hours_per_day: int = 7
-@export var starting_hour: int = 15
-@export var seconds_per_hours: int = 30.0
+#@export var working_hours_per_day: int = 7
+#@export var starting_hour: int = 15
+#@export var seconds_per_hours: int = 30.0
 
 @onready var timer: Timer = $Level/timer_day
 
