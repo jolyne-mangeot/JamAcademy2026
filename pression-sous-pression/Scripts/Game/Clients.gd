@@ -40,6 +40,8 @@ func _process(delta: float) -> void:
 			order_over.emit(client_id)
 			_on_timer_timeout()
 	if timer.is_stopped() || client_alive == false:
+		time_left = accept_count_down
+		timer_bar.value = time_left / accept_count_down
 		return
 	time_left -= delta
 	timer_bar.value = time_left / accept_count_down
@@ -49,9 +51,9 @@ func _on_timer_timeout() -> void:
 	print("Time stop")
 	client_left.emit()
 	order.free()
+	client_alive = false
 	self.visible = false
 	order_in_progress = false
-	client_alive = false
 
 
 func spawn_orders() -> void:
