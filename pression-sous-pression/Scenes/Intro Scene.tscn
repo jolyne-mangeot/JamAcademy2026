@@ -52,7 +52,7 @@ theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("2_fas08")
 theme_override_fonts/bold_font = ExtResource("2_fas08")
 bbcode_enabled = true
-text = "[font_size=35]Bajama, a human-fish, and their son Pacal, a fish, suffer from a difficult divorce. But Bajama won't let themself be defeated and decides to work hard to provide for their child. From now on, Bajama works as a barman in a human submarine and will have to bust a gut to show their worth [/font_size]"
+text = "[font_size=35]Bajama, a human-fish, and their son Pakal, a fish, suffer from a difficult divorce. But Bajama won't let themself be defeated and decides to work hard to provide for their child. From now on, Bajama works as a barman in a human submarine and will have to bust a gut to show their worth. [/font_size]"
 script = SubResource("GDScript_33sem")
 
 [node name="Button" type="Button" parent="." unique_id=415330654]
