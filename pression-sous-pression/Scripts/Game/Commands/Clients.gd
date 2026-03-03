@@ -1,8 +1,8 @@
 extends Node
 
 @onready var timer_bar: ProgressBar = $Timer_progress
-var accept_count_down: float = randi_range(5, 25)
-var order_count_down: float = accept_count_down * 2
+var accept_count_down: float
+var order_count_down: float
 @onready var timer: Timer = $Timer_leaving
 @export var client_id:int
 var client_alive:bool = false
@@ -24,6 +24,8 @@ signal drink_given(glass_type: String)
 
 
 func init_client() -> void:
+	accept_count_down = randi_range(GameManager.client_patience - 5, GameManager.client_patience + 5)
+	order_count_down = accept_count_down * 2
 	timer.wait_time = accept_count_down
 	timer.start()
 	client_alive = true
@@ -50,6 +52,8 @@ func _process(delta: float) -> void:
 
 
 func _on_timer_timeout() -> void:
+	if client_alive == false:
+		return
 	print("Time stop")
 	client_left.emit()
 	order.free()

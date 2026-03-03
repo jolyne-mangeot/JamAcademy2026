@@ -3,6 +3,8 @@ extends Node
 @export var clients_slots:Array[Control]
 var free_chairs:Array[Control]
 
+func _ready() -> void:
+	get_node("client_delay").wait_time = GameManager.client_spawn_delay
 
 func _on_timer_timeout() -> void:
 	free_chairs = []

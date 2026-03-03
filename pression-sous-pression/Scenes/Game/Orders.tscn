@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://c7nilg33fkkli"]
 
 [ext_resource type="Script" uid="uid://b6lyx1x5po76s" path="res://Scripts/Game/Commands/Commands.gd" id="1_8b401"]
-[ext_resource type="Texture2D" uid="uid://tfdpac8v454s" path="res://Assets/Sprites/BeerAmbré.png" id="2_e8770"]
-[ext_resource type="Texture2D" uid="uid://cuwksr6pou2lk" path="res://Assets/Sprites/HookSheet.png" id="2_lj7ow"]
-[ext_resource type="Texture2D" uid="uid://bktvw45be5kok" path="res://Assets/Sprites/PastisGlass.png" id="3_8b401"]
-[ext_resource type="Texture2D" uid="uid://tmjin4c015rd" path="res://Assets/Sprites/BeerBrune.png" id="3_wyg4n"]
-[ext_resource type="Texture2D" uid="uid://cl6e2l150x6vw" path="res://Assets/Sprites/CofeeMug.png" id="4_23sgj"]
-[ext_resource type="Texture2D" uid="uid://dnh8n2oacvfh3" path="res://Assets/Sprites/BeerBlonde.png" id="5_5vg42"]
+[ext_resource type="Texture2D" uid="uid://tfdpac8v454s" path="res://Assets/Sprites/GamingScene/BeerAmbré.png" id="2_e8770"]
+[ext_resource type="Texture2D" uid="uid://cuwksr6pou2lk" path="res://Assets/Sprites/GamingScene/HookSheet.png" id="2_lj7ow"]
+[ext_resource type="Texture2D" uid="uid://bktvw45be5kok" path="res://Assets/Sprites/GamingScene/PastisGlass.png" id="3_8b401"]
+[ext_resource type="Texture2D" uid="uid://tmjin4c015rd" path="res://Assets/Sprites/GamingScene/BeerBrune.png" id="3_wyg4n"]
+[ext_resource type="Texture2D" uid="uid://cl6e2l150x6vw" path="res://Assets/Sprites/GamingScene/CofeeMug.png" id="4_23sgj"]
+[ext_resource type="Texture2D" uid="uid://dnh8n2oacvfh3" path="res://Assets/Sprites/GamingScene/BeerBlonde.png" id="5_5vg42"]
 [ext_resource type="FontFile" uid="uid://d37u2vjhyv1h3" path="res://Assets/Fonts/Kelvinch.otf" id="5_wyg4n"]
 
 [node name="Order" type="Control" unique_id=1545625154]

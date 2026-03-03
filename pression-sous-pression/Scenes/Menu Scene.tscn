@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://qre40qf4tm58"]
 
 [ext_resource type="Script" uid="uid://bvx46004gqirc" path="res://Scripts/Menues/MenuScene.gd" id="1_5vbwr"]
-[ext_resource type="Texture2D" uid="uid://4dd2aus5rxel" path="res://Assets/Sprites/BG.png" id="2_111ux"]
+[ext_resource type="Texture2D" uid="uid://4dd2aus5rxel" path="res://Assets/Sprites/GamingScene/BG.png" id="2_111ux"]
 [ext_resource type="AudioStream" uid="uid://dla0mx78w3ugn" path="res://Assets/Music/otherworldly_oceanside.mp3" id="3_s3ykx"]
 [ext_resource type="FontFile" uid="uid://d37u2vjhyv1h3" path="res://Assets/Fonts/Kelvinch.otf" id="3_sibm3"]
 

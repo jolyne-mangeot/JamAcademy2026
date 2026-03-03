@@ -6,9 +6,6 @@ extends Control
 
 
 func _ready() -> void:
-	resume_button.pressed.connect(_on_resume_button_pressed)
-	quit_button.pressed.connect(_on_quit_button_pressed)
-	menu_button.pressed.connect(_on_main_menu_button_pressed)
 	visible = false
 
 
