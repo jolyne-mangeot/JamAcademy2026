@@ -11,6 +11,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_6w8xc")
+Price_patience = 75
+Price_max_order = 50
+Price_delay = 30
+Price_pourboire = 55
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1687662602]
 
@@ -55,7 +59,6 @@ theme_override_font_sizes/font_size = 32
 text = "Start Next day"
 
 [node name="PauseMenu" parent="." unique_id=2086796289 instance=ExtResource("1_g2cgu")]
-visible = false
 
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Time_enhancement_tap" to="." method="_on_time_enhancement_tap_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Pourboire_enhancement" to="." method="_on_pourboire_enhancement_pressed"]
