@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://c7nilg33fkkli"]
 
+[ext_resource type="Script" uid="uid://f48wk0hvisud" path="res://orders.gd" id="1_kqm5l"]
 [ext_resource type="Texture2D" uid="uid://fknyb55rae4m" path="res://Assets/Drive/HookSheet.png" id="1_tabbh"]
 
 [node name="Node2D" type="Node2D" unique_id=514450677]
+script = ExtResource("1_kqm5l")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=789439060]
 offset_left = 337.0
