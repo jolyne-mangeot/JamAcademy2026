@@ -1,7 +1,7 @@
 extends Node
 
 @onready var timer_bar: ProgressBar = $Timer_progress
-var accept_count_down: float = 25.0
+var accept_count_down: float = randi_range(5, 25)
 var order_count_down: float = accept_count_down * 2
 @onready var timer: Timer = $Timer_leaving
 @export var client_id:int
@@ -12,6 +12,8 @@ var order_in_progress:bool = false
 var time_left: float = accept_count_down
 var progress_percent: float = 0.0
 var is_hovered:bool = false
+var is_count_down: bool = false
+
 
 signal client_left()
 signal order_fulfilled()
@@ -39,6 +41,8 @@ func _process(delta: float) -> void:
 			order_over.emit(client_id)
 			_on_timer_timeout()
 	if timer.is_stopped() || client_alive == false:
+		time_left = accept_count_down
+		timer_bar.value = time_left / accept_count_down
 		return
 	time_left -= delta
 	timer_bar.value = time_left / accept_count_down
@@ -48,9 +52,9 @@ func _on_timer_timeout() -> void:
 	print("Time stop")
 	client_left.emit()
 	order.free()
+	client_alive = false
 	self.visible = false
 	order_in_progress = false
-	client_alive = false
 
 
 func spawn_orders() -> void:
@@ -66,6 +70,8 @@ func _on_button_pressed() -> void:
 		return
 	else:
 		order_accept.emit(client_id, order)
+		time_left = accept_count_down
+		timer_bar.value = time_left / accept_count_down
 
 
 func _on_command_hook_order_accepted(id: int) -> void:

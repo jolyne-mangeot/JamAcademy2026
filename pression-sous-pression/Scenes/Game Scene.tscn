@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://4dapgurhapnk"]
 
 [ext_resource type="Texture2D" uid="uid://cij1wklfkqmq0" path="res://Assets/Sprites/Bar_Back.png" id="1_0km67"]
+[ext_resource type="Script" uid="uid://bridn1eq17kg1" path="res://Scenes/game_scene.gd" id="1_gaucp"]
 [ext_resource type="Texture2D" uid="uid://4dd2aus5rxel" path="res://Assets/Sprites/BG.png" id="1_hlnq6"]
 [ext_resource type="Texture2D" uid="uid://bfqf2ajkcevxs" path="res://Assets/Sprites/Bar_Front.png" id="2_0rvqk"]
 [ext_resource type="AudioStream" uid="uid://dr7a8kb02khx1" path="res://Assets/Music/Quirky Dog.mp3" id="2_ovske"]
@@ -11,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://d1gakwj0hboo4" path="res://Assets/Sprites/BarmanBeer.png" id="5_te4bi"]
 [ext_resource type="Script" uid="uid://74uditbk48ik" path="res://Scripts/Game/CommandHook.gd" id="6_erls1"]
 [ext_resource type="Texture2D" uid="uid://d4hwklr1kbnmy" path="res://Assets/Sprites/BarmanNice.png" id="6_gaucp"]
+[ext_resource type="PackedScene" uid="uid://poifjhi42r6a" path="res://PauseMenu.tscn" id="6_f4f5n"]
 [ext_resource type="Texture2D" uid="uid://b8gscfdskerku" path="res://Assets/Sprites/BeerEmpty.png" id="7_4ad7p"]
 [ext_resource type="Texture2D" uid="uid://yfbdphdl6hme" path="res://Assets/Sprites/AllTable.png" id="7_cxldr"]
 [ext_resource type="Script" uid="uid://ji0lxuim6nta" path="res://Scripts/Game/DragAndDrop.gd" id="8_s5gn0"]
@@ -36,6 +38,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_gaucp")
 
 [node name="Background" type="TextureRect" parent="." unique_id=144055639]
 layout_mode = 1
@@ -150,6 +153,52 @@ grow_vertical = 2
 texture = ExtResource("2_0rvqk")
 expand_mode = 2
 stretch_mode = 4
+
+[node name="CanvasLayer" parent="." unique_id=2086796289 instance=ExtResource("6_f4f5n")]
+
+[node name="Commands" type="Node" parent="." unique_id=2131376500]
+
+[node name="Command Hook 1" type="TextureRect" parent="Commands" unique_id=351767748 node_paths=PackedStringArray("hook_1", "hook_2") groups=["Command Hooks"]]
+offset_left = -17.0
+offset_top = -8.0
+offset_right = 179.47
+offset_bottom = 188.47
+scale = Vector2(0.775, 0.775)
+texture = ExtResource("5_s4ps2")
+expand_mode = 2
+stretch_mode = 4
+script = ExtResource("6_erls1")
+command_pos = Vector2(24, 83)
+hook_1 = NodePath("../Command Hook 2")
+hook_2 = NodePath("../Command Hook 3")
+
+[node name="Command Hook 2" type="TextureRect" parent="Commands" unique_id=342541975 node_paths=PackedStringArray("hook_1", "hook_2") groups=["Command Hooks"]]
+offset_left = 84.0
+offset_top = -24.0
+offset_right = 280.47
+offset_bottom = 172.47
+scale = Vector2(0.775, 0.775)
+texture = ExtResource("5_s4ps2")
+expand_mode = 2
+stretch_mode = 4
+script = ExtResource("6_erls1")
+command_pos = Vector2(126, 67)
+hook_1 = NodePath("../Command Hook 1")
+hook_2 = NodePath("../Command Hook 3")
+
+[node name="Command Hook 3" type="TextureRect" parent="Commands" unique_id=317894685 node_paths=PackedStringArray("hook_1", "hook_2") groups=["Command Hooks"]]
+offset_left = 181.0
+offset_top = -40.0
+offset_right = 377.47
+offset_bottom = 156.47
+scale = Vector2(0.775, 0.775)
+texture = ExtResource("5_s4ps2")
+expand_mode = 2
+stretch_mode = 4
+script = ExtResource("6_erls1")
+command_pos = Vector2(223, 49)
+hook_1 = NodePath("../Command Hook 1")
+hook_2 = NodePath("../Command Hook 2")
 
 [node name="Tables" type="TextureRect" parent="." unique_id=1571111971]
 layout_mode = 1

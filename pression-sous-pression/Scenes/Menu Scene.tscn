@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://qre40qf4tm58"]
 
 [ext_resource type="Script" uid="uid://bvx46004gqirc" path="res://Scripts/Menues/MenuScene.gd" id="1_5vbwr"]
-[ext_resource type="Texture2D" uid="uid://bcs3xai1pw6f2" path="res://Assets/Backgrounds/BG.png" id="2_111ux"]
+[ext_resource type="Texture2D" uid="uid://4dd2aus5rxel" path="res://Assets/Sprites/BG.png" id="2_111ux"]
 [ext_resource type="AudioStream" uid="uid://dla0mx78w3ugn" path="res://Assets/Music/otherworldly_oceanside.mp3" id="3_s3ykx"]
+[ext_resource type="FontFile" uid="uid://d37u2vjhyv1h3" path="res://Assets/Fonts/Kelvinch.otf" id="3_sibm3"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_5vbwr"]
 font_size = 50
@@ -36,23 +37,27 @@ alignment = 1
 
 [node name="Title" type="Label" parent="VBoxContainer" unique_id=1609922161]
 layout_mode = 2
-text = "Pression Sous Pression"
+theme_override_fonts/font = ExtResource("3_sibm3")
+text = "Pressions Sous Pression"
 label_settings = SubResource("LabelSettings_5vbwr")
 horizontal_alignment = 1
 
 [node name="Start_button" type="Button" parent="VBoxContainer" unique_id=2137422034]
 custom_minimum_size = Vector2(855, 20)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_sibm3")
 theme_override_font_sizes/font_size = 32
 text = "Start"
 
 [node name="Settings_button" type="Button" parent="VBoxContainer" unique_id=1417525591]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_sibm3")
 theme_override_font_sizes/font_size = 32
 text = "Settings"
 
 [node name="Quit_button" type="Button" parent="VBoxContainer" unique_id=1967446187]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_sibm3")
 theme_override_font_sizes/font_size = 32
 text = "Quit"
 
