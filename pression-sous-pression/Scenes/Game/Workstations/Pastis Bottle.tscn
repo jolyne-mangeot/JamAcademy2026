@@ -31,10 +31,10 @@ stretch_mode = 4
 [node name="Empty Glass" type="TextureRect" parent="." unique_id=855018561]
 visible = false
 layout_mode = 0
-offset_left = 19.0
-offset_top = 178.0
-offset_right = 645.0
-offset_bottom = 1130.0
+offset_left = 20.0
+offset_top = 174.0
+offset_right = 646.0
+offset_bottom = 1126.0
 scale = Vector2(0.07, 0.07)
 texture = ExtResource("3_lhs42")
 stretch_mode = 4
@@ -42,7 +42,9 @@ stretch_mode = 4
 [node name="Prep Progress" type="ProgressBar" parent="." unique_id=1033103695]
 visible = false
 layout_mode = 0
-offset_top = -27.0
-offset_right = 90.0
+offset_left = 1.0
+offset_top = -26.0
+offset_right = 85.23
+offset_bottom = -7.0
 max_value = 1.0
 show_percentage = false
