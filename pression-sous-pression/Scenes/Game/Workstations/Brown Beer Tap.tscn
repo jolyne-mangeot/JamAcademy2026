@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://devstmytgd4ul" path="res://Scripts/Game/TapScript.gd" id="1_kjhln"]
 [ext_resource type="Texture2D" uid="uid://dqdpkoiawt35t" path="res://Assets/Sprites/BeerDispenserR.png" id="1_wr6ff"]
+[ext_resource type="Texture2D" uid="uid://cel4noqhjb6uj" path="res://Assets/Sprites/brune.png" id="2_m1s2v"]
 [ext_resource type="Texture2D" uid="uid://b8gscfdskerku" path="res://Assets/Sprites/BeerEmpty.png" id="3_kjhln"]
 
 [node name="BeerTap" type="Control" unique_id=1463512649 node_paths=PackedStringArray("progress", "empty_glass")]
@@ -17,6 +18,15 @@ script = ExtResource("1_kjhln")
 progress = NodePath("Prep Progress")
 empty_glass = NodePath("Empty Glass")
 
+[node name="Logo" type="TextureRect" parent="." unique_id=2128677294]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 50.0
+offset_right = 64.0
+offset_bottom = 90.0
+texture = ExtResource("2_m1s2v")
+expand_mode = 1
+
 [node name="Tap Texture" type="TextureRect" parent="." unique_id=1189930431]
 layout_mode = 0
 offset_left = 11.0
@@ -29,10 +39,10 @@ stretch_mode = 4
 [node name="Empty Glass" type="TextureRect" parent="." unique_id=855018561]
 visible = false
 layout_mode = 0
-offset_left = -8.0
-offset_top = 160.0
-offset_right = 2039.9995
-offset_bottom = 2208.0
+offset_left = 6.0
+offset_top = 167.0
+offset_right = 1383.7778
+offset_bottom = 1811.4443
 scale = Vector2(0.045, 0.045)
 texture = ExtResource("3_kjhln")
 expand_mode = 1
@@ -41,9 +51,9 @@ stretch_mode = 4
 [node name="Prep Progress" type="ProgressBar" parent="." unique_id=1033103695]
 visible = false
 layout_mode = 0
-offset_left = -0.23
-offset_top = -35.0
-offset_right = 89.77
-offset_bottom = -8.0
+offset_left = 1.0
+offset_top = -26.0
+offset_right = 85.23
+offset_bottom = -7.0
 max_value = 1.0
 show_percentage = false

@@ -13,23 +13,26 @@
 visible = false
 layout_mode = 3
 anchors_preset = 0
+scale = Vector2(1.295, 1.295)
 script = ExtResource("1_8b401")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=789439060]
 layout_mode = 0
-offset_right = 151.0
+offset_right = 86.41194
 offset_bottom = 145.0
+scale = Vector2(1.295, 1.295)
 texture = ExtResource("2_lj7ow")
-expand_mode = 2
+expand_mode = 1
 stretch_mode = 4
 
 [node name="brown" type="TextureRect" parent="." unique_id=2119886699 groups=["drink_type"]]
 visible = false
 layout_mode = 0
-offset_left = 43.0
-offset_top = 44.0
-offset_right = 97.0
-offset_bottom = 106.0
+offset_left = 19.323343
+offset_top = 57.786934
+offset_right = 73.32335
+offset_bottom = 119.786934
+scale = Vector2(1.295, 1.295)
 texture = ExtResource("3_wyg4n")
 expand_mode = 1
 stretch_mode = 4
@@ -37,10 +40,11 @@ stretch_mode = 4
 [node name="red" type="TextureRect" parent="." unique_id=1193044659 groups=["drink_type"]]
 visible = false
 layout_mode = 0
-offset_left = 43.0
-offset_top = 42.0
-offset_right = 97.0
-offset_bottom = 104.0
+offset_left = 19.458931
+offset_top = 57.14286
+offset_right = 73.45894
+offset_bottom = 119.14286
+scale = Vector2(1.295, 1.295)
 texture = ExtResource("2_e8770")
 expand_mode = 1
 stretch_mode = 4
@@ -48,10 +52,11 @@ stretch_mode = 4
 [node name="blond" type="TextureRect" parent="." unique_id=128665556 groups=["drink_type"]]
 visible = false
 layout_mode = 0
-offset_left = 42.0
-offset_top = 42.0
-offset_right = 96.0
-offset_bottom = 104.0
+offset_left = 19.458921
+offset_top = 57.142868
+offset_right = 73.45892
+offset_bottom = 119.142876
+scale = Vector2(1.295, 1.295)
 texture = ExtResource("5_5vg42")
 expand_mode = 1
 stretch_mode = 4
@@ -59,10 +64,11 @@ stretch_mode = 4
 [node name="pastis" type="TextureRect" parent="." unique_id=300789546 groups=["drink_type"]]
 visible = false
 layout_mode = 0
-offset_left = 49.0
-offset_top = 45.0
-offset_right = 98.0
-offset_bottom = 105.0
+offset_left = 29.492832
+offset_top = 63.922523
+offset_right = 68.56206
+offset_bottom = 123.939766
+scale = Vector2(1.295, 1.295)
 texture = ExtResource("3_8b401")
 expand_mode = 1
 stretch_mode = 4
@@ -70,29 +76,32 @@ stretch_mode = 4
 [node name="coffee" type="TextureRect" parent="." unique_id=1955363505 groups=["drink_type"]]
 visible = false
 layout_mode = 0
-offset_left = 35.0
-offset_top = 42.0
-offset_right = 102.0
-offset_bottom = 109.0
+offset_left = 13.899614
+offset_top = 82.90557
+offset_right = 70.89472
+offset_bottom = 122.43444
+scale = Vector2(1.295, 1.295)
 texture = ExtResource("4_23sgj")
 expand_mode = 1
 stretch_mode = 4
 
 [node name="koko" type="Label" parent="." unique_id=634206884 groups=["drink_type"]]
 layout_mode = 0
-offset_left = 69.0
-offset_top = 97.0
-offset_right = 109.0
-offset_bottom = 130.0
+offset_left = 49.420845
+offset_top = 132.04633
+offset_right = 89.42085
+offset_bottom = 165.04633
+scale = Vector2(1.295, 1.295)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_wyg4n")
 theme_override_font_sizes/font_size = 24
 text = "x1"
 
 [node name="order_bar" type="ProgressBar" parent="." unique_id=213651992]
 layout_mode = 0
-offset_left = 32.0
-offset_top = 143.0
-offset_right = 112.0
-offset_bottom = 159.0
+offset_top = 190.7336
+offset_right = 84.229996
+offset_bottom = 209.7336
+scale = Vector2(1.295, 1.295)
 max_value = 1.0
 show_percentage = false

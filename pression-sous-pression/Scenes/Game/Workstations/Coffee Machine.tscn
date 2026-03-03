@@ -19,9 +19,9 @@ empty_glass = NodePath("Empty Cup")
 
 [node name="Machine Texture" type="TextureRect" parent="." unique_id=1189930431]
 layout_mode = 0
-offset_left = -3.0
-offset_right = 115.0
-offset_bottom = 118.0
+offset_left = 2.0
+offset_right = 99.0
+offset_bottom = 128.0
 texture = ExtResource("2_jmsum")
 expand_mode = 1
 stretch_mode = 4
@@ -29,10 +29,10 @@ stretch_mode = 4
 [node name="Empty Cup" type="TextureRect" parent="." unique_id=855018561]
 visible = false
 layout_mode = 0
-offset_left = 15.0
-offset_top = 75.0
-offset_right = 1039.0
-offset_bottom = 1099.0
+offset_left = 8.0
+offset_top = 101.0
+offset_right = 813.1948
+offset_bottom = 646.4545
 scale = Vector2(0.077, 0.077)
 texture = ExtResource("3_xe33q")
 stretch_mode = 4
@@ -40,10 +40,10 @@ stretch_mode = 4
 [node name="Prep Progress" type="ProgressBar" parent="." unique_id=1033103695]
 visible = false
 layout_mode = 0
-offset_left = -0.23
-offset_top = -35.0
-offset_right = 114.945
-offset_bottom = -8.0
+offset_left = 1.0
+offset_top = -26.0
+offset_right = 85.23
+offset_bottom = -7.0
 theme_override_font_sizes/font_size = 16
 max_value = 1.0
 show_percentage = false
