@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://h2ofuvb2raus"]
+
+[ext_resource type="Script" uid="uid://devstmytgd4ul" path="res://Scripts/Game/TapScript.gd" id="1_kjhln"]
+[ext_resource type="Texture2D" uid="uid://deuxgowadgyic" path="res://Assets/Drive/BeerDispenser.png" id="1_wr6ff"]
+[ext_resource type="Texture2D" uid="uid://b6qjlj00vieug" path="res://Assets/Drive/Beer.png" id="2_do4vl"]
+[ext_resource type="Script" uid="uid://ji0lxuim6nta" path="res://Scripts/Game/DragAndDrop.gd" id="4_pxe2y"]
+
+[node name="BlondBeerTap" type="Control" unique_id=1463512649 node_paths=PackedStringArray("progress", "empty_glass", "full_glass")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1079.0
+offset_bottom = -432.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kjhln")
+progress = NodePath("Prep Progress")
+empty_glass = NodePath("Empty Glass")
+full_glass = NodePath("Full Glass")
+
+[node name="Tap Texture" type="TextureRect" parent="." unique_id=1189930431]
+layout_mode = 0
+offset_left = 0.9050293
+offset_top = 1.0
+offset_right = 84.0
+offset_bottom = 217.0
+texture = ExtResource("1_wr6ff")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Empty Glass" type="TextureRect" parent="." unique_id=855018561]
+visible = false
+layout_mode = 0
+offset_left = 4.0
+offset_top = 144.0
+offset_right = 2051.9995
+offset_bottom = 2192.0
+scale = Vector2(0.039, 0.039)
+texture = ExtResource("2_do4vl")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Full Glass" type="Sprite2D" parent="." unique_id=1351029385]
+visible = false
+position = Vector2(44, 184)
+scale = Vector2(0.039, 0.039)
+texture = ExtResource("2_do4vl")
+script = ExtResource("4_pxe2y")
+origin_position = Vector2(44, 184)
+glass_type = "blond"
+
+[node name="Prep Progress" type="ProgressBar" parent="." unique_id=1033103695]
+visible = false
+layout_mode = 0
+offset_left = -17.0
+offset_top = -20.0
+offset_right = 111.0
+offset_bottom = 7.0
+max_value = 1.0
