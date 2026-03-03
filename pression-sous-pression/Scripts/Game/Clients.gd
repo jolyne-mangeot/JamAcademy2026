@@ -1,7 +1,7 @@
 extends Node
 
 @onready var timer_bar: ProgressBar = $Timer_progress
-var accept_count_down: float = 25.0
+var accept_count_down: float = randi_range(5, 25)
 var order_count_down: float = accept_count_down * 2
 @onready var timer: Timer = $Timer_leaving
 @export var client_id:int
@@ -13,6 +13,7 @@ var time_left: float = accept_count_down
 var progress_percent: float = 0.0
 var is_hovered:bool = false
 var is_count_down: bool = false
+
 
 signal client_left()
 signal order_fulfilled()
