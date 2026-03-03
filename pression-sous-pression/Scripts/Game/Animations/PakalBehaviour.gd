@@ -1,8 +1,5 @@
-extends Resource
+extends Node
 
-var drink_name:String
-var icon:Texture2D
-var glass_type:String
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

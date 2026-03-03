@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://162po0cqemj3"]
 
-[ext_resource type="Script" uid="uid://mb0agjqgvp0b" path="res://Scripts/Game/PastisBottleScript.gd" id="1_lhs42"]
+[ext_resource type="Script" uid="uid://mb0agjqgvp0b" path="res://Scripts/Game/Workspaces/PastisBottleScript.gd" id="1_lhs42"]
 [ext_resource type="Texture2D" uid="uid://dweb1o0x164xc" path="res://Assets/Sprites/PastisBottle.png" id="2_lhs42"]
 [ext_resource type="Texture2D" uid="uid://bmu8q62xumpp0" path="res://Assets/Sprites/PastisGlassEmpty.png" id="3_lhs42"]
 

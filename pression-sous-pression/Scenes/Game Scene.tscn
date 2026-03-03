@@ -6,30 +6,38 @@
 [ext_resource type="Texture2D" uid="uid://bfqf2ajkcevxs" path="res://Assets/Sprites/Bar_Front.png" id="2_0rvqk"]
 [ext_resource type="AudioStream" uid="uid://dr7a8kb02khx1" path="res://Assets/Music/Quirky Dog.mp3" id="2_ovske"]
 [ext_resource type="PackedScene" uid="uid://h2ofuvb2raus" path="res://Scenes/Game/Workstations/Brown Beer Tap.tscn" id="4_h35fg"]
-[ext_resource type="Script" uid="uid://byumfj7j1wfvs" path="res://Scripts/Game/BajamaBehaviour.gd" id="5_f4f5n"]
+[ext_resource type="Script" uid="uid://byumfj7j1wfvs" path="res://Scripts/Game/Animations/BajamaBehaviour.gd" id="5_f4f5n"]
 [ext_resource type="Texture2D" uid="uid://cwo4dshqjqv3k" path="res://Assets/Sprites/AllStool.png" id="5_h35fg"]
 [ext_resource type="Texture2D" uid="uid://cnxoahf07js8s" path="res://Assets/Sprites/Hook.png" id="5_s4ps2"]
 [ext_resource type="Texture2D" uid="uid://d1gakwj0hboo4" path="res://Assets/Sprites/BarmanBeer.png" id="5_te4bi"]
-[ext_resource type="Script" uid="uid://74uditbk48ik" path="res://Scripts/Game/CommandHook.gd" id="6_erls1"]
+[ext_resource type="Script" uid="uid://74uditbk48ik" path="res://Scripts/Game/Commands/CommandHook.gd" id="6_erls1"]
 [ext_resource type="PackedScene" uid="uid://poifjhi42r6a" path="res://Scenes/Game/PauseMenu.tscn" id="6_f4f5n"]
 [ext_resource type="Texture2D" uid="uid://d4hwklr1kbnmy" path="res://Assets/Sprites/BarmanNice.png" id="6_gaucp"]
 [ext_resource type="Texture2D" uid="uid://b8gscfdskerku" path="res://Assets/Sprites/BeerEmpty.png" id="7_4ad7p"]
-[ext_resource type="Texture2D" uid="uid://yfbdphdl6hme" path="res://Assets/Sprites/AllTable.png" id="7_cxldr"]
-[ext_resource type="Script" uid="uid://ji0lxuim6nta" path="res://Scripts/Game/DragAndDrop.gd" id="8_s5gn0"]
+[ext_resource type="Script" uid="uid://ji0lxuim6nta" path="res://Scripts/Game/Animations/DragAndDrop.gd" id="8_s5gn0"]
 [ext_resource type="Texture2D" uid="uid://cey13blscp0om" path="res://Assets/Sprites/CofeeMugEmpty.png" id="9_4ad7p"]
 [ext_resource type="Texture2D" uid="uid://bmu8q62xumpp0" path="res://Assets/Sprites/PastisGlassEmpty.png" id="10_8ca1q"]
 [ext_resource type="PackedScene" uid="uid://cdu5q7t0eg6ik" path="res://Scenes/Game/Workstations/Red Beer Tap.tscn" id="10_te4bi"]
 [ext_resource type="PackedScene" uid="uid://cm7260pd33nil" path="res://Scenes/Game/Workstations/Blond Beer Tap.tscn" id="11_26ygd"]
 [ext_resource type="PackedScene" uid="uid://fibkjibmm8i0" path="res://Scenes/Game/Workstations/Coffee Machine.tscn" id="11_s5gn0"]
+[ext_resource type="Texture2D" uid="uid://cmgwve7q6ogjo" path="res://Assets/Sprites/Table.png" id="11_yqalu"]
 [ext_resource type="PackedScene" uid="uid://162po0cqemj3" path="res://Scenes/Game/Workstations/Pastis Bottle.tscn" id="12_11pef"]
+[ext_resource type="FontFile" uid="uid://d37u2vjhyv1h3" path="res://Assets/Fonts/Kelvinch.otf" id="12_pj0fw"]
 [ext_resource type="Texture2D" uid="uid://tmjin4c015rd" path="res://Assets/Sprites/BeerBrune.png" id="13_jelqd"]
+[ext_resource type="Texture2D" uid="uid://btrbfn33hxjxw" path="res://Assets/Sprites/separator.png" id="13_yqalu"]
 [ext_resource type="PackedScene" uid="uid://blm4f15xoka3u" path="res://Scenes/Game/Clients.tscn" id="14_s4ps2"]
 [ext_resource type="Texture2D" uid="uid://tfdpac8v454s" path="res://Assets/Sprites/BeerAmbré.png" id="15_aldvi"]
-[ext_resource type="Script" uid="uid://b5vqw4vvhsywa" path="res://Scripts/Game/ClientsSpawner.gd" id="16_o7mf4"]
+[ext_resource type="Script" uid="uid://b5vqw4vvhsywa" path="res://Scripts/Game/Commands/ClientsSpawner.gd" id="16_o7mf4"]
 [ext_resource type="Texture2D" uid="uid://dnh8n2oacvfh3" path="res://Assets/Sprites/BeerBlonde.png" id="16_te4bi"]
 [ext_resource type="Texture2D" uid="uid://cl6e2l150x6vw" path="res://Assets/Sprites/CofeeMug.png" id="17_26ygd"]
 [ext_resource type="Texture2D" uid="uid://bktvw45be5kok" path="res://Assets/Sprites/PastisGlass.png" id="18_gaucp"]
 [ext_resource type="Texture2D" uid="uid://cg0wts3a4ssuy" path="res://Assets/Sprites/Fishbowl.png" id="21_26ygd"]
+
+[sub_resource type="Gradient" id="Gradient_pj0fw"]
+colors = PackedColorArray(0.5343956, 0.25409824, 0.1394135, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_6crsu"]
+gradient = SubResource("Gradient_pj0fw")
 
 [node name="Level" type="Control" unique_id=327468503]
 layout_mode = 3
@@ -39,6 +47,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_gaucp")
+
+[node name="DayPassing" type="TextureRect" parent="." unique_id=1116585987]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("GradientTexture2D_6crsu")
 
 [node name="Background" type="TextureRect" parent="." unique_id=144055639]
 layout_mode = 1
@@ -161,20 +175,88 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 335.0
+offset_top = 1093.43
+offset_right = 335.0
+offset_bottom = 1093.4312
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.265, 0.265)
 size_flags_horizontal = 6
-texture = ExtResource("7_cxldr")
+texture = ExtResource("11_yqalu")
 expand_mode = 2
 stretch_mode = 4
+
+[node name="1" type="Label" parent="Tables" unique_id=453346888]
+layout_mode = 0
+offset_left = 509.43408
+offset_top = 54.811325
+offset_right = 635.4341
+offset_bottom = 355.81134
+theme_override_colors/font_color = Color(0.69789743, 0.5952235, 0, 1)
+theme_override_fonts/font = ExtResource("12_pj0fw")
+theme_override_font_sizes/font_size = 220
+text = "1"
+
+[node name="2" type="Label" parent="Tables" unique_id=804810874]
+layout_mode = 0
+offset_left = 1860.3774
+offset_top = 66.13207
+offset_right = 1986.3774
+offset_bottom = 367.13208
+rotation = -0.17577347
+theme_override_colors/font_color = Color(0.69789743, 0.5952235, 0, 1)
+theme_override_fonts/font = ExtResource("12_pj0fw")
+theme_override_font_sizes/font_size = 220
+text = "2"
+
+[node name="Tables2" type="TextureRect" parent="." unique_id=1099176785]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1500.0
+offset_top = 1093.43
+offset_right = 1500.0
+offset_bottom = 1093.4312
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.265, 0.265)
+size_flags_horizontal = 6
+texture = ExtResource("11_yqalu")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="3" type="Label" parent="Tables2" unique_id=418407284]
+layout_mode = 0
+offset_left = 513.20764
+offset_top = 47.264153
+offset_right = 639.20764
+offset_bottom = 348.26416
+theme_override_colors/font_color = Color(0.69789743, 0.5952235, 0, 1)
+theme_override_fonts/font = ExtResource("12_pj0fw")
+theme_override_font_sizes/font_size = 220
+text = "3"
+
+[node name="4" type="Label" parent="Tables2" unique_id=447908874]
+layout_mode = 0
+offset_left = 1849.0566
+offset_top = 51.03774
+offset_right = 1975.0566
+offset_bottom = 352.03775
+rotation = -0.17046736
+theme_override_colors/font_color = Color(0.69789743, 0.5952235, 0, 1)
+theme_override_fonts/font = ExtResource("12_pj0fw")
+theme_override_font_sizes/font_size = 220
+text = "4"
 
 [node name="Stools" type="TextureRect" parent="." unique_id=1391185693]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 47.95
-offset_bottom = 47.94995
+offset_top = 17.15
+offset_bottom = 17.150024
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 6
@@ -182,19 +264,38 @@ texture = ExtResource("5_h35fg")
 expand_mode = 2
 stretch_mode = 4
 
+[node name="Pipe" type="TextureRect" parent="." unique_id=1798864866]
+layout_mode = 0
+offset_left = 1748.0
+offset_top = 427.0
+offset_right = 2006.0
+offset_bottom = 481.0
+scale = Vector2(0.585, 0.585)
+texture = ExtResource("13_yqalu")
+
+[node name="Pipe2" type="TextureRect" parent="." unique_id=1727810473]
+layout_mode = 0
+offset_left = 1923.9999
+offset_top = 428.0
+offset_right = 2182.0
+offset_bottom = 482.0
+scale = Vector2(0.585, 0.585)
+texture = ExtResource("13_yqalu")
+
 [node name="BrownBeerTap" parent="." unique_id=1463512649 node_paths=PackedStringArray("full_glass") instance=ExtResource("4_h35fg")]
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 2019.0
+offset_left = 1999.0
 offset_top = 280.64
-offset_right = 2098.9995
+offset_right = 2078.9995
 offset_bottom = 505.6402
 grow_horizontal = 1
 grow_vertical = 1
 scale = Vector2(2.335, 2.335)
 full_glass = NodePath("../Brown Full Glass")
+beer_type = "brown"
 
 [node name="RedBeerTap" parent="." unique_id=1005572842 node_paths=PackedStringArray("full_glass") instance=ExtResource("10_te4bi")]
 layout_mode = 1
@@ -204,15 +305,17 @@ offset_right = -661.00037
 offset_bottom = -934.3596
 scale = Vector2(2.335, 2.335)
 full_glass = NodePath("../Red Full Glass")
+beer_type = "red"
 
 [node name="BlondBeerTap" parent="." unique_id=1322661491 node_paths=PackedStringArray("full_glass") instance=ExtResource("11_26ygd")]
 layout_mode = 1
-offset_left = 1619.0
+offset_left = 1639.0
 offset_top = 280.64
-offset_right = -861.00037
+offset_right = -841.00037
 offset_bottom = -934.3596
 scale = Vector2(2.335, 2.335)
 full_glass = NodePath("../Blond Full Glass")
+beer_type = "blond"
 
 [node name="CoffeeMachine" parent="." unique_id=1464255273 node_paths=PackedStringArray("full_glass") instance=ExtResource("11_s5gn0")]
 layout_mode = 1
@@ -234,7 +337,7 @@ full_glass = NodePath("../Pastis Full Glass")
 
 [node name="Brown Full Glass" type="Sprite2D" parent="." unique_id=1755523614]
 visible = false
-position = Vector2(2110.6875, 746.822)
+position = Vector2(2091, 750)
 scale = Vector2(0.10779163, 0.108)
 texture = ExtResource("13_jelqd")
 script = ExtResource("8_s5gn0")
@@ -242,7 +345,7 @@ glass_type = "brown"
 
 [node name="Red Full Glass" type="Sprite2D" parent="." unique_id=1012011842]
 visible = false
-position = Vector2(1910.6874, 746.822)
+position = Vector2(1911, 751)
 scale = Vector2(0.10779163, 0.108)
 texture = ExtResource("15_aldvi")
 script = ExtResource("8_s5gn0")
@@ -250,7 +353,7 @@ glass_type = "red"
 
 [node name="Blond Full Glass" type="Sprite2D" parent="." unique_id=369252389]
 visible = false
-position = Vector2(1710.6875, 746.822)
+position = Vector2(1732, 750)
 scale = Vector2(0.10779163, 0.108)
 texture = ExtResource("16_te4bi")
 script = ExtResource("8_s5gn0")
@@ -277,9 +380,9 @@ glass_type = "pastis"
 [node name="Client 1" parent="Client Chairs" unique_id=1767717981 instance=ExtResource("14_s4ps2")]
 visible = false
 offset_left = 71.0
-offset_top = 834.53
+offset_top = 814.115
 offset_right = 274.00006
-offset_bottom = 1135.9019
+offset_bottom = 1115.4869
 scale = Vector2(2.165, 2.165)
 size_flags_horizontal = 3
 client_id = 1
@@ -287,9 +390,9 @@ client_id = 1
 [node name="Client 2" parent="Client Chairs" unique_id=1528582113 instance=ExtResource("14_s4ps2")]
 visible = false
 offset_left = 1266.1699
-offset_top = 839.0
+offset_top = 814.115
 offset_right = 1455.3154
-offset_bottom = 1116.1462
+offset_bottom = 1091.2614
 scale = Vector2(-2.165, 2.165)
 size_flags_horizontal = 3
 client_id = 2
@@ -297,9 +400,9 @@ client_id = 2
 [node name="Client 3" parent="Client Chairs" unique_id=356995161 instance=ExtResource("14_s4ps2")]
 visible = false
 offset_left = 1287.0
-offset_top = 838.0
+offset_top = 814.115
 offset_right = 1474.8384
-offset_bottom = 1100.615
+offset_bottom = 1076.7301
 scale = Vector2(2.165, 2.165)
 size_flags_horizontal = 3
 client_id = 3
@@ -307,22 +410,32 @@ client_id = 3
 [node name="Client 4" parent="Client Chairs" unique_id=1825313883 instance=ExtResource("14_s4ps2")]
 visible = false
 offset_left = 2439.0
-offset_top = 834.53
+offset_top = 814.115
 offset_right = 2636.0
-offset_bottom = 1114.697
+offset_bottom = 1094.2821
 scale = Vector2(-2.165, 2.165)
 size_flags_horizontal = 3
 client_id = 4
 
 [node name="Bokal" type="TextureRect" parent="." unique_id=1409635287]
 layout_mode = 0
-offset_left = 48.0
-offset_top = 542.0
-offset_right = 346.0
-offset_bottom = 836.0
+offset_left = 54.0
+offset_top = 557.0
+offset_right = 352.0
+offset_bottom = 851.0
 texture = ExtResource("21_26ygd")
 expand_mode = 1
 stretch_mode = 4
+
+[node name="Pipe3" type="TextureRect" parent="." unique_id=93099378]
+layout_mode = 0
+offset_left = 258.0
+offset_top = 702.0
+offset_right = 516.0
+offset_bottom = 756.0
+rotation = 0.23691818
+scale = Vector2(0.105, 0.105)
+texture = ExtResource("13_yqalu")
 
 [node name="Glasses" type="Node" parent="." unique_id=996044032]
 
@@ -414,6 +527,11 @@ autoplay = true
 [connection signal="glass_dropped" from="Pastis Full Glass" to="Client Chairs/Client 2" method="_on_glass_dropped"]
 [connection signal="glass_dropped" from="Pastis Full Glass" to="Client Chairs/Client 3" method="_on_glass_dropped"]
 [connection signal="glass_dropped" from="Pastis Full Glass" to="Client Chairs/Client 4" method="_on_glass_dropped"]
+[connection signal="drink_given" from="Client Chairs/Client 1" to="BrownBeerTap" method="_on_client_drink_given"]
+[connection signal="drink_given" from="Client Chairs/Client 1" to="RedBeerTap" method="_on_client_drink_given"]
+[connection signal="drink_given" from="Client Chairs/Client 1" to="BlondBeerTap" method="_on_client_drink_given"]
+[connection signal="drink_given" from="Client Chairs/Client 1" to="CoffeeMachine" method="_on_client_drink_given"]
+[connection signal="drink_given" from="Client Chairs/Client 1" to="PastisBottle" method="_on_client_drink_given"]
 [connection signal="order_accept" from="Client Chairs/Client 1" to="Command Hook 1" method="_on_client_order_accept"]
 [connection signal="order_accept" from="Client Chairs/Client 1" to="Command Hook 2" method="_on_client_order_accept"]
 [connection signal="order_accept" from="Client Chairs/Client 1" to="Command Hook 3" method="_on_client_order_accept"]
@@ -421,6 +539,11 @@ autoplay = true
 [connection signal="order_over" from="Client Chairs/Client 1" to="Command Hook 1" method="_on_client_order_over"]
 [connection signal="order_over" from="Client Chairs/Client 1" to="Command Hook 2" method="_on_client_order_over"]
 [connection signal="order_over" from="Client Chairs/Client 1" to="Command Hook 3" method="_on_client_order_over"]
+[connection signal="drink_given" from="Client Chairs/Client 2" to="BrownBeerTap" method="_on_client_drink_given"]
+[connection signal="drink_given" from="Client Chairs/Client 2" to="RedBeerTap" method="_on_client_drink_given"]
+[connection signal="drink_given" from="Client Chairs/Client 2" to="BlondBeerTap" method="_on_client_drink_given"]
+[connection signal="drink_given" from="Client Chairs/Client 2" to="CoffeeMachine" method="_on_client_drink_given"]
+[connection signal="drink_given" from="Client Chairs/Client 2" to="PastisBottle" method="_on_client_drink_given"]
 [connection signal="order_accept" from="Client Chairs/Client 2" to="Command Hook 1" method="_on_client_order_accept"]
 [connection signal="order_accept" from="Client Chairs/Client 2" to="Command Hook 2" method="_on_client_order_accept"]
 [connection signal="order_accept" from="Client Chairs/Client 2" to="Command Hook 3" method="_on_client_order_accept"]
@@ -428,6 +551,11 @@ autoplay = true
 [connection signal="order_over" from="Client Chairs/Client 2" to="Command Hook 1" method="_on_client_order_over"]
 [connection signal="order_over" from="Client Chairs/Client 2" to="Command Hook 2" method="_on_client_order_over"]
 [connection signal="order_over" from="Client Chairs/Client 2" to="Command Hook 3" method="_on_client_order_over"]
+[connection signal="drink_given" from="Client Chairs/Client 3" to="BrownBeerTap" method="_on_client_drink_given"]
+[connection signal="drink_given" from="Client Chairs/Client 3" to="RedBeerTap" method="_on_client_drink_given"]
+[connection signal="drink_given" from="Client Chairs/Client 3" to="BlondBeerTap" method="_on_client_drink_given"]
+[connection signal="drink_given" from="Client Chairs/Client 3" to="CoffeeMachine" method="_on_client_drink_given"]
+[connection signal="drink_given" from="Client Chairs/Client 3" to="PastisBottle" method="_on_client_drink_given"]
 [connection signal="order_accept" from="Client Chairs/Client 3" to="Command Hook 1" method="_on_client_order_accept"]
 [connection signal="order_accept" from="Client Chairs/Client 3" to="Command Hook 2" method="_on_client_order_accept"]
 [connection signal="order_accept" from="Client Chairs/Client 3" to="Command Hook 3" method="_on_client_order_accept"]
@@ -435,6 +563,11 @@ autoplay = true
 [connection signal="order_over" from="Client Chairs/Client 3" to="Command Hook 1" method="_on_client_order_over"]
 [connection signal="order_over" from="Client Chairs/Client 3" to="Command Hook 2" method="_on_client_order_over"]
 [connection signal="order_over" from="Client Chairs/Client 3" to="Command Hook 3" method="_on_client_order_over"]
+[connection signal="drink_given" from="Client Chairs/Client 4" to="BrownBeerTap" method="_on_client_drink_given"]
+[connection signal="drink_given" from="Client Chairs/Client 4" to="RedBeerTap" method="_on_client_drink_given"]
+[connection signal="drink_given" from="Client Chairs/Client 4" to="BlondBeerTap" method="_on_client_drink_given"]
+[connection signal="drink_given" from="Client Chairs/Client 4" to="CoffeeMachine" method="_on_client_drink_given"]
+[connection signal="drink_given" from="Client Chairs/Client 4" to="PastisBottle" method="_on_client_drink_given"]
 [connection signal="order_accept" from="Client Chairs/Client 4" to="Command Hook 1" method="_on_client_order_accept"]
 [connection signal="order_accept" from="Client Chairs/Client 4" to="Command Hook 2" method="_on_client_order_accept"]
 [connection signal="order_accept" from="Client Chairs/Client 4" to="Command Hook 3" method="_on_client_order_accept"]

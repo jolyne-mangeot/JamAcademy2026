@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://fibkjibmm8i0"]
 
-[ext_resource type="Script" uid="uid://b4nj11npcvew1" path="res://Scripts/Game/CoffeeMachineScript.gd" id="1_jmsum"]
+[ext_resource type="Script" uid="uid://b4nj11npcvew1" path="res://Scripts/Game/Workspaces/CoffeeMachineScript.gd" id="1_jmsum"]
 [ext_resource type="Texture2D" uid="uid://c0pw3mv7r3cw6" path="res://Assets/Sprites/cofee_machine.png" id="2_jmsum"]
 [ext_resource type="Texture2D" uid="uid://cey13blscp0om" path="res://Assets/Sprites/CofeeMugEmpty.png" id="3_xe33q"]
 

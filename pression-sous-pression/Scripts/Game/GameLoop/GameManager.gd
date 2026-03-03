@@ -1,5 +1,6 @@
 class_name Constants extends RefCounted
 
+var audio_muted:bool = false
 
 enum Order {
 	BROWN,

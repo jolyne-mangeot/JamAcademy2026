@@ -3,6 +3,7 @@ extends Control
 var RNG = RandomNumberGenerator.new()
 
 var amount_label:Label
+var id_label:Label
 var progress_bar:ProgressBar
 var drinks:Array[Node]
 var drink_amount: int = 0
@@ -28,6 +29,7 @@ func get_random_int(min_val: int, max_val: int) -> int:
 
 func init_order() -> void:
 	amount_label = get_node("koko")
+	id_label = get_node("id")
 	progress_bar = get_node("order_bar")
 	drinks = [get_node("red"), get_node("brown"), get_node("blond"), get_node("coffee"), get_node("pastis")]
 	RNG.randomize()
@@ -38,4 +40,5 @@ func init_order() -> void:
 	visual = drinks[drink_id]
 	print(types)
 	amount_label.text = "x"+str(drink_amount)
+	id_label.text = str(client_id)
 	visual.visible = true

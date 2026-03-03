@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://poifjhi42r6a"]
 
-[ext_resource type="Script" uid="uid://26rfcj307fqc" path="res://Scripts/Game/PauseMenu.gd" id="1_nov15"]
+[ext_resource type="Script" uid="uid://26rfcj307fqc" path="res://Scripts/Game/GameLoop/PauseMenu.gd" id="1_nov15"]
 [ext_resource type="FontFile" uid="uid://d37u2vjhyv1h3" path="res://Assets/Fonts/Kelvinch.otf" id="2_etnfi"]
 
 [sub_resource type="GDScript" id="GDScript_nov15"]
