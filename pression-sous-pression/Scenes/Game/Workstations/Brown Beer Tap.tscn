@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://h2ofuvb2raus"]
 
 [ext_resource type="Script" uid="uid://devstmytgd4ul" path="res://Scripts/Game/Workspaces/TapScript.gd" id="1_kjhln"]
-[ext_resource type="Texture2D" uid="uid://dqdpkoiawt35t" path="res://Assets/Sprites/BeerDispenserR.png" id="1_wr6ff"]
-[ext_resource type="Texture2D" uid="uid://cel4noqhjb6uj" path="res://Assets/Sprites/brune.png" id="2_m1s2v"]
-[ext_resource type="Texture2D" uid="uid://b8gscfdskerku" path="res://Assets/Sprites/BeerEmpty.png" id="3_kjhln"]
+[ext_resource type="Texture2D" uid="uid://dqdpkoiawt35t" path="res://Assets/Sprites/GamingScene/BeerDispenserR.png" id="1_wr6ff"]
+[ext_resource type="Texture2D" uid="uid://cel4noqhjb6uj" path="res://Assets/Sprites/GamingScene/brune.png" id="2_m1s2v"]
+[ext_resource type="Texture2D" uid="uid://b8gscfdskerku" path="res://Assets/Sprites/GamingScene/BeerEmpty.png" id="3_kjhln"]
 
 [node name="BeerTap" type="Control" unique_id=1463512649 node_paths=PackedStringArray("progress", "empty_glass")]
 layout_mode = 3
