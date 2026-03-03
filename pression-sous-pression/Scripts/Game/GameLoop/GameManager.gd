@@ -1,20 +1,61 @@
-class_name Constants extends RefCounted
-
 var audio_muted:bool = false
 var Order_types: Array[String] = ["red", "brown", "blond", "coffee", "pastis"]
 var days: Array[String] = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
+var max_drinks_ordered_supp: Array[int] = [1, 1, 2, 2, 3, 4]
+var client_spawn_delay_supp: Array[float] = [0.5, 1.0, 1.0, 1.5, 2.0, 2.0]
 
-#day passes
-var happy_client: bool = false
-var index: int = 0
-var first_day: String = days[0]
-var current_day: String = first_day
+#resets every game
+var day_count: int = 1
+var current_day: String = days[day_count]
+var customer_present: int = 0
+var accepted_orders: int = 0
+var fulfilled_orders: int = 0
+var failed_orders: int = 0
+var money_count: int = 0
+var daily_rent: int = 30
+
+var pakal_smoked_days: int = 0
+var coffee_in_bokal: int = 0
+var pastis_in_bokal: int = 0
+var beer_in_bokal: int = 0
+
+#upgrades
+var max_drinks_ordered: int = 1
+var client_spawn_delay:int = 10.0
+var pourboire_enhancement:float = 1.0
+
+var day_duration:float = 180.0
+
+
+func start_game() -> void:
+	max_drinks_ordered_supp = [1, 1, 2, 2, 3, 4]
+	client_spawn_delay_supp = [0.5, 1.0, 1.0, 1.5, 2.0, 2.0]
+
+	day_count = 1
+	current_day = days[day_count]
+	customer_present = 0
+	accepted_orders = 0
+	fulfilled_orders = 0
+	failed_orders = 0
+	money_count = 0
+	daily_rent = 30
+
+	pakal_smoked_days = 0
+	coffee_in_bokal = 0
+	pastis_in_bokal = 0
+	beer_in_bokal = 0
+
+#upgrades
+	max_drinks_ordered = 1
+	client_spawn_delay = 10.0
+	pourboire_enhancement = 1.0
 
 func _next_day()-> void:
-	current_day = days[index +1]
-	#current_day = Elements.values()[(Elements.values().find(current_day) + 1) % Elements.values().size()]
-	
-	
+	max_drinks_ordered += max_drinks_ordered_supp[day_count - 1]
+	client_spawn_delay -= client_spawn_delay_supp[day_count - 1]
+	day_count += 1
+	current_day = days[day_count]
+
 
 #cota goes up when day passes
 var current_day_client_quota: int = 10
@@ -22,18 +63,4 @@ var current_day_client_quota: int = 10
 
 #if clients are happy or not / if they pay
 var satisfaction: int = 0
-var fish_coins: int = 0
-
-func _satisfaction(value: int) -> void:
-	satisfaction = value
-	if satisfaction >= 1:
-		happy_client = true
-	else:
-		happy_client = false
-
-
-func _ready() -> void:
-	fish_coins -= 10
-	if happy_client:
-		fish_coins += 10
-	
+var fish_coins: int = 0 
