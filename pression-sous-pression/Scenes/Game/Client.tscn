@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://chbs18uwxdku"]
 
+[ext_resource type="Texture2D" uid="uid://bylkan2y3yu10" path="res://Assets/Drive/FishGirl.png" id="1_lirui"]
+
 [node name="Client" type="Control" unique_id=1302065012]
 layout_mode = 3
 anchors_preset = 15
@@ -21,11 +23,18 @@ offset_right = 40.0
 offset_bottom = 23.0
 
 [node name="Client Back" type="TextureRect" parent="." unique_id=1274656799]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Chair Back" type="TextureRect" parent="." unique_id=1062654558]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -113.245
+offset_top = -113.244995
+offset_right = 113.245
+offset_bottom = 113.244995
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_lirui")
+expand_mode = 2
+stretch_mode = 4
