@@ -7,7 +7,7 @@ var delay = .2
 var drop_spots
 
 func _ready():
-	drop_spots = get_three().get_nodes_in_group("drop_spot_group")
+	drop_spots = get_tree().get_nodes_in_group("drop_spot_group")
 	print(drop_spots)
 func _physics_process(delta):
 	if is_dragging == true:
