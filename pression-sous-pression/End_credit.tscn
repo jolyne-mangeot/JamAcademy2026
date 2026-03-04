@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://fpm3fn3mqbjr"]
 
 [ext_resource type="Texture2D" uid="uid://b3p5tr58c26vb" path="res://Assets/Sprites/GamingScene/Sheet.png" id="1_av21i"]
+[ext_resource type="PackedScene" uid="uid://poifjhi42r6a" path="res://Scenes/Game/PauseMenu.tscn" id="1_w1hqp"]
+[ext_resource type="Script" uid="uid://iauquewjr1oo" path="res://end_credit.gd" id="1_wqdnx"]
 [ext_resource type="Texture2D" uid="uid://bcxgclueua2eo" path="res://Assets/Sprites/TitleScreen/EcranTitre.png" id="2_8npdy"]
 [ext_resource type="Texture2D" uid="uid://ba4mf4oaj37yl" path="res://Assets/Sprites/TitleScreen/Title.png" id="3_8npdy"]
 [ext_resource type="Texture2D" uid="uid://xx134v8x0g56" path="res://Assets/Sprites/TitleScreen/ButtonA.png" id="4_lmpcg"]
@@ -19,6 +21,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_wqdnx")
+
+[node name="PauseMenu" parent="." unique_id=2086796289 instance=ExtResource("1_w1hqp")]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=447423211]
 layout_mode = 0
