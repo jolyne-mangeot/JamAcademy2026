@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://d28lhi0p1sy8b"]
 
+[ext_resource type="Texture2D" uid="uid://4dd2aus5rxel" path="res://Assets/Sprites/GamingScene/BG.png" id="1_6g51k"]
 [ext_resource type="Texture2D" uid="uid://bxp743age3pye" path="res://Assets/Sprites/GamingScene/Screenshot From 2026-03-04 09-09-17.png" id="1_n8g1e"]
 [ext_resource type="Texture2D" uid="uid://xx134v8x0g56" path="res://Assets/Sprites/TitleScreen/ButtonA.png" id="2_3yavu"]
 [ext_resource type="FontFile" uid="uid://d37u2vjhyv1h3" path="res://Assets/Fonts/Kelvinch.otf" id="2_n8g1e"]
@@ -26,6 +27,21 @@ offset_right = -546.0
 offset_bottom = -339.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="." unique_id=440970489]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -407.0
+offset_top = -199.0
+offset_right = 565.0
+offset_bottom = 353.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_6g51k")
+expand_mode = 2
+stretch_mode = 4
 
 [node name="ScreenshotFrom20260304090917" type="Sprite2D" parent="." unique_id=987969623]
 position = Vector2(824, 502)

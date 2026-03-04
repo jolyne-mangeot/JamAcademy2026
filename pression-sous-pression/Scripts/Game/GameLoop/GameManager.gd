@@ -45,7 +45,6 @@ func start_game() -> void:
 	money_count = 0
 	daily_rent = 30
 	day_duration = 120.0
-	satisfaction = 100
 
 	pakal_smoked_days = 0
 	coffee_in_bokal = 0
@@ -61,11 +60,18 @@ func _next_day()-> void:
 	if day_count == 7:
 		call_ending()
 	pakal_fed = false
+	customer_present = 0
+	accepted_orders = 0
+	fulfilled_orders = 0
+	incomplete_orders = 0
 	max_drinks_ordered += max_drinks_ordered_supp[day_count - 1]
 	client_spawn_delay -= client_spawn_delay_supp[day_count - 1]
 	client_patience -= 3.5
 	day_count += 1
 	current_day = days[day_count - 1]
+
+func calculate_satisfaction() -> int:
+	return int((fulfilled_orders + (incomplete_orders / 2)) / customer_present * 100)
 
 func call_ending():
 	pass

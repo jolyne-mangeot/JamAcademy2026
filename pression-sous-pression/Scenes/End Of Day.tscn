@@ -12,8 +12,12 @@
 [ext_resource type="Texture2D" uid="uid://d4hwklr1kbnmy" path="res://Assets/Sprites/GamingScene/BarmanNice.png" id="7_fowem"]
 [ext_resource type="Script" uid="uid://cxbnfwffedki0" path="res://Scripts/Game/EndOfDay/rent_title.gd" id="7_hn8ea"]
 [ext_resource type="Texture2D" uid="uid://33nr4f716deb" path="res://Assets/Sprites/GamingScene/FishFront.png" id="7_l2j3q"]
-[ext_resource type="Script" uid="uid://dvkf3bbcifdx7" path="res://Scripts/Game/EndOfDay/satisfaction_title.gd" id="9_opg7c"]
+[ext_resource type="Script" uid="uid://dvkf3bbcifdx7" path="res://Scripts/Game/EndOfDay/customer_attendance.gd" id="9_opg7c"]
 [ext_resource type="Script" uid="uid://b4bso5qtmyg5y" path="res://Scripts/Game/EndOfDay/message.gd" id="9_pcq7y"]
+[ext_resource type="Script" uid="uid://bvh1er641l1vm" path="res://Scripts/Game/EndOfDay/pakalhealth.gd" id="10_doaul"]
+[ext_resource type="Script" uid="uid://q7ek5gnpfss0" path="res://Scripts/Game/EndOfDay/orders_fulfilled.gd" id="12_ewj7u"]
+[ext_resource type="Script" uid="uid://biycu63rn60hk" path="res://Scripts/Game/EndOfDay/orders_failed.gd" id="13_8n5i1"]
+[ext_resource type="Texture2D" uid="uid://xx134v8x0g56" path="res://Assets/Sprites/TitleScreen/ButtonA.png" id="16_7ga3h"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_opg7c"]
 
@@ -35,6 +39,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="PauseMenu" parent="Control" unique_id=2086796289 instance=ExtResource("3_l2j3q")]
+visible = false
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1199638123]
 stream = ExtResource("1_kssu7")
@@ -74,20 +79,26 @@ theme_override_font_sizes/font_size = 150
 text = "Final report: "
 
 [node name="Earnings Title" type="Label" parent="." unique_id=1461458327]
-offset_left = 677.0
-offset_top = 951.0
-offset_right = 1048.0
-offset_bottom = 1073.0
+offset_left = 867.0
+offset_top = 954.0
+offset_right = 1238.0
+offset_bottom = 1076.0
+theme_override_colors/font_color = Color(0.05000007, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("5_q8jam")
 theme_override_font_sizes/font_size = 90
 text = "Earnings:"
 script = ExtResource("6_bodib")
 
 [node name="Rent Title" type="Label" parent="." unique_id=2001075867]
-offset_left = 681.0
-offset_top = 344.0
-offset_right = 910.0
-offset_bottom = 466.0
+offset_left = 1016.0
+offset_top = 834.0
+offset_right = 1245.0
+offset_bottom = 956.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("5_q8jam")
 theme_override_font_sizes/font_size = 90
 text = "Rent :"
@@ -96,44 +107,75 @@ script = ExtResource("7_hn8ea")
 [node name="message" type="Label" parent="." unique_id=2107215797]
 offset_left = 79.0
 offset_top = 51.0
-offset_right = 579.0
+offset_right = 740.0
 offset_bottom = 142.0
 theme_override_fonts/font = ExtResource("5_q8jam")
 theme_override_font_sizes/font_size = 45
 horizontal_alignment = 1
+autowrap_mode = 3
 script = ExtResource("9_pcq7y")
 
-[node name="satisfaction title" type="Label" parent="." unique_id=521213653]
-offset_left = 668.0
-offset_top = 629.0
-offset_right = 1614.0
-offset_bottom = 751.0
+[node name="pakalhealth" type="Label" parent="." unique_id=591341607]
+offset_left = 2025.0
+offset_top = 859.0
+offset_right = 2539.0
+offset_bottom = 955.0
+theme_override_fonts/font = ExtResource("5_q8jam")
+theme_override_font_sizes/font_size = 45
+horizontal_alignment = 1
+script = ExtResource("10_doaul")
+
+[node name="attendance" type="Label" parent="." unique_id=521213653]
+offset_left = 690.0
+offset_top = 334.0
+offset_right = 1636.0
+offset_bottom = 456.0
 theme_override_fonts/font = ExtResource("5_q8jam")
 theme_override_font_sizes/font_size = 90
-text = "Customer's satisfaction: "
+text = "Customers who attended: "
 script = ExtResource("9_opg7c")
 
+[node name="fulfilled" type="Label" parent="." unique_id=1146616006]
+offset_left = 1038.0
+offset_top = 479.0
+offset_right = 1688.0
+offset_bottom = 601.0
+theme_override_fonts/font = ExtResource("5_q8jam")
+theme_override_font_sizes/font_size = 90
+text = "Orders fulfilled: "
+script = ExtResource("12_ewj7u")
+
+[node name="uncompleted" type="Label" parent="." unique_id=194616500]
+offset_left = 853.0
+offset_top = 633.0
+offset_right = 1686.0
+offset_bottom = 755.0
+theme_override_fonts/font = ExtResource("5_q8jam")
+theme_override_font_sizes/font_size = 90
+text = "Orders uncompleted:"
+script = ExtResource("13_8n5i1")
+
 [node name="money" type="TextureRect" parent="." unique_id=800522061]
-offset_left = 1306.0
-offset_top = 955.0
-offset_right = 1432.0
-offset_bottom = 1075.0
+offset_left = 1523.0
+offset_top = 960.0
+offset_right = 1649.0
+offset_bottom = 1080.0
 texture = ExtResource("5_bodib")
 expand_mode = 2
 
 [node name="moneyy" type="TextureRect" parent="." unique_id=2131490459]
-offset_left = 1192.0
-offset_top = 344.0
-offset_right = 1317.0
-offset_bottom = 453.0
+offset_left = 1527.0
+offset_top = 834.0
+offset_right = 1652.0
+offset_bottom = 943.0
 texture = ExtResource("5_bodib")
 expand_mode = 2
 
 [node name="fish bowl" type="TextureRect" parent="." unique_id=322686622]
-offset_left = 2121.0
-offset_top = 938.0
-offset_right = 2192.0542
-offset_bottom = 1003.0611
+offset_left = 2095.9998
+offset_top = 992.99994
+offset_right = 2167.054
+offset_bottom = 1058.061
 scale = Vector2(5.0384016, 5.948263)
 texture = ExtResource("6_hn8ea")
 expand_mode = 2
@@ -142,10 +184,10 @@ expand_mode = 2
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 18.0
-offset_top = 712.0
-offset_right = -1992.0
-offset_bottom = 45.0
+offset_left = 27.0
+offset_top = 493.0
+offset_right = -1847.0
+offset_bottom = -6.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("7_fowem")
@@ -161,17 +203,28 @@ scale = Vector2(4.0092425, 4.0343566)
 texture = ExtResource("7_l2j3q")
 expand_mode = 2
 
-[node name="Money" type="Sprite2D" parent="." unique_id=242775417]
-position = Vector2(1896.9999, 693)
-scale = Vector2(0.124999955, 0.11523436)
-texture = ExtResource("5_bodib")
+[node name="TextureRect" type="TextureRect" parent="." unique_id=578683710]
+offset_left = 836.0
+offset_top = 1208.0
+offset_right = 1779.0
+offset_bottom = 1367.0
+texture = ExtResource("16_7ga3h")
 
-[node name="shop_button" type="Button" parent="." unique_id=1466201828]
-offset_left = 1025.0
-offset_top = 1210.0
-offset_right = 1583.0
-offset_bottom = 1342.0
+[node name="buttons" type="Control" parent="." unique_id=1883047291]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="shop_button" type="Button" parent="buttons" unique_id=1466201828]
+visible = false
+layout_mode = 0
+offset_left = 839.0
+offset_top = 1212.0
+offset_right = 1776.0
+offset_bottom = 1344.0
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_q8jam")
 theme_override_font_sizes/font_size = 90
 theme_override_styles/normal = SubResource("StyleBoxEmpty_opg7c")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_pcq7y")
@@ -180,4 +233,22 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_7ga3h")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_tuadv")
 text = "Go to Shop"
 
-[connection signal="pressed" from="shop_button" to="." method="_on_shop_button_pressed"]
+[node name="defeat_button" type="Button" parent="buttons" unique_id=1811379234]
+visible = false
+layout_mode = 0
+offset_left = 839.0
+offset_top = 1212.0
+offset_right = 1776.0
+offset_bottom = 1344.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_q8jam")
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = SubResource("StyleBoxEmpty_opg7c")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pcq7y")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_doaul")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_7ga3h")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tuadv")
+text = "Back to Main-Menu"
+
+[connection signal="pressed" from="buttons/shop_button" to="." method="_on_shop_button_pressed"]
+[connection signal="pressed" from="buttons/defeat_button" to="." method="_on_defeat_button_pressed"]
