@@ -34,6 +34,7 @@ grow_vertical = 2
 script = ExtResource("1_wqdnx")
 
 [node name="PauseMenu" parent="." unique_id=2086796289 instance=ExtResource("1_w1hqp")]
+visible = false
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=447423211]
 layout_mode = 0
@@ -171,9 +172,9 @@ scale = Vector2(0.50564975, 0.56573707)
 texture = ExtResource("10_tkd8h")
 
 [node name="Separator" type="Sprite2D" parent="." unique_id=1410407740]
-position = Vector2(1294, 848)
+position = Vector2(1294.0001, 848)
 rotation = 0.2932153
-scale = Vector2(0.45323524, 0.51233757)
+scale = Vector2(0.44968975, 0.32326487)
 texture = ExtResource("11_8h0vc")
 
 [node name="ButtonA3" type="Sprite2D" parent="." unique_id=870517616]
