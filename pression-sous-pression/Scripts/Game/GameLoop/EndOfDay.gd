@@ -7,6 +7,7 @@ extends Node
 func _ready():
 	GameManager.money_count -= GameManager.daily_rent
 	if GameManager.money_count < 0:
+#		if the rent is highter than what was gained it goes immediatly to the thx menu
 		#get_node("buttons/defeat_button").visible = true
 		defeat_button.visible = true
 		_on_defeat_button_pressed()
