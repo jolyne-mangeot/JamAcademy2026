@@ -21,6 +21,7 @@ signal order_failed()
 signal order_accept(id: int, order)
 signal order_over(id: int)
 signal drink_given(glass_type: String)
+signal wrong_drink_given()
 
 
 func init_client() -> void:
@@ -50,9 +51,9 @@ func _process(delta: float) -> void:
 
 
 func _on_timer_timeout() -> void:
-	if client_alive == false || order_in_progress == false:
+	if client_alive == false:
 		return
-	if order.drink_amount < order.total_drinks:
+	if order.drink_amount < order.total_drinks && order_in_progress == true:
 		if order.drink_amount == 0:
 			drinks_paid = order.total_drinks
 		else:
@@ -90,7 +91,6 @@ func _on_command_hook_order_accepted(id: int) -> void:
 		timer.stop()
 		timer_bar.visible = false
 		order_in_progress = true
-		print("Command accepted")
 
 
 func _on_glass_dropped(glass_type: String) -> void:
@@ -100,6 +100,7 @@ func _on_glass_dropped(glass_type: String) -> void:
 		drink_given.emit(glass_type)
 		if order.check_drink(glass_type) == false:
 			order_failed.emit()
+			wrong_drink_given.emit()
 			_on_timer_timeout()
 		else:
 			order.update_order()

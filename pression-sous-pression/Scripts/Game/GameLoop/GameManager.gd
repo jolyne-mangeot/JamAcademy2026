@@ -17,7 +17,7 @@ var money_count: int = 0
 var daily_rent: int = 30
 var client_patience: float = 40
 
-var pakal_fed: bool = 0
+var pakal_fed: bool = false
 var pakal_smoked_days: int = 0
 var coffee_in_bokal: int = 0
 var pastis_in_bokal: int = 0

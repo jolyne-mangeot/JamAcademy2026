@@ -27,7 +27,7 @@ func _process(delta: float) -> void:
 
 
 func _on_coffee_cup_dropped(glass_type: String) -> void:
-	if glass_type == "coffee" && is_occupied == false && is_pouring == false && mouse_hovering == true:
+	if glass_type == "coffee cup" && is_occupied == false && is_pouring == false && mouse_hovering == true:
 		empty_glass.visible = true
 		is_pouring = true
 		is_occupied = true
