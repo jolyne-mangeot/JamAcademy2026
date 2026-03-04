@@ -41,29 +41,28 @@
 [ext_resource type="Script" uid="uid://b1b6wjf57suxg" path="res://Scripts/Game/GameLoop/CoinCount.gd" id="33_6crsu"]
 [ext_resource type="Texture2D" uid="uid://2jklaq1yweqg" path="res://Assets/Pakal/Brown/brown4.png" id="33_n6xri"]
 [ext_resource type="Texture2D" uid="uid://bgonvei7by11q" path="res://Assets/Pakal/Yellow/Yellow1.png" id="34_4hysa"]
-[ext_resource type="Texture2D" uid="uid://bbvb3yoxlmbv8" path="res://Assets/Sprites/GamingScene/Money.png" id="34_5e80b"]
-[ext_resource type="Texture2D" uid="uid://y2if7tfls4m6" path="res://Assets/Pakal/Yellow/Yellow2.png" id="35_a21ox"]
-[ext_resource type="Texture2D" uid="uid://0sqy5kse15px" path="res://Assets/Pakal/Yellow/Yellow3.png" id="36_i0afu"]
-[ext_resource type="Texture2D" uid="uid://dvukcxkwdtx61" path="res://Assets/Pakal/Yellow/Yellow4.png" id="37_xts02"]
-[ext_resource type="Texture2D" uid="uid://cprj85tk456b5" path="res://Assets/Pakal/Black/Black1.png" id="38_bxh6b"]
-[ext_resource type="Texture2D" uid="uid://r1u55e6lw4oo" path="res://Assets/Pakal/Black/Black2.png" id="39_aemtc"]
-[ext_resource type="Texture2D" uid="uid://bl84jl41klbeq" path="res://Assets/Pakal/Black/Black3.png" id="40_vr6vh"]
-[ext_resource type="Texture2D" uid="uid://rc53vy61asjx" path="res://Assets/Pakal/Black/Black4.png" id="41_2feie"]
-[ext_resource type="Texture2D" uid="uid://cmiic5bn65qf1" path="res://Assets/Pakal/FishbowlFront.png" id="44_xfd74"]
-[ext_resource type="Texture2D" uid="uid://xx134v8x0g56" path="res://Assets/Sprites/TitleScreen/ButtonA.png" id="52_xfd74"]
 [ext_resource type="AudioStream" uid="uid://c675xx7aw5jc7" path="res://Assets/Music/Ambiance de bar.mp3" id="34_5e80b"]
 [ext_resource type="AudioStream" uid="uid://1xjc6hs2mar5" path="res://Assets/Music/Biere service.mp3" id="35_5qs78"]
 [ext_resource type="AudioStream" uid="uid://d02dxdyrncpwq" path="res://Assets/Music/Glacons dans un verre.mp3" id="35_5vel0"]
+[ext_resource type="Texture2D" uid="uid://y2if7tfls4m6" path="res://Assets/Pakal/Yellow/Yellow2.png" id="35_a21ox"]
 [ext_resource type="AudioStream" uid="uid://e6v4d7gygxx7" path="res://Assets/Music/CoffeeSound.mp3" id="35_sf4n0"]
+[ext_resource type="Texture2D" uid="uid://0sqy5kse15px" path="res://Assets/Pakal/Yellow/Yellow3.png" id="36_i0afu"]
 [ext_resource type="AudioStream" uid="uid://urjcc2v3ol5c" path="res://Assets/Music/BellSound.mp3" id="36_sf4n0"]
 [ext_resource type="AudioStream" uid="uid://bjtl1qqh7hc7j" path="res://Assets/Music/CoinSound.mp3" id="37_dy3ug"]
+[ext_resource type="Texture2D" uid="uid://dvukcxkwdtx61" path="res://Assets/Pakal/Yellow/Yellow4.png" id="37_xts02"]
+[ext_resource type="Texture2D" uid="uid://cprj85tk456b5" path="res://Assets/Pakal/Black/Black1.png" id="38_bxh6b"]
 [ext_resource type="AudioStream" uid="uid://ca6lsfw6qyx2l" path="res://Assets/Music/GlassSound1.mp3" id="38_i3po2"]
 [ext_resource type="AudioStream" uid="uid://dhwl2brr4w2gi" path="res://Assets/Music/GlassSound2.mp3" id="39_7b35j"]
+[ext_resource type="Texture2D" uid="uid://r1u55e6lw4oo" path="res://Assets/Pakal/Black/Black2.png" id="39_aemtc"]
 [ext_resource type="AudioStream" uid="uid://bphdwet2gbu7g" path="res://Assets/Music/GlassSound3.mp3" id="40_6c0fh"]
+[ext_resource type="Texture2D" uid="uid://bl84jl41klbeq" path="res://Assets/Pakal/Black/Black3.png" id="40_vr6vh"]
+[ext_resource type="Texture2D" uid="uid://rc53vy61asjx" path="res://Assets/Pakal/Black/Black4.png" id="41_2feie"]
 [ext_resource type="AudioStream" uid="uid://bpaiv5vbrhs08" path="res://Assets/Music/GlassSound4.mp3" id="41_52dda"]
 [ext_resource type="AudioStream" uid="uid://dcxh0agepmvb1" path="res://Assets/Music/PastisSound.mp3" id="42_6c0fh"]
 [ext_resource type="AudioStream" uid="uid://ck18avkbvnvuq" path="res://Assets/Music/Annoyed.mp3" id="43_52dda"]
+[ext_resource type="Texture2D" uid="uid://cmiic5bn65qf1" path="res://Assets/Pakal/FishbowlFront.png" id="44_xfd74"]
 [ext_resource type="AudioStream" uid="uid://pe4fddwa7w4" path="res://Assets/Music/BarTheme.mp3" id="45_52dda"]
+[ext_resource type="Texture2D" uid="uid://xx134v8x0g56" path="res://Assets/Sprites/TitleScreen/ButtonA.png" id="52_xfd74"]
 
 [sub_resource type="Gradient" id="Gradient_pj0fw"]
 colors = PackedColorArray(0.5343956, 0.25409824, 0.1394135, 1, 1, 1, 1, 1)
@@ -200,7 +199,6 @@ texture = ExtResource("2_0rvqk")
 expand_mode = 2
 
 [node name="CanvasLayer" parent="." unique_id=2086796289 instance=ExtResource("6_f4f5n")]
-visible = false
 
 [node name="Tables" type="TextureRect" parent="." unique_id=1571111971]
 layout_mode = 1
@@ -746,7 +744,6 @@ text = "03.00"
 [node name="Money" type="Sprite2D" parent="." unique_id=26300496]
 position = Vector2(2233, 81)
 scale = Vector2(0.09570321, 0.09667969)
-texture = ExtResource("34_5e80b")
 
 [node name="DayAnnouncement" type="CanvasLayer" parent="." unique_id=425691507]
 visible = false
@@ -788,6 +785,7 @@ grow_vertical = 2
 theme_override_fonts/font = ExtResource("31_yqalu")
 theme_override_font_sizes/font_size = 78
 text = "Monday"
+
 [node name="AudioManager" type="AudioStreamPlayer" parent="." unique_id=158461676]
 
 [node name="IceCubeSound" type="AudioStreamPlayer" parent="AudioManager" unique_id=671153827]
