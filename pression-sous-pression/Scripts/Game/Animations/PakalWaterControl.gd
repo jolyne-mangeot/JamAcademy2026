@@ -10,7 +10,8 @@ func _ready() -> void:
 	elif GameManager.beer_in_bokal > 0 && GameManager.coffee_in_bokal == 0 && GameManager.pastis_in_bokal == 0:
 		get_node(str("Brown " + str(int(GameManager.pastis_in_bokal / 2)))).visible = true
 	elif GameManager.coffee_in_bokal > 0 || GameManager.beer_in_bokal > 0 || GameManager.pastis_in_bokal > 0:
-		get_node(str("Black " + str(int(GameManager.coffee_in_bokal / 2)))).visible = true
+		var pipi = GameManager.coffee_in_bokal + GameManager.beer_in_bokal + GameManager.pastis_in_bokal
+		get_node(str("Black " + str(int(pipi / 2)))).visible = true
 	else:
 		get_node("Day1 Water").visible = true
 
