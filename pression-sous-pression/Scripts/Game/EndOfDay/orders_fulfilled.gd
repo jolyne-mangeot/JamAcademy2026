@@ -3,9 +3,9 @@ extends Label
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	text = "Customer's satisfaction: "  + str(GameManager.satisfaction)
+	text = "Orders fulfilled: "  + str(GameManager.fulfilled_orders)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	text = "Customer's satisfaction: "  + str(GameManager.satisfaction)
+	text = "Orders fulfilled: "  + str(GameManager.fulfilled_orders)
