@@ -6,6 +6,7 @@ func _ready():
 	GameManager.money_count -= GameManager.daily_rent
 	if GameManager.money_count < 0 || GameManager.day_count == 7:
 		get_node("buttons/defeat_button").visible = true
+		get_tree().change_scene_to_file("res://Thx.tscn")
 	else:
 		get_node("buttons/shop_button").visible = true
  
