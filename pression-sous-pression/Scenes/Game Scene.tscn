@@ -33,6 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://cg0wts3a4ssuy" path="res://Assets/Sprites/GamingScene/Fishbowl.png" id="21_26ygd"]
 [ext_resource type="FontFile" uid="uid://d37u2vjhyv1h3" path="res://Assets/Fonts/Kelvinch.otf" id="31_yqalu"]
 [ext_resource type="Script" uid="uid://b1b6wjf57suxg" path="res://Scripts/Game/GameLoop/CoinCount.gd" id="33_6crsu"]
+[ext_resource type="Texture2D" uid="uid://bbvb3yoxlmbv8" path="res://Assets/Sprites/GamingScene/Money.png" id="34_5e80b"]
 
 [sub_resource type="Gradient" id="Gradient_pj0fw"]
 colors = PackedColorArray(0.5343956, 0.25409824, 0.1394135, 1, 1, 1, 1, 1)
@@ -506,13 +507,13 @@ autoplay = true
 
 [node name="CoinCount" type="Label" parent="." unique_id=1910615106]
 layout_mode = 0
-offset_left = 2179.0
-offset_top = 20.0
-offset_right = 2547.0
-offset_bottom = 80.0
+offset_left = 2305.0
+offset_top = 7.0
+offset_right = 2525.0
+offset_bottom = 142.0
 theme_override_fonts/font = ExtResource("31_yqalu")
-theme_override_font_sizes/font_size = 35
-text = "COIN COUNT:"
+theme_override_font_sizes/font_size = 100
+text = "1000"
 script = ExtResource("33_6crsu")
 
 [node name="countdown_time" type="Label" parent="." unique_id=810052963]
@@ -524,6 +525,11 @@ offset_bottom = 154.0
 theme_override_fonts/font = ExtResource("31_yqalu")
 theme_override_font_sizes/font_size = 100
 text = "03.00"
+
+[node name="Money" type="Sprite2D" parent="." unique_id=26300496]
+position = Vector2(2233, 81)
+scale = Vector2(0.09570321, 0.09667969)
+texture = ExtResource("34_5e80b")
 
 [connection signal="order_accepted" from="Command Hook 1" to="Client Chairs/Client 1" method="_on_command_hook_order_accepted"]
 [connection signal="order_accepted" from="Command Hook 1" to="Client Chairs/Client 2" method="_on_command_hook_order_accepted"]

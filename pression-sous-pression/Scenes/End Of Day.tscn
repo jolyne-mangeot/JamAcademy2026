@@ -2,12 +2,13 @@
 
 [ext_resource type="Script" uid="uid://dnxkamo4mpmg6" path="res://Scripts/Game/GameLoop/EndOfDay.gd" id="1_55r4e"]
 [ext_resource type="AudioStream" uid="uid://bvyeq7vuuivp1" path="res://Assets/Music/at_work.mp3" id="1_kssu7"]
-[ext_resource type="Texture2D" path="res://Assets/Drive/BG.png" id="3_fowem"]
-[ext_resource type="Texture2D" path="res://Assets/Backgrounds/Sheet.png" id="4_q8jam"]
-[ext_resource type="Texture2D" path="res://Assets/Drive/Money.png" id="5_bodib"]
-[ext_resource type="Texture2D" path="res://Assets/Drive/Fishbowl.png" id="6_hn8ea"]
-[ext_resource type="Texture2D" path="res://Assets/Drive/Barman.png" id="7_fowem"]
-[ext_resource type="Texture2D" path="res://Assets/Drive/BabyFish.png" id="7_l2j3q"]
+[ext_resource type="Texture2D" uid="uid://4dd2aus5rxel" path="res://Assets/Sprites/GamingScene/BG.png" id="3_fowem"]
+[ext_resource type="Texture2D" uid="uid://b3p5tr58c26vb" path="res://Assets/Sprites/GamingScene/Sheet.png" id="4_q8jam"]
+[ext_resource type="Texture2D" uid="uid://bbvb3yoxlmbv8" path="res://Assets/Sprites/GamingScene/Money.png" id="5_bodib"]
+[ext_resource type="FontFile" uid="uid://d37u2vjhyv1h3" path="res://Assets/Fonts/Kelvinch.otf" id="5_q8jam"]
+[ext_resource type="Texture2D" uid="uid://cg0wts3a4ssuy" path="res://Assets/Sprites/GamingScene/Fishbowl.png" id="6_hn8ea"]
+[ext_resource type="Texture2D" uid="uid://d4hwklr1kbnmy" path="res://Assets/Sprites/GamingScene/BarmanNice.png" id="7_fowem"]
+[ext_resource type="Texture2D" uid="uid://33nr4f716deb" path="res://Assets/Sprites/GamingScene/FishFront.png" id="7_l2j3q"]
 
 [node name="End Of Day" type="Node" unique_id=2144417167]
 script = ExtResource("1_55r4e")
@@ -31,17 +32,22 @@ stretch_mode = 4
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -23.0
+offset_right = -4.0
+offset_bottom = -23.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("4_q8jam")
 expand_mode = 2
 
 [node name="Title" type="Label" parent="." unique_id=1489368191]
-offset_left = 61.0
-offset_top = 36.0
-offset_right = 164.0
-offset_bottom = 59.0
-theme_override_font_sizes/font_size = 26
+offset_left = 864.0
+offset_top = 2.0
+offset_right = 1822.0
+offset_bottom = 207.0
+theme_override_fonts/font = ExtResource("5_q8jam")
+theme_override_font_sizes/font_size = 150
 text = "Day's Report:"
 
 [node name="Earnings Title" type="Label" parent="." unique_id=1461458327]
@@ -52,11 +58,12 @@ offset_bottom = 110.0
 text = "Earnings:"
 
 [node name="Rent Title" type="Label" parent="." unique_id=2001075867]
-offset_left = 61.0
-offset_top = 130.0
-offset_right = 102.0
-offset_bottom = 153.0
-text = "Rent:"
+offset_left = 872.0
+offset_top = 351.0
+offset_right = 1023.0
+offset_bottom = 434.0
+theme_override_font_sizes/font_size = 60
+text = "Rent :"
 
 [node name="message" type="Label" parent="." unique_id=2107215797]
 offset_left = 813.0
@@ -81,18 +88,18 @@ texture = ExtResource("5_bodib")
 expand_mode = 2
 
 [node name="moneyy" type="TextureRect" parent="." unique_id=2131490459]
-offset_left = 186.0
-offset_top = 120.0
-offset_right = 226.0
-offset_bottom = 160.0
+offset_left = 1374.0
+offset_top = 332.0
+offset_right = 1525.0
+offset_bottom = 434.0
 texture = ExtResource("5_bodib")
 expand_mode = 2
 
 [node name="fish bowl" type="TextureRect" parent="." unique_id=322686622]
-offset_left = 814.99994
-offset_top = 350.99997
-offset_right = 854.99994
-offset_bottom = 390.99997
+offset_left = 2105.0
+offset_top = 852.00006
+offset_right = 2145.0
+offset_bottom = 892.00006
 scale = Vector2(5.0384016, 5.948263)
 texture = ExtResource("6_hn8ea")
 expand_mode = 2
@@ -101,10 +108,10 @@ expand_mode = 2
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 447.0
-offset_top = 102.0
-offset_right = -223.0
-offset_bottom = -61.0
+offset_left = 136.0
+offset_top = 293.0
+offset_right = -1874.0
+offset_bottom = -374.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("7_fowem")
@@ -112,10 +119,10 @@ expand_mode = 1
 stretch_mode = 4
 
 [node name="pacal" type="TextureRect" parent="." unique_id=455969433]
-offset_left = 832.0
-offset_top = 411.00003
-offset_right = 872.0
-offset_bottom = 451.00003
+offset_left = 1853.0002
+offset_top = 35.0
+offset_right = 1893.0002
+offset_bottom = 75.0
 scale = Vector2(4.0092425, 4.0343566)
 texture = ExtResource("7_l2j3q")
 expand_mode = 2
