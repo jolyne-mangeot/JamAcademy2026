@@ -4,15 +4,18 @@ extends Control
 @onready var pause_menu: Control = $CanvasLayer/PauseMenu
 @onready var timer: Timer = $timer_day
 @onready var label: Label = $countdown_time
-@onready var day_label: Label = $Day
-
+@export var daylabel: Label
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	#get_tree().paused = true
-	#day_label.text = GameManager.current_day
+	get_tree().paused = true
+	daylabel.text = GameManager.current_day
+	await get_tree().create_timer(3.0).timeout
+	get_node("DayAnnouncement").visible = false
+	get_tree().paused = false
 	timer.wait_time = GameManager.day_duration
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
