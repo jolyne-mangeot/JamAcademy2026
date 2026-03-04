@@ -14,6 +14,8 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l5xqr"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4n3xu"]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sbpj2"]
 
 [node name="Settings" type="Control" unique_id=403622405]
@@ -50,6 +52,8 @@ offset_left = 403.0
 offset_top = 212.0
 offset_right = 723.0
 offset_bottom = 265.0
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_6k6jm")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/focus = SubResource("StyleBoxEmpty_m2duy")
@@ -57,15 +61,17 @@ text = "Mute Audio"
 
 [node name="backMenu_button" type="Button" parent="." unique_id=411588060]
 layout_mode = 0
-offset_left = 399.0
+offset_left = 372.0
 offset_top = 313.0
-offset_right = 751.0
+offset_right = 724.0
 offset_bottom = 368.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_6k6jm")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxEmpty_76bmw")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_6k6jm")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_l5xqr")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4n3xu")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_sbpj2")
 text = "Go Back to Menu"
 

@@ -2,6 +2,19 @@
 
 [ext_resource type="Script" uid="uid://26rfcj307fqc" path="res://Scripts/Game/GameLoop/PauseMenu.gd" id="1_nov15"]
 [ext_resource type="FontFile" uid="uid://d37u2vjhyv1h3" path="res://Assets/Fonts/Kelvinch.otf" id="2_etnfi"]
+[ext_resource type="Texture2D" uid="uid://xx134v8x0g56" path="res://Assets/Sprites/TitleScreen/ButtonA.png" id="2_gfu53"]
+[ext_resource type="Texture2D" uid="uid://beqajr83p3m1o" path="res://Assets/Sprites/TitleScreen/ButtonB.png" id="3_xee8l"]
+[ext_resource type="Texture2D" uid="uid://cwmcc6b8ncgb3" path="res://Assets/Sprites/TitleScreen/ButtonC.png" id="4_q8bt6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gfu53"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b2vbv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xee8l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q8bt6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_80i0j"]
 
 [sub_resource type="GDScript" id="GDScript_nov15"]
 script/source = "extends Button
@@ -16,6 +29,26 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 "
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_opoh4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ukq1h"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s02cd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ha5dw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5h6y8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_52qd5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uqqcg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8jhjy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8qjs4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6op3y"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=2086796289]
 
@@ -41,6 +74,18 @@ theme_override_constants/margin_top = 500
 theme_override_constants/margin_right = 850
 theme_override_constants/margin_bottom = 500
 
+[node name="ButtonA" type="Sprite2D" parent="PauseMenu/MarginContainer" unique_id=281570685]
+position = Vector2(1283, 555)
+texture = ExtResource("2_gfu53")
+
+[node name="ButtonB" type="Sprite2D" parent="PauseMenu/MarginContainer" unique_id=2025286259]
+position = Vector2(1274, 723)
+texture = ExtResource("3_xee8l")
+
+[node name="ButtonC" type="Sprite2D" parent="PauseMenu/MarginContainer" unique_id=1671741927]
+position = Vector2(1282, 904)
+texture = ExtResource("4_q8bt6")
+
 [node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu/MarginContainer" unique_id=1800150215]
 layout_mode = 2
 size_flags_stretch_ratio = 7.01
@@ -49,23 +94,41 @@ theme_override_constants/separation = 63
 [node name="ResumeButton" type="Button" parent="PauseMenu/MarginContainer/VBoxContainer" unique_id=346392276]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_etnfi")
 theme_override_font_sizes/font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gfu53")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_b2vbv")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_xee8l")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_q8bt6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_80i0j")
 text = "Resume Game"
 script = SubResource("GDScript_nov15")
 
 [node name="MainMenuButton" type="Button" parent="PauseMenu/MarginContainer/VBoxContainer" unique_id=953577852]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_etnfi")
 theme_override_font_sizes/font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_opoh4")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ukq1h")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_s02cd")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ha5dw")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5h6y8")
 text = "Main Menu"
 
 [node name="QuitButton" type="Button" parent="PauseMenu/MarginContainer/VBoxContainer" unique_id=1292778987]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_etnfi")
 theme_override_font_sizes/font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_52qd5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_uqqcg")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8jhjy")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_8qjs4")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6op3y")
 text = "Quit"
 
 [connection signal="pressed" from="PauseMenu/MarginContainer/VBoxContainer/ResumeButton" to="PauseMenu" method="_on_resume_button_pressed"]
