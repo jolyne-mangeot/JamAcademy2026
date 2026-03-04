@@ -64,6 +64,7 @@
 [ext_resource type="AudioStream" uid="uid://pe4fddwa7w4" path="res://Assets/Music/BarTheme.mp3" id="45_52dda"]
 [ext_resource type="Texture2D" uid="uid://bbvb3yoxlmbv8" path="res://Assets/Sprites/GamingScene/Money.png" id="50_r6see"]
 [ext_resource type="Texture2D" uid="uid://xx134v8x0g56" path="res://Assets/Sprites/TitleScreen/ButtonA.png" id="52_xfd74"]
+[ext_resource type="AudioStream" uid="uid://vx2cvx65piw0" path="res://Assets/Music/blupbluppqcql..mp3" id="65_bmquk"]
 
 [sub_resource type="Gradient" id="Gradient_pj0fw"]
 colors = PackedColorArray(0.5343956, 0.25409824, 0.1394135, 1, 1, 1, 1, 1)
@@ -856,6 +857,10 @@ stream = ExtResource("45_52dda")
 volume_db = -13.0
 autoplay = true
 parameters/looping = true
+
+[node name="Buble" type="AudioStreamPlayer" parent="AudioManager" unique_id=307516649]
+unique_name_in_owner = true
+stream = ExtResource("65_bmquk")
 
 [connection signal="order_accepted" from="Command Hook 1" to="Client Chairs/Client 1" method="_on_command_hook_order_accepted"]
 [connection signal="order_accepted" from="Command Hook 1" to="Client Chairs/Client 2" method="_on_command_hook_order_accepted"]
