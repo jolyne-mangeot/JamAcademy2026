@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://beqajr83p3m1o" path="res://Assets/Sprites/TitleScreen/ButtonB.png" id="5_hjx88"]
 [ext_resource type="Texture2D" uid="uid://cwmcc6b8ncgb3" path="res://Assets/Sprites/TitleScreen/ButtonC.png" id="6_da4n0"]
 [ext_resource type="FontFile" uid="uid://d37u2vjhyv1h3" path="res://Assets/Fonts/Kelvinch.otf" id="7_hjx88"]
-<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://tfdpac8v454s" path="res://Assets/Sprites/GamingScene/BeerAmbré.png" id="8_karvq"]
 [ext_resource type="Texture2D" uid="uid://dnh8n2oacvfh3" path="res://Assets/Sprites/GamingScene/BeerBlonde.png" id="9_tkd8h"]
 [ext_resource type="Texture2D" uid="uid://33nr4f716deb" path="res://Assets/Sprites/GamingScene/FishFront.png" id="10_tkd8h"]
@@ -24,8 +23,6 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8did2"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uu6ul"]
-=======
->>>>>>> 09024e7 (end credit done)
 
 [node name="Control" type="Control" unique_id=1097713460]
 layout_mode = 3
@@ -37,7 +34,6 @@ grow_vertical = 2
 script = ExtResource("1_wqdnx")
 
 [node name="PauseMenu" parent="." unique_id=2086796289 instance=ExtResource("1_w1hqp")]
-visible = false
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=447423211]
 layout_mode = 0
@@ -155,7 +151,6 @@ offset_bottom = 516.0
 theme_override_fonts/font = ExtResource("7_hjx88")
 theme_override_font_sizes/font_size = 45
 text = "Sarhynn"
-<<<<<<< HEAD
 
 [node name="BeerAmbré" type="Sprite2D" parent="." unique_id=956660513]
 position = Vector2(592.28204, 396.4256)
@@ -202,5 +197,3 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_uu6ul")
 text = "Back to menu"
 
 [connection signal="pressed" from="Back_button" to="." method="_on_back_button_pressed"]
-=======
->>>>>>> 09024e7 (end credit done)
