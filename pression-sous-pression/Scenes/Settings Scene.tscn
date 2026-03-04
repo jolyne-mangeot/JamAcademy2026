@@ -63,7 +63,8 @@ texture = ExtResource("2_sbpj2")
 expand_mode = 1
 
 [node name="ButtonA" type="Sprite2D" parent="." unique_id=38435631]
-position = Vector2(575, 415)
+position = Vector2(559.25, 415)
+scale = Vector2(1.0473684, 1)
 texture = ExtResource("4_4n3xu")
 
 [node name="ButtonB" type="Sprite2D" parent="." unique_id=452860553]
@@ -86,10 +87,10 @@ text = "Mute Audio"
 
 [node name="backMenu_button" type="Button" parent="." unique_id=411588060]
 layout_mode = 0
-offset_left = 355.0
-offset_top = 378.0
-offset_right = 707.0
-offset_bottom = 433.0
+offset_left = 375.0
+offset_top = 383.0
+offset_right = 727.0
+offset_bottom = 438.0
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_6k6jm")
 theme_override_font_sizes/font_size = 32

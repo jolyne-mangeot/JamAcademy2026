@@ -83,7 +83,8 @@ theme = SubResource("Theme_a4tc2")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("11_wogxw")
 theme_override_font_sizes/font_size = 48
-text = "If you ever work an essential job, you must know how a burnout feels like. Well, Bajama couldn't ever feel it more real, as the pressure of never seeing their lost partner litterally burned and grilled them on the spot ! Pakal tried begging the humans not to see this as a gastronomical experiment, but who are we to stop persons of the sea when they set their hook and barbecue tongs on the crunchiest of snacks ?"
+text = "If you ever work an essential job, you must know how a burnout feels like. Well, Bajama couldn't ever feel it more real, as the pressure of never seeing their lost partner litterally burned and grilled them on the spot ! Pakal tried begging the humans not to see this as a gastronomical experiment, but who are we to stop persons of the sea when they set their hook and barbecue tongs on the crunchiest of snacks ?
+Try again !"
 autowrap_mode = 3
 
 [node name="next" type="Button" parent="." unique_id=415330654]

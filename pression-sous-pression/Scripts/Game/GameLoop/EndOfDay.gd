@@ -26,7 +26,7 @@ func _on_shop_button_pressed() -> void:
 
 func _on_defeat_button_pressed() -> void:
 	if GameManager.day_count < 7:
-		get_tree().change_scene_to_file("res://Scenes/Endings/Thx.tscn")
+		get_tree().change_scene_to_file("res://Scenes/Endings/Defeat.tscn")
 	elif GameManager.coffee_in_bokal >= 6:
 		get_tree().change_scene_to_file("res://Scenes/Endings/CoffeeEnding.tscn")
 	elif GameManager.pastis_in_bokal >= 6:
