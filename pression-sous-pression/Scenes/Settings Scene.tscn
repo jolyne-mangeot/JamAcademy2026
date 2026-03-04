@@ -3,8 +3,10 @@
 [ext_resource type="Script" uid="uid://oeuner457q0f" path="res://Scripts/Menues/SettingsScene.gd" id="1_ktb8s"]
 [ext_resource type="Texture2D" uid="uid://4dd2aus5rxel" path="res://Assets/Sprites/GamingScene/BG.png" id="2_hfnpu"]
 [ext_resource type="Texture2D" uid="uid://b3p5tr58c26vb" path="res://Assets/Sprites/GamingScene/Sheet.png" id="2_sbpj2"]
+[ext_resource type="Texture2D" uid="uid://xx134v8x0g56" path="res://Assets/Sprites/TitleScreen/ButtonA.png" id="4_4n3xu"]
 [ext_resource type="FontFile" uid="uid://d37u2vjhyv1h3" path="res://Assets/Fonts/Kelvinch.otf" id="4_6k6jm"]
 [ext_resource type="AudioStream" uid="uid://dla0mx78w3ugn" path="res://Assets/Music/otherworldly_oceanside.mp3" id="4_shka7"]
+[ext_resource type="Texture2D" uid="uid://beqajr83p3m1o" path="res://Assets/Sprites/TitleScreen/ButtonB.png" id="5_iduts"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m2duy"]
 
@@ -46,13 +48,21 @@ offset_bottom = 690.0
 texture = ExtResource("2_sbpj2")
 expand_mode = 1
 
+[node name="ButtonA" type="Sprite2D" parent="." unique_id=38435631]
+position = Vector2(575, 415)
+texture = ExtResource("4_4n3xu")
+
+[node name="ButtonB" type="Sprite2D" parent="." unique_id=452860553]
+position = Vector2(558, 185)
+texture = ExtResource("5_iduts")
+
 [node name="VolumeButton" type="CheckButton" parent="." unique_id=580038096]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 403.0
-offset_top = 212.0
-offset_right = 723.0
-offset_bottom = 265.0
+offset_left = 392.0
+offset_top = 149.0
+offset_right = 711.0
+offset_bottom = 209.0
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_6k6jm")
@@ -62,10 +72,10 @@ text = "Mute Audio"
 
 [node name="backMenu_button" type="Button" parent="." unique_id=411588060]
 layout_mode = 0
-offset_left = 372.0
-offset_top = 313.0
-offset_right = 724.0
-offset_bottom = 368.0
+offset_left = 355.0
+offset_top = 378.0
+offset_right = 707.0
+offset_bottom = 433.0
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_6k6jm")
 theme_override_font_sizes/font_size = 32
