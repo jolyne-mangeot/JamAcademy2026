@@ -51,6 +51,7 @@ func _process(delta: float) -> void:
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6op3y"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=2086796289]
+script = ExtResource("1_nov15")
 
 [node name="PauseMenu" type="Control" parent="." unique_id=951712142]
 process_mode = 2
@@ -60,7 +61,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_nov15")
 
 [node name="ColorRect" type="ColorRect" parent="PauseMenu" unique_id=2093458329]
 modulate = Color(0, 0, 0, 0.7019608)
@@ -140,6 +140,6 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_8qjs4")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_6op3y")
 text = "Quit"
 
-[connection signal="pressed" from="PauseMenu/MarginContainer/VBoxContainer/ResumeButton" to="PauseMenu" method="_on_resume_button_pressed"]
-[connection signal="pressed" from="PauseMenu/MarginContainer/VBoxContainer/MainMenuButton" to="PauseMenu" method="_on_main_menu_button_pressed"]
-[connection signal="pressed" from="PauseMenu/MarginContainer/VBoxContainer/QuitButton" to="PauseMenu" method="_on_quit_button_pressed"]
+[connection signal="pressed" from="PauseMenu/MarginContainer/VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="PauseMenu/MarginContainer/VBoxContainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
+[connection signal="pressed" from="PauseMenu/MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

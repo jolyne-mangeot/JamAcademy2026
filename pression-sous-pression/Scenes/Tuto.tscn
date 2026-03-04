@@ -1,8 +1,19 @@
 [gd_scene format=3 uid="uid://d28lhi0p1sy8b"]
 
-[ext_resource type="Texture2D" uid="uid://bovrwxfmkrayd" path="res://Assets/Sprites/Tutorial/Screenshot.png" id="1_or3k3"]
+[ext_resource type="Texture2D" uid="uid://bxp743age3pye" path="res://Assets/Sprites/GamingScene/Screenshot From 2026-03-04 09-09-17.png" id="1_n8g1e"]
+[ext_resource type="Texture2D" uid="uid://xx134v8x0g56" path="res://Assets/Sprites/TitleScreen/ButtonA.png" id="2_3yavu"]
 [ext_resource type="FontFile" uid="uid://d37u2vjhyv1h3" path="res://Assets/Fonts/Kelvinch.otf" id="2_n8g1e"]
 [ext_resource type="Script" uid="uid://d3tqfygpoqnc7" path="res://Scenes/TutoButton.gd" id="2_vv1sr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6g51k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vq7if"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m3mr7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yq2g8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1x8c5"]
 
 [node name="Control" type="Control" unique_id=1904200241]
 layout_mode = 3
@@ -11,34 +22,60 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 396.0
 offset_top = 185.0
-offset_right = -417.0
+offset_right = -546.0
 offset_bottom = -339.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1745089488]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 181.0
-offset_top = 132.0
-offset_right = -132.0
-offset_bottom = -63.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("1_or3k3")
-expand_mode = 2
+[node name="ScreenshotFrom20260304090917" type="Sprite2D" parent="." unique_id=987969623]
+position = Vector2(824, 502)
+scale = Vector2(0.62934875, 0.6248104)
+texture = ExtResource("1_n8g1e")
 
-[node name="Button" type="Button" parent="." unique_id=1348461435]
+[node name="Label" type="Label" parent="ScreenshotFrom20260304090917" unique_id=1870389976]
+offset_left = -985.1454
+offset_top = 793.8408
+offset_right = 1080.8546
+offset_bottom = 962.8408
+theme_override_fonts/font = ExtResource("2_n8g1e")
+theme_override_font_sizes/font_size = 60
+text = "You must take the order of the client by clicking on him before the time
+runs out."
+horizontal_alignment = 1
+
+[node name="ButtonA" type="Sprite2D" parent="." unique_id=635443146]
+position = Vector2(1795, 1169)
+texture = ExtResource("2_3yavu")
+
+[node name="Next_button" type="Button" parent="." unique_id=1348461435]
 layout_mode = 0
-offset_left = 1782.0
-offset_top = 1092.0
-offset_right = 2110.0
-offset_bottom = 1200.0
+offset_left = 1578.0
+offset_top = 1110.0
+offset_right = 2025.0
+offset_bottom = 1218.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_n8g1e")
 theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6g51k")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_vq7if")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_m3mr7")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_yq2g8")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1x8c5")
 text = "NEXT"
 script = ExtResource("2_vv1sr")
 
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[node name="Label" type="Label" parent="." unique_id=1300232622]
+layout_mode = 0
+offset_left = -172.0
+offset_top = -124.0
+offset_right = 1819.0
+offset_bottom = 133.0
+theme_override_fonts/font = ExtResource("2_n8g1e")
+theme_override_font_sizes/font_size = 45
+text = "You need to drag the corresponding glasses or cup to the corresponding equipment to fill it.
+Then you can give them to the client after taking their order.
+Careful ! The client will leave if given the wrong order !!
+"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Next_button" to="Next_button" method="_on_pressed"]
