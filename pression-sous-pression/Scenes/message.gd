@@ -20,4 +20,4 @@ func _satisfaction():
 		message = "Your son is getting hungry.\n"
 	else:
 		message = "Your son might soon be going with your ex-partner.\n"
-	$message.text = message
+	text = message
