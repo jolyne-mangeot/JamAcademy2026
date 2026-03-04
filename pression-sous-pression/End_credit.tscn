@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://fpm3fn3mqbjr"]
+
+[ext_resource type="Texture2D" uid="uid://b3p5tr58c26vb" path="res://Assets/Sprites/GamingScene/Sheet.png" id="1_av21i"]
+[ext_resource type="Texture2D" uid="uid://bcxgclueua2eo" path="res://Assets/Sprites/TitleScreen/EcranTitre.png" id="2_8npdy"]
+[ext_resource type="Texture2D" uid="uid://ba4mf4oaj37yl" path="res://Assets/Sprites/TitleScreen/Title.png" id="3_8npdy"]
+[ext_resource type="Texture2D" uid="uid://xx134v8x0g56" path="res://Assets/Sprites/TitleScreen/ButtonA.png" id="4_lmpcg"]
+[ext_resource type="Texture2D" uid="uid://beqajr83p3m1o" path="res://Assets/Sprites/TitleScreen/ButtonB.png" id="5_hjx88"]
+[ext_resource type="Texture2D" uid="uid://cwmcc6b8ncgb3" path="res://Assets/Sprites/TitleScreen/ButtonC.png" id="6_da4n0"]
+
+[node name="Control" type="Control" unique_id=1097713460]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=447423211]
+layout_mode = 0
+offset_right = 2561.0
+offset_bottom = 1441.0
+
+[node name="EcranTitre" type="Sprite2D" parent="TextureRect" unique_id=1778882457]
+position = Vector2(1280.5, 721.5)
+scale = Vector2(1.3286458, 1.3194444)
+texture = ExtResource("2_8npdy")
+
+[node name="Sheet" type="Sprite2D" parent="." unique_id=1787354644]
+position = Vector2(1263.9999, 678.25)
+scale = Vector2(0.5346679, 0.37634277)
+texture = ExtResource("1_av21i")
+
+[node name="Title" type="Sprite2D" parent="." unique_id=178026966]
+position = Vector2(1227, 172)
+texture = ExtResource("3_8npdy")
+
+[node name="ButtonA" type="Sprite2D" parent="." unique_id=2145288702]
+position = Vector2(717, 534)
+texture = ExtResource("4_lmpcg")
+
+[node name="ButtonB" type="Sprite2D" parent="." unique_id=153386018]
+position = Vector2(1693, 534)
+texture = ExtResource("5_hjx88")
+
+[node name="ButtonA2" type="Sprite2D" parent="." unique_id=1352332190]
+position = Vector2(1701, 737)
+texture = ExtResource("4_lmpcg")
+
+[node name="ButtonC" type="Sprite2D" parent="." unique_id=800548242]
+position = Vector2(1705, 955)
+texture = ExtResource("6_da4n0")
+
+[node name="ButtonB2" type="Sprite2D" parent="." unique_id=2045286361]
+position = Vector2(723, 735)
+texture = ExtResource("5_hjx88")
+
+[node name="ButtonC2" type="Sprite2D" parent="." unique_id=349113085]
+position = Vector2(726, 951)
+texture = ExtResource("6_da4n0")
