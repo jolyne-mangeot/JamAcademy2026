@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://d3fx5nxjxx6sl"]
+
+[ext_resource type="Script" uid="uid://cpdgovpeug018" path="res://thx.gd" id="1_gcqy4"]
+[ext_resource type="Texture2D" uid="uid://4dd2aus5rxel" path="res://Assets/Sprites/GamingScene/BG.png" id="1_yshhl"]
+[ext_resource type="Texture2D" uid="uid://cwmcc6b8ncgb3" path="res://Assets/Sprites/TitleScreen/ButtonC.png" id="2_gcqy4"]
+[ext_resource type="Texture2D" uid="uid://xx134v8x0g56" path="res://Assets/Sprites/TitleScreen/ButtonA.png" id="3_bf2eg"]
+[ext_resource type="FontFile" uid="uid://d37u2vjhyv1h3" path="res://Assets/Fonts/Kelvinch.otf" id="4_yavpy"]
+[ext_resource type="Texture2D" uid="uid://d4hwklr1kbnmy" path="res://Assets/Sprites/GamingScene/BarmanNice.png" id="5_snncs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j3lb1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mxk2o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ivtrw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r23hl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j18dn"]
+
+[node name="Control" type="Control" unique_id=2113700708]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gcqy4")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1467027672]
+layout_mode = 0
+offset_right = 2557.0
+offset_bottom = 1452.0
+texture = ExtResource("1_yshhl")
+expand_mode = 1
+
+[node name="ButtonC" type="Sprite2D" parent="TextureRect" unique_id=200585175]
+position = Vector2(1279, 174.00002)
+scale = Vector2(1.2744361, 1.7314814)
+texture = ExtResource("2_gcqy4")
+
+[node name="ButtonA" type="Sprite2D" parent="TextureRect" unique_id=945826218]
+position = Vector2(1287, 404)
+scale = Vector2(1.3263156, 2.074074)
+texture = ExtResource("3_bf2eg")
+
+[node name="Label" type="Label" parent="TextureRect" unique_id=488152095]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -294.5
+offset_top = 335.0
+offset_right = 282.5
+offset_bottom = 641.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("4_yavpy")
+theme_override_font_sizes/font_size = 65
+text = "Thanks for playing !!"
+
+[node name="Button" type="Button" parent="TextureRect" unique_id=214354924]
+layout_mode = 0
+offset_left = 880.0
+offset_top = 24.0
+offset_right = 1676.0
+offset_bottom = 271.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_yavpy")
+theme_override_font_sizes/font_size = 65
+theme_override_styles/normal = SubResource("StyleBoxEmpty_j3lb1")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_mxk2o")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ivtrw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_r23hl")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_j18dn")
+text = "Back to main"
+
+[node name="BarmanNice" type="Sprite2D" parent="." unique_id=2043791520]
+position = Vector2(1293, 1019.99994)
+scale = Vector2(0.43640637, 0.4435237)
+texture = ExtResource("5_snncs")
+
+[connection signal="pressed" from="TextureRect/Button" to="." method="_on_button_pressed"]
