@@ -51,24 +51,28 @@ theme_override_constants/separation = 75
 
 [node name="Time_enhancement_tap" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=812059233]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_a4xni")
 theme_override_font_sizes/font_size = 32
 text = "Reduce Time to fuel drinks
 75 $"
 
 [node name="Pourboire_enhancement" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1909860607]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_a4xni")
 theme_override_font_sizes/font_size = 32
 text = "Customer become more generous
 50$"
 
 [node name="max_order_button" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1153757693]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_a4xni")
 theme_override_font_sizes/font_size = 32
 text = "Reduce max orders of client 
 30$"
 
 [node name="delay_client_button" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=287386430]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_a4xni")
 theme_override_font_sizes/font_size = 32
 text = "Augment delay between clients
 55 $"
