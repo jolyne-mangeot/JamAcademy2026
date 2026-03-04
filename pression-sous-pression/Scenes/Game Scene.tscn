@@ -741,7 +741,7 @@ offset_right = 1423.0
 offset_bottom = 154.0
 theme_override_fonts/font = ExtResource("31_yqalu")
 theme_override_font_sizes/font_size = 100
-text = "03.00"
+text = "02.00"
 
 [node name="Money" type="Sprite2D" parent="." unique_id=26300496]
 position = Vector2(2233, 81)
@@ -869,6 +869,10 @@ parameters/looping = true
 [connection signal="order_accepted" from="Command Hook 3" to="Client Chairs/Client 2" method="_on_command_hook_order_accepted"]
 [connection signal="order_accepted" from="Command Hook 3" to="Client Chairs/Client 3" method="_on_command_hook_order_accepted"]
 [connection signal="order_accepted" from="Command Hook 3" to="Client Chairs/Client 4" method="_on_command_hook_order_accepted"]
+[connection signal="end_game" from="CanvasLayer" to="Client Chairs/Client 1" method="_on_timer_timeout"]
+[connection signal="end_game" from="CanvasLayer" to="Client Chairs/Client 2" method="_on_timer_timeout"]
+[connection signal="end_game" from="CanvasLayer" to="Client Chairs/Client 3" method="_on_timer_timeout"]
+[connection signal="end_game" from="CanvasLayer" to="Client Chairs/Client 4" method="_on_timer_timeout"]
 [connection signal="glass_dropped" from="Employee Pipe" to="Bokal/Water Control" method="_on_glass_dropped"]
 [connection signal="mouse_entered" from="BrownBeerTap" to="BrownBeerTap" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="BrownBeerTap" to="BrownBeerTap" method="_on_mouse_exited"]
