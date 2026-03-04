@@ -90,9 +90,9 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_6w8xc")
 Price_patience = 75
-Price_max_order = 50
-Price_delay = 30
-Price_pourboire = 55
+Price_max_order = 30
+Price_delay = 55
+Price_pourboire = 50
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1687662602]
 

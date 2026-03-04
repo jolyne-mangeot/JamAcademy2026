@@ -13,6 +13,17 @@
 [ext_resource type="Script" uid="uid://cxbnfwffedki0" path="res://Scenes/rent_title.gd" id="7_hn8ea"]
 [ext_resource type="Texture2D" uid="uid://33nr4f716deb" path="res://Assets/Sprites/GamingScene/FishFront.png" id="7_l2j3q"]
 [ext_resource type="Script" uid="uid://dvkf3bbcifdx7" path="res://Scenes/satisfaction_title.gd" id="9_opg7c"]
+[ext_resource type="Script" uid="uid://b4bso5qtmyg5y" path="res://Scenes/message.gd" id="9_pcq7y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_opg7c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pcq7y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_doaul"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7ga3h"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tuadv"]
 
 [node name="End Of Day" type="Node" unique_id=2144417167]
 script = ExtResource("1_55r4e")
@@ -83,11 +94,14 @@ text = "Rent :"
 script = ExtResource("7_hn8ea")
 
 [node name="message" type="Label" parent="." unique_id=2107215797]
-offset_left = 115.0
-offset_top = 94.0
-offset_right = 358.0
-offset_bottom = 143.0
+offset_left = 79.0
+offset_top = 51.0
+offset_right = 579.0
+offset_bottom = 142.0
+theme_override_fonts/font = ExtResource("5_q8jam")
+theme_override_font_sizes/font_size = 45
 horizontal_alignment = 1
+script = ExtResource("9_pcq7y")
 
 [node name="satisfaction title" type="Label" parent="." unique_id=521213653]
 offset_left = 668.0
@@ -151,3 +165,19 @@ expand_mode = 2
 position = Vector2(1896.9999, 693)
 scale = Vector2(0.124999955, 0.11523436)
 texture = ExtResource("5_bodib")
+
+[node name="shop_button" type="Button" parent="." unique_id=1466201828]
+offset_left = 1025.0
+offset_top = 1210.0
+offset_right = 1583.0
+offset_bottom = 1342.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = SubResource("StyleBoxEmpty_opg7c")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pcq7y")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_doaul")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_7ga3h")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tuadv")
+text = "Go to Shop"
+
+[connection signal="pressed" from="shop_button" to="." method="_on_shop_button_pressed"]
