@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://xx134v8x0g56" path="res://Assets/Sprites/TitleScreen/ButtonA.png" id="4_bsqa3"]
 [ext_resource type="Texture2D" uid="uid://beqajr83p3m1o" path="res://Assets/Sprites/TitleScreen/ButtonB.png" id="5_mhhmh"]
 [ext_resource type="Texture2D" uid="uid://cwmcc6b8ncgb3" path="res://Assets/Sprites/TitleScreen/ButtonC.png" id="6_7eeap"]
+[ext_resource type="Texture2D" uid="uid://ba4mf4oaj37yl" path="res://Assets/Sprites/TitleScreen/Title.png" id="8_x21g4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_5vbwr"]
 font_size = 50
@@ -78,23 +79,23 @@ label_settings = SubResource("LabelSettings_5vbwr")
 horizontal_alignment = 1
 
 [node name="ButtonA" type="Sprite2D" parent="." unique_id=386872028]
-position = Vector2(657, 395)
+position = Vector2(643, 530)
 texture = ExtResource("4_bsqa3")
 
 [node name="ButtonB" type="Sprite2D" parent="." unique_id=1632352288]
-position = Vector2(643, 573)
+position = Vector2(649, 713)
 texture = ExtResource("5_mhhmh")
 
 [node name="ButtonC" type="Sprite2D" parent="." unique_id=1213101584]
-position = Vector2(649, 766)
+position = Vector2(649, 893)
 texture = ExtResource("6_7eeap")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1414775073]
 layout_mode = 0
-offset_left = 223.0
-offset_top = 246.0
-offset_right = 1078.0
-offset_bottom = 896.0
+offset_left = 229.0
+offset_top = 379.0
+offset_right = 1084.0
+offset_bottom = 1029.0
 theme_override_constants/separation = 120
 alignment = 1
 
@@ -140,6 +141,10 @@ text = "Quit"
 stream = ExtResource("3_s3ykx")
 volume_db = -10.0
 autoplay = true
+
+[node name="Title2" type="Sprite2D" parent="." unique_id=649912981]
+position = Vector2(571, 187)
+texture = ExtResource("8_x21g4")
 
 [connection signal="pressed" from="VBoxContainer/Start_button" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Settings_button" to="." method="_on_settings_button_pressed"]

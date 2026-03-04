@@ -187,7 +187,6 @@ texture = ExtResource("2_0rvqk")
 expand_mode = 2
 
 [node name="CanvasLayer" parent="." unique_id=2086796289 instance=ExtResource("6_f4f5n")]
-visible = false
 
 [node name="Tables" type="TextureRect" parent="." unique_id=1571111971]
 layout_mode = 1
@@ -681,7 +680,7 @@ script = ExtResource("8_s5gn0")
 glass_type = "pastis glass"
 
 [node name="timer_day" type="Timer" parent="." unique_id=1501621741]
-wait_time = 180.0
+wait_time = 120.0
 one_shot = true
 autostart = true
 
