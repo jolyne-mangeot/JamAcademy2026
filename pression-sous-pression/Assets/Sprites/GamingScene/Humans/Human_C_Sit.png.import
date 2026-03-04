@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ca7n72qrx2ska"
-path="res://.godot/imported/Human01_WalkA.png-77741d107cc86ed6ea69051c6497594a.ctex"
+uid="uid://ck8xpxa3p76mo"
+path="res://.godot/imported/Human_C_Sit.png-2d7244f09d2d3caf082cc1ce7f29545d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/GamingScene/Human01_WalkA.png"
-dest_files=["res://.godot/imported/Human01_WalkA.png-77741d107cc86ed6ea69051c6497594a.ctex"]
+source_file="res://Assets/Sprites/GamingScene/Humans/Human_C_Sit.png"
+dest_files=["res://.godot/imported/Human_C_Sit.png-2d7244f09d2d3caf082cc1ce7f29545d.ctex"]
 
 [params]
 

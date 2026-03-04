@@ -1,12 +1,18 @@
 [gd_scene format=3 uid="uid://blm4f15xoka3u"]
 
 [ext_resource type="Script" uid="uid://dkp4gb7ofgcer" path="res://Scripts/Game/Commands/Clients.gd" id="1_6myro"]
-[ext_resource type="Texture2D" uid="uid://b744ulnvjtvfv" path="res://Assets/Sprites/GamingScene/Human_A_Sit.png" id="3_6myro"]
-[ext_resource type="Texture2D" uid="uid://dcxbphtedv7o0" path="res://Assets/Sprites/GamingScene/Human_B_Sit.png" id="3_j3npf"]
-[ext_resource type="Texture2D" uid="uid://daxry44k31g4j" path="res://Assets/Sprites/GamingScene/Human_C_Sit.png" id="4_dihau"]
-[ext_resource type="Texture2D" uid="uid://dvflpcuv2faht" path="res://Assets/Sprites/GamingScene/Human_D_Sit.png" id="5_ubgjt"]
-[ext_resource type="Texture2D" uid="uid://44v30hbhkjqo" path="res://Assets/Sprites/GamingScene/Human_E_Sit.png" id="6_552on"]
-[ext_resource type="Texture2D" uid="uid://d2kp4iqbf5wnn" path="res://Assets/Sprites/GamingScene/Human_F_Sit.png" id="7_pk7g8"]
+[ext_resource type="Texture2D" uid="uid://cmw634gulanw3" path="res://Assets/Sprites/GamingScene/Humans/Human_A_Sit.png" id="2_wkkrx"]
+[ext_resource type="Texture2D" uid="uid://c1u6rpmyqhwr7" path="res://Assets/Sprites/GamingScene/Humans/Human_A_Sit_Angry.png" id="3_d6cqi"]
+[ext_resource type="Texture2D" uid="uid://jq3nsjhtulje" path="res://Assets/Sprites/GamingScene/Humans/Human_B_Sit.png" id="4_re27a"]
+[ext_resource type="Texture2D" uid="uid://b0amfum0xg3b1" path="res://Assets/Sprites/GamingScene/Humans/Human_B_Sit_Angry.png" id="5_6j4k4"]
+[ext_resource type="Texture2D" uid="uid://ck8xpxa3p76mo" path="res://Assets/Sprites/GamingScene/Humans/Human_C_Sit.png" id="6_c8wkl"]
+[ext_resource type="Texture2D" uid="uid://dwamgv51fx74y" path="res://Assets/Sprites/GamingScene/Humans/Human_C_Sit_Angry.png" id="7_ee15t"]
+[ext_resource type="Texture2D" uid="uid://dj0qn7jrd83hq" path="res://Assets/Sprites/GamingScene/Humans/Human_D_Sit.png" id="8_eflso"]
+[ext_resource type="Texture2D" uid="uid://bo8uek7bfu07f" path="res://Assets/Sprites/GamingScene/Humans/Human_D_Sit_Angry.png" id="9_0a1wl"]
+[ext_resource type="Texture2D" uid="uid://0oqeu2klavrx" path="res://Assets/Sprites/GamingScene/Humans/Human_E_Sit.png" id="10_7vqds"]
+[ext_resource type="Texture2D" uid="uid://bbkf24mtxqmjk" path="res://Assets/Sprites/GamingScene/Humans/Human_E_Sit_Angry.png" id="11_w1k03"]
+[ext_resource type="Texture2D" uid="uid://e7ytbbdgrt46" path="res://Assets/Sprites/GamingScene/Humans/Human_F_Sit.png" id="12_1oq26"]
+[ext_resource type="Texture2D" uid="uid://csqky0hcn1u8h" path="res://Assets/Sprites/GamingScene/Humans/Human_F_Sit_Angry.png" id="13_wldu5"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vjkiq"]
 
@@ -36,7 +42,7 @@ offset_top = 1.0
 offset_right = 198.0
 offset_bottom = 279.0
 script = ExtResource("1_6myro")
-skins = [NodePath("Textures/Client_texture1"), NodePath("Textures/Client_texture2"), NodePath("Textures/Client_texture3"), NodePath("Textures/Client_texture4"), NodePath("Textures/Client_texture5"), NodePath("Textures/Client_texture6")]
+skins = [NodePath("Textures/client1"), NodePath("Textures/client2"), NodePath("Textures/client3"), NodePath("Textures/client4"), NodePath("Textures/client5"), NodePath("Textures/client6")]
 
 [node name="Timer_leaving" type="Timer" parent="." unique_id=1770227453]
 one_shot = true
@@ -46,69 +52,165 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Client_texture1" type="TextureRect" parent="Textures" unique_id=194036211 groups=["skins"]]
+[node name="client1" type="Control" parent="Textures" unique_id=461849192]
 visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="happy" type="TextureRect" parent="Textures/client1" unique_id=194036211 groups=["skins"]]
 layout_mode = 0
 offset_left = 17.0
 offset_top = 35.0
 offset_right = 203.0
 offset_bottom = 337.0
-texture = ExtResource("3_6myro")
+texture = ExtResource("2_wkkrx")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="Client_texture2" type="TextureRect" parent="Textures" unique_id=1718514943 groups=["skins"]]
+[node name="angry" type="TextureRect" parent="Textures/client1" unique_id=928369498 groups=["skins"]]
 visible = false
 layout_mode = 0
 offset_left = 17.0
 offset_top = 35.0
 offset_right = 203.0
 offset_bottom = 337.0
-texture = ExtResource("3_j3npf")
+texture = ExtResource("3_d6cqi")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="Client_texture3" type="TextureRect" parent="Textures" unique_id=912929874 groups=["skins"]]
+[node name="client2" type="Control" parent="Textures" unique_id=836223314]
 visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="happy" type="TextureRect" parent="Textures/client2" unique_id=1964543580 groups=["skins"]]
 layout_mode = 0
 offset_left = 17.0
 offset_top = 35.0
 offset_right = 203.0
 offset_bottom = 337.0
-texture = ExtResource("4_dihau")
+texture = ExtResource("4_re27a")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="Client_texture4" type="TextureRect" parent="Textures" unique_id=622692879 groups=["skins"]]
+[node name="angry" type="TextureRect" parent="Textures/client2" unique_id=1751472318 groups=["skins"]]
 visible = false
 layout_mode = 0
 offset_left = 17.0
 offset_top = 35.0
 offset_right = 203.0
 offset_bottom = 337.0
-texture = ExtResource("5_ubgjt")
+texture = ExtResource("5_6j4k4")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="Client_texture5" type="TextureRect" parent="Textures" unique_id=1495017595 groups=["skins"]]
+[node name="client3" type="Control" parent="Textures" unique_id=1703182581]
 visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="happy" type="TextureRect" parent="Textures/client3" unique_id=673639304 groups=["skins"]]
 layout_mode = 0
 offset_left = 17.0
 offset_top = 35.0
 offset_right = 203.0
 offset_bottom = 337.0
-texture = ExtResource("6_552on")
+texture = ExtResource("6_c8wkl")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="Client_texture6" type="TextureRect" parent="Textures" unique_id=2096385271 groups=["skins"]]
+[node name="angry" type="TextureRect" parent="Textures/client3" unique_id=402367559 groups=["skins"]]
 visible = false
 layout_mode = 0
 offset_left = 17.0
 offset_top = 35.0
 offset_right = 203.0
 offset_bottom = 337.0
-texture = ExtResource("7_pk7g8")
+texture = ExtResource("7_ee15t")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="client4" type="Control" parent="Textures" unique_id=1396014417]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="happy" type="TextureRect" parent="Textures/client4" unique_id=687026160 groups=["skins"]]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 35.0
+offset_right = 203.0
+offset_bottom = 337.0
+texture = ExtResource("8_eflso")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="angry" type="TextureRect" parent="Textures/client4" unique_id=1385938435 groups=["skins"]]
+visible = false
+layout_mode = 0
+offset_left = 17.0
+offset_top = 35.0
+offset_right = 203.0
+offset_bottom = 337.0
+texture = ExtResource("9_0a1wl")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="client5" type="Control" parent="Textures" unique_id=1208981262]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="happy" type="TextureRect" parent="Textures/client5" unique_id=470221370 groups=["skins"]]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 35.0
+offset_right = 203.0
+offset_bottom = 337.0
+texture = ExtResource("10_7vqds")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="angry" type="TextureRect" parent="Textures/client5" unique_id=170248298 groups=["skins"]]
+visible = false
+layout_mode = 0
+offset_left = 17.0
+offset_top = 35.0
+offset_right = 203.0
+offset_bottom = 337.0
+texture = ExtResource("11_w1k03")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="client6" type="Control" parent="Textures" unique_id=898221826]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="happy" type="TextureRect" parent="Textures/client6" unique_id=1430579285 groups=["skins"]]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 35.0
+offset_right = 203.0
+offset_bottom = 337.0
+texture = ExtResource("12_1oq26")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="angry" type="TextureRect" parent="Textures/client6" unique_id=2131035052 groups=["skins"]]
+visible = false
+layout_mode = 0
+offset_left = 17.0
+offset_top = 35.0
+offset_right = 203.0
+offset_bottom = 337.0
+texture = ExtResource("13_wldu5")
 expand_mode = 1
 stretch_mode = 4
 

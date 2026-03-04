@@ -6,11 +6,6 @@ var message: String = ""
 func _ready() -> void:
 	_satisfaction()
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	_satisfaction()
-
 func _satisfaction():
 	if satisfaction > 75:
 		message = "Your son loves you.\nIt fills you with determination..."

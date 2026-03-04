@@ -7,6 +7,7 @@ var order_count_down: float = accept_count_down * 2
 @export var client_id:int
 @export var skins:Array[Node]
 var current_skin: Node
+var skin_id: int = 0
 var client_alive:bool = false
 var order
 var order_time_left: float = order_count_down
@@ -16,7 +17,6 @@ var progress_percent: float = 0.0
 var is_hovered:bool = false
 var is_count_down: bool = false
 var drinks_paid: float
-
 
 signal order_fulfilled()
 signal order_failed()
@@ -31,8 +31,11 @@ func _ready() -> void:
 func init_client() -> void:
 	timer.wait_time = accept_count_down
 	timer.start()
+	current_skin.get_node("happy").visible = true
+	current_skin.get_node("angry").visible = false
 	current_skin.visible = false
-	current_skin = skins.pick_random()
+	skin_id = randi_range(0, 5)
+	current_skin = skins[skin_id]
 	current_skin.visible = true
 	client_alive = true
 	self.visible = true
@@ -47,6 +50,9 @@ func _process(delta: float) -> void:
 	if order_in_progress == true:
 		order_time_left -= delta
 		order.progress_bar.value = order_time_left / order_count_down
+		if order_time_left < 5.0:
+			current_skin.get_node("happy").visible = false
+			current_skin.get_node("angry").visible = true
 		if order_time_left <= 0.0:
 			order_failed.emit()
 			_on_timer_timeout()
@@ -56,6 +62,9 @@ func _process(delta: float) -> void:
 		return
 	time_left -= delta
 	timer_bar.value = time_left / accept_count_down
+	if time_left < 3.0:
+		current_skin.get_node("happy").visible = false
+		current_skin.get_node("angry").visible = true
 
 
 func _on_timer_timeout() -> void:
@@ -101,6 +110,8 @@ func _on_command_hook_order_accepted(id: int) -> void:
 	if id == client_id && client_alive == true:
 		%BellOrder.play()
 		timer.stop()
+		current_skin.get_node("happy").visible = true
+		current_skin.get_node("angry").visible = false
 		timer_bar.visible = false
 		order_in_progress = true
 		GameManager.accepted_orders += 1

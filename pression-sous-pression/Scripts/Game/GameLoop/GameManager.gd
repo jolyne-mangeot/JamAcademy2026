@@ -65,7 +65,7 @@ func _next_day()-> void:
 	client_spawn_delay -= client_spawn_delay_supp[day_count - 1]
 	client_patience -= 3.5
 	day_count += 1
-	current_day = days[day_count]
+	current_day = days[day_count - 1]
 
 func call_ending():
 	pass

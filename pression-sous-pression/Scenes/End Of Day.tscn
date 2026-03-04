@@ -7,13 +7,13 @@
 [ext_resource type="Texture2D" uid="uid://b3p5tr58c26vb" path="res://Assets/Sprites/GamingScene/Sheet.png" id="4_q8jam"]
 [ext_resource type="Texture2D" uid="uid://bbvb3yoxlmbv8" path="res://Assets/Sprites/GamingScene/Money.png" id="5_bodib"]
 [ext_resource type="FontFile" uid="uid://d37u2vjhyv1h3" path="res://Assets/Fonts/Kelvinch.otf" id="5_q8jam"]
-[ext_resource type="Script" uid="uid://bw0w4oc8saorq" path="res://Scenes/earnings_title.gd" id="6_bodib"]
+[ext_resource type="Script" uid="uid://bw0w4oc8saorq" path="res://Scripts/Game/EndOfDay/earnings_title.gd" id="6_bodib"]
 [ext_resource type="Texture2D" uid="uid://cg0wts3a4ssuy" path="res://Assets/Sprites/GamingScene/Fishbowl.png" id="6_hn8ea"]
 [ext_resource type="Texture2D" uid="uid://d4hwklr1kbnmy" path="res://Assets/Sprites/GamingScene/BarmanNice.png" id="7_fowem"]
-[ext_resource type="Script" uid="uid://cxbnfwffedki0" path="res://Scenes/rent_title.gd" id="7_hn8ea"]
+[ext_resource type="Script" uid="uid://cxbnfwffedki0" path="res://Scripts/Game/EndOfDay/rent_title.gd" id="7_hn8ea"]
 [ext_resource type="Texture2D" uid="uid://33nr4f716deb" path="res://Assets/Sprites/GamingScene/FishFront.png" id="7_l2j3q"]
-[ext_resource type="Script" uid="uid://dvkf3bbcifdx7" path="res://Scenes/satisfaction_title.gd" id="9_opg7c"]
-[ext_resource type="Script" uid="uid://b4bso5qtmyg5y" path="res://Scenes/message.gd" id="9_pcq7y"]
+[ext_resource type="Script" uid="uid://dvkf3bbcifdx7" path="res://Scripts/Game/EndOfDay/satisfaction_title.gd" id="9_opg7c"]
+[ext_resource type="Script" uid="uid://b4bso5qtmyg5y" path="res://Scripts/Game/EndOfDay/message.gd" id="9_pcq7y"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_opg7c"]
 
