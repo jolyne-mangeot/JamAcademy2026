@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://cij1wklfkqmq0" path="res://Assets/Sprites/GamingScene/Bar_Back.png" id="2_a0bff"]
 [ext_resource type="Texture2D" uid="uid://beqajr83p3m1o" path="res://Assets/Sprites/TitleScreen/ButtonB.png" id="2_tlmoe"]
 [ext_resource type="FontFile" uid="uid://d37u2vjhyv1h3" path="res://Assets/Fonts/Kelvinch.otf" id="3_a4xni"]
+[ext_resource type="Texture2D" uid="uid://bbvb3yoxlmbv8" path="res://Assets/Sprites/GamingScene/Money.png" id="5_g4621"]
+[ext_resource type="Script" uid="uid://3bh0v7le4pfs" path="res://count_money.gd" id="5_shp2b"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a0bff"]
 
@@ -89,7 +91,17 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_rtrrr")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_dhqmx")
 text = "Start Next day"
 
-[node name="Label" type="Label" parent="CanvasLayer" unique_id=1007788583]
+[node name="Count_money" type="Label" parent="CanvasLayer" unique_id=1725359238]
+offset_left = 2171.0
+offset_top = 78.0
+offset_right = 2514.0
+offset_bottom = 283.0
+theme_override_fonts/font = ExtResource("3_a4xni")
+theme_override_font_sizes/font_size = 150
+text = "1000"
+script = ExtResource("5_shp2b")
+
+[node name="Title" type="Label" parent="CanvasLayer" unique_id=1007788583]
 offset_left = 771.0
 offset_top = 73.0
 offset_right = 1768.0
@@ -97,6 +109,11 @@ offset_bottom = 274.0
 theme_override_fonts/font = ExtResource("3_a4xni")
 theme_override_font_sizes/font_size = 150
 text = "Upgrade shop :"
+
+[node name="Money" type="Sprite2D" parent="CanvasLayer/Title" unique_id=1756770709]
+position = Vector2(1298, 116)
+scale = Vector2(0.14233407, 0.14746092)
+texture = ExtResource("5_g4621")
 
 [node name="PauseMenu" parent="." unique_id=2086796289 instance=ExtResource("1_g2cgu")]
 
