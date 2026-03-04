@@ -42,7 +42,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="PauseMenu" parent="Control" unique_id=2086796289 instance=ExtResource("3_l2j3q")]
-visible = false
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1199638123]
 stream = ExtResource("1_kssu7")
@@ -252,7 +251,6 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_tuadv")
 text = "Go to Shop"
 
 [node name="defeat_button" type="Button" parent="buttons" unique_id=1811379234]
-visible = false
 layout_mode = 0
 offset_left = 839.0
 offset_top = 1212.0
@@ -266,7 +264,7 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_pcq7y")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_doaul")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_7ga3h")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_tuadv")
-text = "Back to Main-Menu"
+text = "Next"
 
 [connection signal="pressed" from="buttons/shop_button" to="." method="_on_shop_button_pressed"]
 [connection signal="pressed" from="buttons/defeat_button" to="." method="_on_defeat_button_pressed"]

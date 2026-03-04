@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Pression Sous Pression"
-run/main_scene="uid://4dapgurhapnk"
+run/main_scene="uid://qre40qf4tm58"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
