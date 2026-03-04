@@ -44,6 +44,16 @@ font_size = 50
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b0vnp"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j8vne"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qq4t8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_18mq4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2hgqf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y1yhi"]
+
 [node name="Menu" type="Control" unique_id=379755638]
 layout_mode = 3
 anchors_preset = 15
@@ -146,6 +156,27 @@ autoplay = true
 position = Vector2(571, 187)
 texture = ExtResource("8_x21g4")
 
+[node name="ButtonA2" type="Sprite2D" parent="." unique_id=1435551922]
+position = Vector2(650, 1210)
+texture = ExtResource("4_bsqa3")
+
+[node name="credits_button" type="Button" parent="." unique_id=1283015397]
+layout_mode = 0
+offset_left = 343.0
+offset_top = 1167.0
+offset_right = 938.0
+offset_bottom = 1248.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_sibm3")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxEmpty_j8vne")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_qq4t8")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_18mq4")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_2hgqf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_y1yhi")
+text = "Credits"
+
 [connection signal="pressed" from="VBoxContainer/Start_button" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Settings_button" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit_button" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="credits_button" to="." method="_on_credits_button_pressed"]
