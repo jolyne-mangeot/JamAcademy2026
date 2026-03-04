@@ -3,10 +3,14 @@
 [ext_resource type="Script" uid="uid://oeuner457q0f" path="res://Scripts/Menues/SettingsScene.gd" id="1_ktb8s"]
 [ext_resource type="Texture2D" uid="uid://4dd2aus5rxel" path="res://Assets/Sprites/GamingScene/BG.png" id="2_hfnpu"]
 [ext_resource type="Texture2D" uid="uid://b3p5tr58c26vb" path="res://Assets/Sprites/GamingScene/Sheet.png" id="2_sbpj2"]
+[ext_resource type="Texture2D" uid="uid://duhnmmtll8rqj" path="res://Assets/Sprites/GamingScene/FishGirl.png" id="3_3xfqd"]
 [ext_resource type="Texture2D" uid="uid://xx134v8x0g56" path="res://Assets/Sprites/TitleScreen/ButtonA.png" id="4_4n3xu"]
 [ext_resource type="FontFile" uid="uid://d37u2vjhyv1h3" path="res://Assets/Fonts/Kelvinch.otf" id="4_6k6jm"]
 [ext_resource type="AudioStream" uid="uid://dla0mx78w3ugn" path="res://Assets/Music/otherworldly_oceanside.mp3" id="4_shka7"]
 [ext_resource type="Texture2D" uid="uid://beqajr83p3m1o" path="res://Assets/Sprites/TitleScreen/ButtonB.png" id="5_iduts"]
+[ext_resource type="Texture2D" uid="uid://blt837js3xums" path="res://Assets/Sprites/Intro/FishSubmarine.png" id="9_gaeyx"]
+[ext_resource type="Texture2D" uid="uid://cnxoahf07js8s" path="res://Assets/Sprites/GamingScene/Hook.png" id="10_cj1we"]
+[ext_resource type="Texture2D" uid="uid://cpkpxyu25voqx" path="res://Assets/Sprites/GamingScene/FishSide.png" id="11_shr03"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m2duy"]
 
@@ -34,10 +38,20 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = -18.0
+offset_right = -2.0
+offset_bottom = -18.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_hfnpu")
 expand_mode = 2
+
+[node name="FishGirl" type="Sprite2D" parent="Background" unique_id=791505704]
+modulate = Color(0.15127608, 0.15127608, 0.15127608, 0.13725491)
+position = Vector2(1410, 731.0001)
+scale = Vector2(0.8544922, 0.8955078)
+texture = ExtResource("3_3xfqd")
 
 [node name="SheetBackground" type="TextureRect" parent="." unique_id=1160465629]
 layout_mode = 0
@@ -90,6 +104,22 @@ text = "Go Back to Menu"
 stream = ExtResource("4_shka7")
 volume_db = -10.0
 autoplay = true
+
+[node name="FishSubmarine" type="Sprite2D" parent="." unique_id=1352247471]
+position = Vector2(1762, 669.00006)
+rotation = -0.5864306
+texture = ExtResource("9_gaeyx")
+
+[node name="Hook" type="Sprite2D" parent="." unique_id=611079256]
+position = Vector2(1992.0001, 991)
+scale = Vector2(0.34923676, 0.22763148)
+texture = ExtResource("10_cj1we")
+
+[node name="FishSide" type="Sprite2D" parent="." unique_id=1359185652]
+position = Vector2(1883, 1168.0001)
+rotation = -0.7627089
+scale = Vector2(0.42231643, 0.39442226)
+texture = ExtResource("11_shr03")
 
 [connection signal="pressed" from="VolumeButton" to="." method="_on_volume_button_pressed"]
 [connection signal="pressed" from="backMenu_button" to="." method="_on_back_menu_button_pressed"]
