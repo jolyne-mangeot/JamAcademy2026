@@ -1,11 +1,18 @@
 [gd_scene format=3 uid="uid://fpm3fn3mqbjr"]
 
 [ext_resource type="Texture2D" uid="uid://b3p5tr58c26vb" path="res://Assets/Sprites/GamingScene/Sheet.png" id="1_av21i"]
+[ext_resource type="PackedScene" uid="uid://poifjhi42r6a" path="res://Scenes/Game/PauseMenu.tscn" id="1_w1hqp"]
+[ext_resource type="Script" uid="uid://iauquewjr1oo" path="res://end_credit.gd" id="1_wqdnx"]
 [ext_resource type="Texture2D" uid="uid://bcxgclueua2eo" path="res://Assets/Sprites/TitleScreen/EcranTitre.png" id="2_8npdy"]
 [ext_resource type="Texture2D" uid="uid://ba4mf4oaj37yl" path="res://Assets/Sprites/TitleScreen/Title.png" id="3_8npdy"]
 [ext_resource type="Texture2D" uid="uid://xx134v8x0g56" path="res://Assets/Sprites/TitleScreen/ButtonA.png" id="4_lmpcg"]
 [ext_resource type="Texture2D" uid="uid://beqajr83p3m1o" path="res://Assets/Sprites/TitleScreen/ButtonB.png" id="5_hjx88"]
 [ext_resource type="Texture2D" uid="uid://cwmcc6b8ncgb3" path="res://Assets/Sprites/TitleScreen/ButtonC.png" id="6_da4n0"]
+[ext_resource type="FontFile" uid="uid://d37u2vjhyv1h3" path="res://Assets/Fonts/Kelvinch.otf" id="7_hjx88"]
+[ext_resource type="Texture2D" uid="uid://tfdpac8v454s" path="res://Assets/Sprites/GamingScene/BeerAmbré.png" id="8_karvq"]
+[ext_resource type="Texture2D" uid="uid://dnh8n2oacvfh3" path="res://Assets/Sprites/GamingScene/BeerBlonde.png" id="9_tkd8h"]
+[ext_resource type="Texture2D" uid="uid://33nr4f716deb" path="res://Assets/Sprites/GamingScene/FishFront.png" id="10_tkd8h"]
+[ext_resource type="Texture2D" uid="uid://btrbfn33hxjxw" path="res://Assets/Sprites/GamingScene/separator.png" id="11_8h0vc"]
 
 [node name="Control" type="Control" unique_id=1097713460]
 layout_mode = 3
@@ -14,6 +21,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_wqdnx")
+
+[node name="PauseMenu" parent="." unique_id=2086796289 instance=ExtResource("1_w1hqp")]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=447423211]
 layout_mode = 0
@@ -35,25 +45,123 @@ position = Vector2(1227, 172)
 texture = ExtResource("3_8npdy")
 
 [node name="ButtonA" type="Sprite2D" parent="." unique_id=2145288702]
-position = Vector2(717, 534)
+position = Vector2(717, 651)
 texture = ExtResource("4_lmpcg")
 
 [node name="ButtonB" type="Sprite2D" parent="." unique_id=153386018]
-position = Vector2(1693, 534)
+position = Vector2(1722, 647)
 texture = ExtResource("5_hjx88")
 
 [node name="ButtonA2" type="Sprite2D" parent="." unique_id=1352332190]
-position = Vector2(1701, 737)
+position = Vector2(1713, 827)
 texture = ExtResource("4_lmpcg")
 
 [node name="ButtonC" type="Sprite2D" parent="." unique_id=800548242]
-position = Vector2(1705, 955)
+position = Vector2(1707, 1019)
 texture = ExtResource("6_da4n0")
 
 [node name="ButtonB2" type="Sprite2D" parent="." unique_id=2045286361]
-position = Vector2(723, 735)
+position = Vector2(723, 838)
 texture = ExtResource("5_hjx88")
 
 [node name="ButtonC2" type="Sprite2D" parent="." unique_id=349113085]
-position = Vector2(726, 951)
+position = Vector2(722, 1027)
 texture = ExtResource("6_da4n0")
+
+[node name="ButtonC3" type="Sprite2D" parent="." unique_id=2047778851]
+position = Vector2(1208, 491)
+texture = ExtResource("6_da4n0")
+
+[node name="Camille" type="Label" parent="." unique_id=562541250]
+layout_mode = 0
+offset_left = 592.0
+offset_top = 616.0
+offset_right = 744.0
+offset_bottom = 678.0
+theme_override_fonts/font = ExtResource("7_hjx88")
+theme_override_font_sizes/font_size = 45
+text = "Camille P."
+
+[node name="Benjamin" type="Label" parent="." unique_id=1301125776]
+layout_mode = 0
+offset_left = 583.0
+offset_top = 799.0
+offset_right = 813.0
+offset_bottom = 861.0
+theme_override_fonts/font = ExtResource("7_hjx88")
+theme_override_font_sizes/font_size = 45
+text = "Benjamin R."
+
+[node name="Pacal" type="Label" parent="." unique_id=1104976155]
+layout_mode = 0
+offset_left = 604.0
+offset_top = 990.0
+offset_right = 786.0
+offset_bottom = 1052.0
+theme_override_fonts/font = ExtResource("7_hjx88")
+theme_override_font_sizes/font_size = 45
+text = "Pascal C."
+
+[node name="Emma" type="Label" parent="." unique_id=1916547781]
+layout_mode = 0
+offset_left = 1615.0
+offset_top = 791.0
+offset_right = 1802.0
+offset_bottom = 853.0
+theme_override_fonts/font = ExtResource("7_hjx88")
+theme_override_font_sizes/font_size = 45
+text = "Emma G."
+
+[node name="Jolyne" type="Label" parent="." unique_id=580698573]
+layout_mode = 0
+offset_left = 1612.0
+offset_top = 608.0
+offset_right = 1819.0
+offset_bottom = 671.0
+theme_override_fonts/font = ExtResource("7_hjx88")
+theme_override_font_sizes/font_size = 45
+text = "Jolyne M."
+
+[node name="Ady" type="Label" parent="." unique_id=492408172]
+layout_mode = 0
+offset_left = 1615.0
+offset_top = 980.0
+offset_right = 1754.0
+offset_bottom = 1047.0
+theme_override_fonts/font = ExtResource("7_hjx88")
+theme_override_font_sizes/font_size = 45
+text = "Ady G."
+
+[node name="Sarhynn" type="Label" parent="." unique_id=1343525327]
+layout_mode = 0
+offset_left = 1117.0
+offset_top = 454.0
+offset_right = 1283.0
+offset_bottom = 516.0
+theme_override_fonts/font = ExtResource("7_hjx88")
+theme_override_font_sizes/font_size = 45
+text = "Sarhynn"
+
+[node name="BeerAmbré" type="Sprite2D" parent="." unique_id=956660513]
+position = Vector2(592.28204, 396.4256)
+rotation = -0.705113
+scale = Vector2(0.16508943, 0.16045871)
+texture = ExtResource("8_karvq")
+
+[node name="BeerBlonde" type="Sprite2D" parent="." unique_id=209221856]
+position = Vector2(1836.0001, 389)
+rotation = 0.6457718
+scale = Vector2(0.16184579, 0.1525725)
+texture = ExtResource("9_tkd8h")
+flip_h = true
+
+[node name="FishFront" type="Sprite2D" parent="." unique_id=1065113010]
+position = Vector2(1236.9999, 788)
+scale = Vector2(0.50564975, 0.56573707)
+texture = ExtResource("10_tkd8h")
+
+[node name="Separator" type="Sprite2D" parent="." unique_id=1410407740]
+position = Vector2(1294, 848)
+rotation = 0.2932153
+scale = Vector2(0.45323524, 0.51233757)
+texture = ExtResource("11_8h0vc")
