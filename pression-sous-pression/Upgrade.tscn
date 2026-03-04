@@ -5,50 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://cij1wklfkqmq0" path="res://Assets/Sprites/GamingScene/Bar_Back.png" id="2_a0bff"]
 [ext_resource type="Texture2D" uid="uid://beqajr83p3m1o" path="res://Assets/Sprites/TitleScreen/ButtonB.png" id="2_tlmoe"]
 [ext_resource type="FontFile" uid="uid://d37u2vjhyv1h3" path="res://Assets/Fonts/Kelvinch.otf" id="3_a4xni"]
-[ext_resource type="Texture2D" uid="uid://cwmcc6b8ncgb3" path="res://Assets/Sprites/TitleScreen/ButtonC.png" id="3_dhqmx"]
 [ext_resource type="Texture2D" uid="uid://bbvb3yoxlmbv8" path="res://Assets/Sprites/GamingScene/Money.png" id="5_g4621"]
 [ext_resource type="Script" uid="uid://3bh0v7le4pfs" path="res://count_money.gd" id="5_shp2b"]
-[ext_resource type="Texture2D" uid="uid://xx134v8x0g56" path="res://Assets/Sprites/TitleScreen/ButtonA.png" id="6_wd1fp"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wd1fp"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cb0rl"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vqfcb"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oax8l"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6kl52"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p1qna"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0ur40"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6pjvp"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gl2cx"]
-S
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pg28v"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fbrfw"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q5huf"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_53wws"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vxw2s"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2obqh"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t5mqb"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_25d1k"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a7vr6"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pi5vg"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j8bad"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a0bff"]
 
@@ -91,75 +49,27 @@ offset_right = -975.24023
 offset_bottom = -269.96008
 theme_override_constants/separation = 75
 
-[node name="ButtonC2" type="Sprite2D" parent="CanvasLayer/VBoxContainer" unique_id=1011022092]
-position = Vector2(351, 47)
-scale = Vector2(1, 1.175926)
-texture = ExtResource("3_dhqmx")
-
 [node name="Time_enhancement_tap" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=812059233]
 layout_mode = 2
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_a4xni")
 theme_override_font_sizes/font_size = 32
-theme_override_styles/normal = SubResource("StyleBoxEmpty_wd1fp")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_cb0rl")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_vqfcb")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_oax8l")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_6kl52")
 text = "Reduce Time to fuel drinks
 75 $"
 
-[node name="ButtonB" type="Sprite2D" parent="CanvasLayer/VBoxContainer" unique_id=934675326]
-position = Vector2(357, 210.5)
-scale = Vector2(1, 1.1203704)
-texture = ExtResource("2_tlmoe")
-
-[node name="ButtonA" type="Sprite2D" parent="CanvasLayer/VBoxContainer" unique_id=1400185731]
-position = Vector2(355, 366)
-scale = Vector2(1, 1.0555556)
-texture = ExtResource("6_wd1fp")
-
-[node name="ButtonC" type="Sprite2D" parent="CanvasLayer/VBoxContainer" unique_id=244402226]
-position = Vector2(358, 532)
-scale = Vector2(1, 1.1203704)
-texture = ExtResource("3_dhqmx")
-
 [node name="Pourboire_enhancement" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1909860607]
 layout_mode = 2
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_a4xni")
 theme_override_font_sizes/font_size = 32
-theme_override_styles/normal = SubResource("StyleBoxEmpty_p1qna")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_0ur40")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_6pjvp")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_gl2cx")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_pg28v")
 text = "Customer become more generous
 50$"
 
 [node name="max_order_button" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1153757693]
 layout_mode = 2
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_a4xni")
 theme_override_font_sizes/font_size = 32
-theme_override_styles/normal = SubResource("StyleBoxEmpty_fbrfw")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_q5huf")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_53wws")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_vxw2s")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_2obqh")
 text = "Reduce max orders of client 
 30$"
 
 [node name="delay_client_button" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=287386430]
 layout_mode = 2
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_a4xni")
 theme_override_font_sizes/font_size = 32
-theme_override_styles/normal = SubResource("StyleBoxEmpty_t5mqb")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_25d1k")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_a7vr6")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_pi5vg")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_j8bad")
 text = "Augment delay between clients
 55 $"
 
