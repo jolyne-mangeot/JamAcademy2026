@@ -98,7 +98,10 @@ texture = ExtResource("3_dhqmx")
 
 [node name="Time_enhancement_tap" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=812059233]
 layout_mode = 2
+<<<<<<< HEAD
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+=======
+>>>>>>> 5499378 (uh)
 theme_override_fonts/font = ExtResource("3_a4xni")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxEmpty_wd1fp")
@@ -126,7 +129,10 @@ texture = ExtResource("3_dhqmx")
 
 [node name="Pourboire_enhancement" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1909860607]
 layout_mode = 2
+<<<<<<< HEAD
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+=======
+>>>>>>> 5499378 (uh)
 theme_override_fonts/font = ExtResource("3_a4xni")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxEmpty_p1qna")
@@ -139,7 +145,10 @@ text = "Customer become more generous
 
 [node name="max_order_button" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1153757693]
 layout_mode = 2
+<<<<<<< HEAD
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+=======
+>>>>>>> 5499378 (uh)
 theme_override_fonts/font = ExtResource("3_a4xni")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxEmpty_fbrfw")
@@ -152,7 +161,10 @@ text = "Reduce max orders of client
 
 [node name="delay_client_button" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=287386430]
 layout_mode = 2
+<<<<<<< HEAD
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+=======
+>>>>>>> 5499378 (uh)
 theme_override_fonts/font = ExtResource("3_a4xni")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxEmpty_t5mqb")
