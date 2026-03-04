@@ -4,11 +4,14 @@
 [ext_resource type="AudioStream" uid="uid://bvyeq7vuuivp1" path="res://Assets/Music/at_work.mp3" id="1_kssu7"]
 [ext_resource type="Texture2D" uid="uid://4dd2aus5rxel" path="res://Assets/Sprites/GamingScene/BG.png" id="3_fowem"]
 [ext_resource type="PackedScene" uid="uid://poifjhi42r6a" path="res://Scenes/Game/PauseMenu.tscn" id="3_l2j3q"]
+[ext_resource type="AudioStream" uid="uid://dcvb5jbtgeml4" path="res://Assets/Music/CRWDCheer_Cris et applaudissements d ados 2 (ID 0237)_LaSonotheque.fr.mp3" id="4_axwjc"]
 [ext_resource type="Texture2D" uid="uid://b3p5tr58c26vb" path="res://Assets/Sprites/GamingScene/Sheet.png" id="4_q8jam"]
 [ext_resource type="Texture2D" uid="uid://bbvb3yoxlmbv8" path="res://Assets/Sprites/GamingScene/Money.png" id="5_bodib"]
+[ext_resource type="AudioStream" uid="uid://c0qfh7pcxfjun" path="res://Assets/Music/olivia_parker-crowd-boo-disapproval-demo-309882.mp3" id="5_ice5o"]
 [ext_resource type="FontFile" uid="uid://d37u2vjhyv1h3" path="res://Assets/Fonts/Kelvinch.otf" id="5_q8jam"]
 [ext_resource type="Script" uid="uid://bw0w4oc8saorq" path="res://Scripts/Game/EndOfDay/earnings_title.gd" id="6_bodib"]
 [ext_resource type="Texture2D" uid="uid://cg0wts3a4ssuy" path="res://Assets/Sprites/GamingScene/Fishbowl.png" id="6_hn8ea"]
+[ext_resource type="AudioStream" uid="uid://bwgie138gs8s5" path="res://Assets/Music/freesound_community-cough-82181.mp3" id="6_ice5o"]
 [ext_resource type="Texture2D" uid="uid://d4hwklr1kbnmy" path="res://Assets/Sprites/GamingScene/BarmanNice.png" id="7_fowem"]
 [ext_resource type="Script" uid="uid://cxbnfwffedki0" path="res://Scripts/Game/EndOfDay/rent_title.gd" id="7_hn8ea"]
 [ext_resource type="Texture2D" uid="uid://33nr4f716deb" path="res://Assets/Sprites/GamingScene/FishFront.png" id="7_l2j3q"]
@@ -43,7 +46,22 @@ visible = false
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1199638123]
 stream = ExtResource("1_kssu7")
+volume_db = -20.0
 autoplay = true
+
+[node name="Applause" type="AudioStreamPlayer" parent="AudioStreamPlayer" unique_id=1031421823]
+unique_name_in_owner = true
+stream = ExtResource("4_axwjc")
+volume_db = -10.0
+
+[node name="Boo" type="AudioStreamPlayer" parent="AudioStreamPlayer" unique_id=814438764]
+unique_name_in_owner = true
+stream = ExtResource("5_ice5o")
+volume_db = -10.0
+
+[node name="cough" type="AudioStreamPlayer" parent="AudioStreamPlayer" unique_id=1733688777]
+unique_name_in_owner = true
+stream = ExtResource("6_ice5o")
 
 [node name="Background" type="TextureRect" parent="." unique_id=1522631625]
 anchors_preset = 15
