@@ -71,4 +71,4 @@ func _next_day()-> void:
 	current_day = days[day_count - 1]
 
 func call_ending():
-	get_tree().change_scene_to_file("res://Thx.tscn")
+	pass
