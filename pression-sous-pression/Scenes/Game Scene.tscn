@@ -30,7 +30,12 @@
 [ext_resource type="Texture2D" uid="uid://dnh8n2oacvfh3" path="res://Assets/Sprites/GamingScene/BeerBlonde.png" id="16_te4bi"]
 [ext_resource type="Texture2D" uid="uid://cl6e2l150x6vw" path="res://Assets/Sprites/GamingScene/CofeeMug.png" id="17_26ygd"]
 [ext_resource type="Texture2D" uid="uid://bktvw45be5kok" path="res://Assets/Sprites/GamingScene/PastisGlass.png" id="18_gaucp"]
-[ext_resource type="Texture2D" uid="uid://cg0wts3a4ssuy" path="res://Assets/Sprites/GamingScene/Fishbowl.png" id="21_26ygd"]
+[ext_resource type="Texture2D" uid="uid://c3mimjxdfc52k" path="res://Assets/Sprites/GamingScene/FishbowlFront.png" id="27_ryxql"]
+[ext_resource type="Script" uid="uid://dmfdtyajrrsyd" path="res://Scripts/Game/Animations/PakalWaterControl.gd" id="28_dy3ug"]
+[ext_resource type="Texture2D" uid="uid://bq5wu34i48go0" path="res://Assets/Sprites/GamingScene/Fishbowlback.png" id="28_sf4n0"]
+[ext_resource type="Script" uid="uid://db7d5rdeogmdd" path="res://Scripts/Game/Animations/PakalBehaviour.gd" id="29_dy3ug"]
+[ext_resource type="Texture2D" uid="uid://cpkpxyu25voqx" path="res://Assets/Sprites/GamingScene/FishSide.png" id="30_i3po2"]
+[ext_resource type="Texture2D" uid="uid://33nr4f716deb" path="res://Assets/Sprites/GamingScene/FishFront.png" id="31_2l4ht"]
 [ext_resource type="FontFile" uid="uid://d37u2vjhyv1h3" path="res://Assets/Fonts/Kelvinch.otf" id="31_yqalu"]
 [ext_resource type="Script" uid="uid://b1b6wjf57suxg" path="res://Scripts/Game/GameLoop/CoinCount.gd" id="33_6crsu"]
 
@@ -301,6 +306,14 @@ offset_bottom = 482.0
 scale = Vector2(0.585, 0.585)
 texture = ExtResource("13_yqalu")
 
+[node name="Employee Pipe" type="Sprite2D" parent="." unique_id=729150077]
+position = Vector2(797.99994, 93.000015)
+rotation = 0.61259544
+scale = Vector2(0.16357717, 0.16425684)
+texture = ExtResource("13_yqalu")
+script = ExtResource("8_s5gn0")
+glass_type = "pipe"
+
 [node name="BrownBeerTap" parent="." unique_id=1463512649 node_paths=PackedStringArray("full_glass") instance=ExtResource("4_h35fg")]
 layout_mode = 0
 anchors_preset = 0
@@ -442,19 +455,78 @@ offset_left = 54.0
 offset_top = 557.0
 offset_right = 352.0
 offset_bottom = 851.0
-texture = ExtResource("21_26ygd")
+texture = ExtResource("27_ryxql")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="Pipe3" type="TextureRect" parent="." unique_id=93099378]
+[node name="Water Control" type="Control" parent="Bokal" unique_id=1266441023 node_paths=PackedStringArray("pipe")]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("28_dy3ug")
+pipe = NodePath("../Pakal Side Pipe")
+
+[node name="Day1 Water" type="TextureRect" parent="Bokal/Water Control" unique_id=1358619396]
 layout_mode = 0
-offset_left = 258.0
-offset_top = 702.0
-offset_right = 516.0
-offset_bottom = 756.0
+offset_right = 298.0
+offset_bottom = 294.0
+texture = ExtResource("28_sf4n0")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Pakal Control" type="Control" parent="Bokal" unique_id=955749558 node_paths=PackedStringArray("side", "front", "sidepipe", "frontpipe")]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("29_dy3ug")
+side = NodePath("Pakal side")
+front = NodePath("Pakal front")
+sidepipe = NodePath("../Pakal Side Pipe")
+frontpipe = NodePath("../Pakal Front Pipe")
+
+[node name="Pakal side" type="TextureRect" parent="Bokal/Pakal Control" unique_id=1654888157]
+layout_mode = 0
+offset_left = 107.0
+offset_top = 96.0
+offset_right = 216.845
+offset_bottom = 174.345
+texture = ExtResource("30_i3po2")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Pakal front" type="TextureRect" parent="Bokal/Pakal Control" unique_id=1869824116]
+visible = false
+layout_mode = 0
+offset_left = 107.0
+offset_top = 96.0
+offset_right = 216.845
+offset_bottom = 174.345
+texture = ExtResource("31_2l4ht")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Pakal Side Pipe" type="TextureRect" parent="Bokal" unique_id=93099378]
+visible = false
+layout_mode = 0
+offset_left = 204.0
+offset_top = 145.0
+offset_right = 462.0
+offset_bottom = 199.0
 rotation = 0.23691818
 scale = Vector2(0.105, 0.105)
 texture = ExtResource("13_yqalu")
+
+[node name="Pakal Front Pipe" type="TextureRect" parent="Bokal" unique_id=583554350]
+visible = false
+layout_mode = 0
+offset_left = 162.0
+offset_top = 143.0
+offset_right = 329.1499
+offset_bottom = 197.0
+rotation = 0.23691818
+scale = Vector2(0.105, 0.105)
+texture = ExtResource("13_yqalu")
+expand_mode = 1
 
 [node name="Glasses" type="Node" parent="." unique_id=996044032]
 
@@ -463,7 +535,7 @@ position = Vector2(1018.0588, 302.95)
 scale = Vector2(0.185, 0.185)
 texture = ExtResource("9_4ad7p")
 script = ExtResource("8_s5gn0")
-glass_type = "coffee"
+glass_type = "coffee cup"
 
 [node name="Beer Glass 1" type="Sprite2D" parent="Glasses" unique_id=881984705]
 position = Vector2(740.0587, 679.95)
@@ -527,6 +599,7 @@ script = ExtResource("33_6crsu")
 [connection signal="order_accepted" from="Command Hook 3" to="Client Chairs/Client 2" method="_on_command_hook_order_accepted"]
 [connection signal="order_accepted" from="Command Hook 3" to="Client Chairs/Client 3" method="_on_command_hook_order_accepted"]
 [connection signal="order_accepted" from="Command Hook 3" to="Client Chairs/Client 4" method="_on_command_hook_order_accepted"]
+[connection signal="glass_dropped" from="Employee Pipe" to="Bokal/Water Control" method="_on_glass_dropped"]
 [connection signal="mouse_entered" from="BrownBeerTap" to="BrownBeerTap" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="BrownBeerTap" to="BrownBeerTap" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="RedBeerTap" to="RedBeerTap" method="_on_mouse_entered"]
@@ -541,22 +614,27 @@ script = ExtResource("33_6crsu")
 [connection signal="glass_dropped" from="Brown Full Glass" to="Client Chairs/Client 2" method="_on_glass_dropped"]
 [connection signal="glass_dropped" from="Brown Full Glass" to="Client Chairs/Client 3" method="_on_glass_dropped"]
 [connection signal="glass_dropped" from="Brown Full Glass" to="Client Chairs/Client 4" method="_on_glass_dropped"]
+[connection signal="glass_dropped" from="Brown Full Glass" to="Bokal/Water Control" method="_on_glass_dropped"]
 [connection signal="glass_dropped" from="Red Full Glass" to="Client Chairs/Client 1" method="_on_glass_dropped"]
 [connection signal="glass_dropped" from="Red Full Glass" to="Client Chairs/Client 2" method="_on_glass_dropped"]
 [connection signal="glass_dropped" from="Red Full Glass" to="Client Chairs/Client 3" method="_on_glass_dropped"]
 [connection signal="glass_dropped" from="Red Full Glass" to="Client Chairs/Client 4" method="_on_glass_dropped"]
+[connection signal="glass_dropped" from="Red Full Glass" to="Bokal/Water Control" method="_on_glass_dropped"]
 [connection signal="glass_dropped" from="Blond Full Glass" to="Client Chairs/Client 1" method="_on_glass_dropped"]
 [connection signal="glass_dropped" from="Blond Full Glass" to="Client Chairs/Client 2" method="_on_glass_dropped"]
 [connection signal="glass_dropped" from="Blond Full Glass" to="Client Chairs/Client 3" method="_on_glass_dropped"]
 [connection signal="glass_dropped" from="Blond Full Glass" to="Client Chairs/Client 4" method="_on_glass_dropped"]
+[connection signal="glass_dropped" from="Blond Full Glass" to="Bokal/Water Control" method="_on_glass_dropped"]
 [connection signal="glass_dropped" from="Coffee Full Cup" to="Client Chairs/Client 1" method="_on_glass_dropped"]
 [connection signal="glass_dropped" from="Coffee Full Cup" to="Client Chairs/Client 2" method="_on_glass_dropped"]
 [connection signal="glass_dropped" from="Coffee Full Cup" to="Client Chairs/Client 3" method="_on_glass_dropped"]
 [connection signal="glass_dropped" from="Coffee Full Cup" to="Client Chairs/Client 4" method="_on_glass_dropped"]
+[connection signal="glass_dropped" from="Coffee Full Cup" to="Bokal/Water Control" method="_on_glass_dropped"]
 [connection signal="glass_dropped" from="Pastis Full Glass" to="Client Chairs/Client 1" method="_on_glass_dropped"]
 [connection signal="glass_dropped" from="Pastis Full Glass" to="Client Chairs/Client 2" method="_on_glass_dropped"]
 [connection signal="glass_dropped" from="Pastis Full Glass" to="Client Chairs/Client 3" method="_on_glass_dropped"]
 [connection signal="glass_dropped" from="Pastis Full Glass" to="Client Chairs/Client 4" method="_on_glass_dropped"]
+[connection signal="glass_dropped" from="Pastis Full Glass" to="Bokal/Water Control" method="_on_glass_dropped"]
 [connection signal="drink_given" from="Client Chairs/Client 1" to="BrownBeerTap" method="_on_client_drink_given"]
 [connection signal="drink_given" from="Client Chairs/Client 1" to="RedBeerTap" method="_on_client_drink_given"]
 [connection signal="drink_given" from="Client Chairs/Client 1" to="BlondBeerTap" method="_on_client_drink_given"]
@@ -570,6 +648,7 @@ script = ExtResource("33_6crsu")
 [connection signal="order_over" from="Client Chairs/Client 1" to="Command Hook 2" method="_on_client_order_over"]
 [connection signal="order_over" from="Client Chairs/Client 1" to="Command Hook 3" method="_on_client_order_over"]
 [connection signal="order_over" from="Client Chairs/Client 1" to="CoinCount" method="_on_client_order_over"]
+[connection signal="wrong_drink_given" from="Client Chairs/Client 1" to="Bokal/Pakal Control" method="_on_client_wrong_drink_given"]
 [connection signal="drink_given" from="Client Chairs/Client 2" to="BrownBeerTap" method="_on_client_drink_given"]
 [connection signal="drink_given" from="Client Chairs/Client 2" to="RedBeerTap" method="_on_client_drink_given"]
 [connection signal="drink_given" from="Client Chairs/Client 2" to="BlondBeerTap" method="_on_client_drink_given"]
@@ -583,6 +662,7 @@ script = ExtResource("33_6crsu")
 [connection signal="order_over" from="Client Chairs/Client 2" to="Command Hook 2" method="_on_client_order_over"]
 [connection signal="order_over" from="Client Chairs/Client 2" to="Command Hook 3" method="_on_client_order_over"]
 [connection signal="order_over" from="Client Chairs/Client 2" to="CoinCount" method="_on_client_order_over"]
+[connection signal="wrong_drink_given" from="Client Chairs/Client 2" to="Bokal/Pakal Control" method="_on_client_wrong_drink_given"]
 [connection signal="drink_given" from="Client Chairs/Client 3" to="BrownBeerTap" method="_on_client_drink_given"]
 [connection signal="drink_given" from="Client Chairs/Client 3" to="RedBeerTap" method="_on_client_drink_given"]
 [connection signal="drink_given" from="Client Chairs/Client 3" to="BlondBeerTap" method="_on_client_drink_given"]
@@ -596,6 +676,7 @@ script = ExtResource("33_6crsu")
 [connection signal="order_over" from="Client Chairs/Client 3" to="Command Hook 2" method="_on_client_order_over"]
 [connection signal="order_over" from="Client Chairs/Client 3" to="Command Hook 3" method="_on_client_order_over"]
 [connection signal="order_over" from="Client Chairs/Client 3" to="CoinCount" method="_on_client_order_over"]
+[connection signal="wrong_drink_given" from="Client Chairs/Client 3" to="Bokal/Pakal Control" method="_on_client_wrong_drink_given"]
 [connection signal="drink_given" from="Client Chairs/Client 4" to="BrownBeerTap" method="_on_client_drink_given"]
 [connection signal="drink_given" from="Client Chairs/Client 4" to="RedBeerTap" method="_on_client_drink_given"]
 [connection signal="drink_given" from="Client Chairs/Client 4" to="BlondBeerTap" method="_on_client_drink_given"]
@@ -609,6 +690,14 @@ script = ExtResource("33_6crsu")
 [connection signal="order_over" from="Client Chairs/Client 4" to="Command Hook 2" method="_on_client_order_over"]
 [connection signal="order_over" from="Client Chairs/Client 4" to="Command Hook 3" method="_on_client_order_over"]
 [connection signal="order_over" from="Client Chairs/Client 4" to="CoinCount" method="_on_client_order_over"]
+[connection signal="wrong_drink_given" from="Client Chairs/Client 4" to="Bokal/Pakal Control" method="_on_client_wrong_drink_given"]
+[connection signal="drink_given" from="Bokal/Water Control" to="BrownBeerTap" method="_on_client_drink_given"]
+[connection signal="drink_given" from="Bokal/Water Control" to="RedBeerTap" method="_on_client_drink_given"]
+[connection signal="drink_given" from="Bokal/Water Control" to="BlondBeerTap" method="_on_client_drink_given"]
+[connection signal="drink_given" from="Bokal/Water Control" to="CoffeeMachine" method="_on_client_drink_given"]
+[connection signal="drink_given" from="Bokal/Water Control" to="PastisBottle" method="_on_client_drink_given"]
+[connection signal="mouse_entered" from="Bokal/Water Control" to="Bokal/Water Control" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Bokal/Water Control" to="Bokal/Water Control" method="_on_mouse_exited"]
 [connection signal="glass_dropped" from="Glasses/Coffee Cup" to="CoffeeMachine" method="_on_coffee_cup_dropped"]
 [connection signal="glass_dropped" from="Glasses/Beer Glass 1" to="BrownBeerTap" method="_on_beer_glass_dropped"]
 [connection signal="glass_dropped" from="Glasses/Beer Glass 1" to="RedBeerTap" method="_on_beer_glass_dropped"]
