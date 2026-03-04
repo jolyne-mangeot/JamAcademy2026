@@ -15,6 +15,7 @@ func _ready() -> void:
 	else:
 		get_node("Day1 Water").visible = true
 
+
 func _on_mouse_entered() -> void:
 	is_hovered = true
 

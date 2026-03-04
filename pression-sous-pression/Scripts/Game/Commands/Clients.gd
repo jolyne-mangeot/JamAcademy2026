@@ -39,6 +39,7 @@ func init_client() -> void:
 	timer_bar.value = 1.0
 	timer_bar.visible = true
 	order_in_progress = false
+	GameManager.customer_present += 1
 	spawn_orders()
 
 
@@ -63,8 +64,10 @@ func _on_timer_timeout() -> void:
 	if order.drink_amount < order.total_drinks && order_in_progress == true:
 		if order.drink_amount == 0:
 			drinks_paid = order.total_drinks
+			GameManager.fulfilled_orders += 1
 		else:
 			drinks_paid = (order.total_drinks - order.drink_amount) * 0.8
+			GameManager.incomplete_orders += 1
 		if order.types == "red" || order.types == "brown" || order.types == "blond":
 			GameManager.money_count += int(5 * drinks_paid * GameManager.pourboire_enhancement)
 		else:
@@ -98,6 +101,7 @@ func _on_command_hook_order_accepted(id: int) -> void:
 		timer.stop()
 		timer_bar.visible = false
 		order_in_progress = true
+		GameManager.accepted_orders += 1
 
 
 func _on_glass_dropped(glass_type: String) -> void:

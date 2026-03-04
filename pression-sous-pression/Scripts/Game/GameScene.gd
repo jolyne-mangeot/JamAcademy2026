@@ -4,11 +4,14 @@ extends Control
 @onready var pause_menu: Control = $CanvasLayer/PauseMenu
 @onready var timer: Timer = $timer_day
 @onready var label: Label = $countdown_time
+@onready var day_label: Label = $Day
 
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	#get_tree().paused = true
+	#day_label.text = GameManager.current_day
 	timer.wait_time = GameManager.day_duration
 
 
@@ -20,7 +23,6 @@ func _process(delta: float) -> void:
 		label.text = str(int(timer.wait_time / 60)) + ":0" + str(mod_wait_time)
 	else:
 		label.text = str(int(timer.wait_time / 60)) + ":" + str(mod_wait_time)
-		
 	if timer.wait_time == 0:
 		_on_timer_day_timeout()
 

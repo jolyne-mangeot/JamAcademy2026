@@ -2,7 +2,7 @@ extends Node
 
 var audio_muted:bool = false
 var Order_types: Array[String] = ["red", "brown", "blond", "coffee", "pastis"]
-var days: Array[String] = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
+var days: Array[String] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 var max_drinks_ordered_supp: Array[int] = [1, 1, 2, 2, 3, 4]
 var client_spawn_delay_supp: Array[float] = [0.5, 1.0, 1.0, 1.5, 2.0, 2.0]
 
@@ -12,7 +12,7 @@ var current_day: String = days[day_count]
 var customer_present: int = 0
 var accepted_orders: int = 0
 var fulfilled_orders: int = 0
-var failed_orders: int = 0
+var incomplete_orders: int = 0
 var money_count: int = 0
 var daily_rent: int = 30
 var client_patience: float = 40
@@ -41,7 +41,7 @@ func start_game() -> void:
 	customer_present = 0
 	accepted_orders = 0
 	fulfilled_orders = 0
-	failed_orders = 0
+	incomplete_orders = 0
 	money_count = 0
 	daily_rent = 30
 	day_duration = 120.0
