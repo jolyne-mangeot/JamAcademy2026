@@ -13,9 +13,10 @@ var customer_present: int = 0
 var accepted_orders: int = 0
 var fulfilled_orders: int = 0
 var failed_orders: int = 0
-var money_count: int = 150
+var money_count: int = 0
 var daily_rent: int = 30
 var client_patience: float = 40
+var satisfaction: int = 100
 
 var pakal_fed: bool = false
 var pakal_smoked_days: int = 0
@@ -44,6 +45,7 @@ func start_game() -> void:
 	money_count = 0
 	daily_rent = 30
 	day_duration = 120.0
+	satisfaction = 100
 
 	pakal_smoked_days = 0
 	coffee_in_bokal = 0
