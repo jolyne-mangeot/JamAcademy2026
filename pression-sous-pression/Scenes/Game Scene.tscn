@@ -515,6 +515,16 @@ theme_override_font_sizes/font_size = 35
 text = "COIN COUNT:"
 script = ExtResource("33_6crsu")
 
+[node name="countdown_time" type="Label" parent="." unique_id=810052963]
+layout_mode = 0
+offset_left = 1160.0
+offset_top = 17.0
+offset_right = 1423.0
+offset_bottom = 154.0
+theme_override_fonts/font = ExtResource("31_yqalu")
+theme_override_font_sizes/font_size = 100
+text = "03.00"
+
 [connection signal="order_accepted" from="Command Hook 1" to="Client Chairs/Client 1" method="_on_command_hook_order_accepted"]
 [connection signal="order_accepted" from="Command Hook 1" to="Client Chairs/Client 2" method="_on_command_hook_order_accepted"]
 [connection signal="order_accepted" from="Command Hook 1" to="Client Chairs/Client 3" method="_on_command_hook_order_accepted"]
@@ -617,4 +627,9 @@ script = ExtResource("33_6crsu")
 [connection signal="glass_dropped" from="Glasses/Beer Glass 2" to="RedBeerTap" method="_on_beer_glass_dropped"]
 [connection signal="glass_dropped" from="Glasses/Beer Glass 2" to="BlondBeerTap" method="_on_beer_glass_dropped"]
 [connection signal="glass_dropped" from="Glasses/Pastis Glass" to="PastisBottle" method="_on_pastis_glass_dropped"]
+[connection signal="timeout" from="timer_day" to="." method="_on_timer_day_timeout"]
+[connection signal="timeout" from="timer_day" to="Client Chairs/Client 1" method="_on_timer_timeout"]
+[connection signal="timeout" from="timer_day" to="Client Chairs/Client 2" method="_on_timer_timeout"]
+[connection signal="timeout" from="timer_day" to="Client Chairs/Client 3" method="_on_timer_timeout"]
+[connection signal="timeout" from="timer_day" to="Client Chairs/Client 4" method="_on_timer_timeout"]
 [connection signal="timeout" from="Client Spawn Manager/client_delay" to="Client Spawn Manager" method="_on_timer_timeout"]
