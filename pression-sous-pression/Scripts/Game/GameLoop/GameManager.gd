@@ -8,7 +8,7 @@ var client_spawn_delay_supp: Array[float] = [0.5, 1.0, 1.0, 1.5, 2.0, 2.0]
 
 # resets every game
 var day_count: int = 1
-var current_day: String = days[day_count]
+var current_day: String = days[day_count - 1]
 var customer_present: int = 0
 var accepted_orders: int = 0
 var fulfilled_orders: int = 0
@@ -37,7 +37,7 @@ func start_game() -> void:
 	client_spawn_delay_supp = [1.5, 2.0, 2.5, 2.5, 3.0, 3.0]
 	
 	day_count = 1
-	current_day = days[day_count]
+	current_day = days[day_count - 1]
 	customer_present = 0
 	accepted_orders = 0
 	fulfilled_orders = 0
