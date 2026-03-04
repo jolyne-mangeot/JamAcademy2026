@@ -7,6 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://beqajr83p3m1o" path="res://Assets/Sprites/TitleScreen/ButtonB.png" id="5_hjx88"]
 [ext_resource type="Texture2D" uid="uid://cwmcc6b8ncgb3" path="res://Assets/Sprites/TitleScreen/ButtonC.png" id="6_da4n0"]
 [ext_resource type="FontFile" uid="uid://d37u2vjhyv1h3" path="res://Assets/Fonts/Kelvinch.otf" id="7_hjx88"]
+[ext_resource type="Texture2D" uid="uid://tfdpac8v454s" path="res://Assets/Sprites/GamingScene/BeerAmbré.png" id="8_karvq"]
+[ext_resource type="Texture2D" uid="uid://dnh8n2oacvfh3" path="res://Assets/Sprites/GamingScene/BeerBlonde.png" id="9_tkd8h"]
+[ext_resource type="Texture2D" uid="uid://33nr4f716deb" path="res://Assets/Sprites/GamingScene/FishFront.png" id="10_tkd8h"]
+[ext_resource type="Texture2D" uid="uid://btrbfn33hxjxw" path="res://Assets/Sprites/GamingScene/separator.png" id="11_8h0vc"]
 
 [node name="Control" type="Control" unique_id=1097713460]
 layout_mode = 3
@@ -132,3 +136,27 @@ offset_bottom = 516.0
 theme_override_fonts/font = ExtResource("7_hjx88")
 theme_override_font_sizes/font_size = 45
 text = "Sarhynn"
+
+[node name="BeerAmbré" type="Sprite2D" parent="." unique_id=956660513]
+position = Vector2(592.28204, 396.4256)
+rotation = -0.705113
+scale = Vector2(0.16508943, 0.16045871)
+texture = ExtResource("8_karvq")
+
+[node name="BeerBlonde" type="Sprite2D" parent="." unique_id=209221856]
+position = Vector2(1836.0001, 389)
+rotation = 0.6457718
+scale = Vector2(0.16184579, 0.1525725)
+texture = ExtResource("9_tkd8h")
+flip_h = true
+
+[node name="FishFront" type="Sprite2D" parent="." unique_id=1065113010]
+position = Vector2(1236.9999, 788)
+scale = Vector2(0.50564975, 0.56573707)
+texture = ExtResource("10_tkd8h")
+
+[node name="Separator" type="Sprite2D" parent="." unique_id=1410407740]
+position = Vector2(1294, 848)
+rotation = 0.2932153
+scale = Vector2(0.45323524, 0.51233757)
+texture = ExtResource("11_8h0vc")
