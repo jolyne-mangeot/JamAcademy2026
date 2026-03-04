@@ -34,7 +34,7 @@ func init_order() -> void:
 	progress_bar = get_node("order_bar")
 	drinks = [get_node("red"), get_node("brown"), get_node("blond"), get_node("coffee"), get_node("pastis")]
 	RNG.randomize()
-	drink_amount = get_random_int(1,4)
+	drink_amount = get_random_int(1,GameManager.max_drinks_ordered)
 	total_drinks = drink_amount
 	print(drink_amount)
 	drink_id = get_random_int(0,4)

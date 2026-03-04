@@ -8,10 +8,10 @@ extends Control
 @onready var max_order_button: Button = $CanvasLayer/VBoxContainer/max_order_button
 @onready var delay_button: Button = $CanvasLayer/VBoxContainer/delay_client_button
 
-@export var Price_patience: int 
+@export var Price_patience: int
 @export var Price_max_order: int
-@export var Price_delay: int 
-@export var Price_pourboire: int 
+@export var Price_delay: int
+@export var Price_pourboire: int
 
 
 func _ready() -> void:

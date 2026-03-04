@@ -14,28 +14,22 @@ func _ready() -> void:
 	await get_tree().create_timer(3.0).timeout
 	get_node("DayAnnouncement").visible = false
 	get_tree().paused = false
-	timer.wait_time = GameManager.day_duration
-	
+	timer.start(GameManager.day_duration)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	timer.wait_time -= delta
-	var mod_wait_time = int(fmod(timer.wait_time, 60))
+	var mod_wait_time = int(fmod(timer.time_left, 60))
 	if mod_wait_time < 10:
-		label.text = str(int(timer.wait_time / 60)) + ":0" + str(mod_wait_time)
+		label.text = str(int(timer.time_left / 60)) + ":0" + str(mod_wait_time)
 	else:
-		label.text = str(int(timer.wait_time / 60)) + ":" + str(mod_wait_time)
-	if timer.wait_time == 0:
-		_on_timer_day_timeout()
-
+		label.text = str(int(timer.time_left / 60)) + ":" + str(mod_wait_time)
 
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
 		get_tree().paused = !get_tree().paused
 		pause_menu.visible = get_tree().paused
-
 
 
 func _on_timer_day_timeout() -> void:

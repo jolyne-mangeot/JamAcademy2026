@@ -7,19 +7,13 @@ extends Node
 func _ready():
 	GameManager.money_count -= GameManager.daily_rent
 	if GameManager.money_count < 0:
-#		if the rent is highter than what was gained it goes immediatly to the thx menu
-		#get_node("buttons/defeat_button").visible = true
 		defeat_button.visible = true
-		_on_defeat_button_pressed()
 	elif GameManager.day_count == 7:
-		#get_node("buttons/defeat_button").visible = true
 		defeat_button.visible = true
-		_on_defeat_button_pressed()
 	else:
-		#get_node("buttons/shop_button").visible = true
 		shop_button.visible = true
-		_on_shop_button_pressed()
  
+
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
 		get_tree().paused = !get_tree().paused
@@ -27,8 +21,21 @@ func _input(event: InputEvent) -> void:
 
 
 func _on_shop_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://Upgrade.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Upgrade.tscn")
 
 
 func _on_defeat_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://Thx.tscn")
+	if GameManager.day_count < 7:
+		get_tree().change_scene_to_file("res://Scenes/Endings/Thx.tscn")
+	elif GameManager.coffee_in_bokal >= 6:
+		get_tree().change_scene_to_file("res://Scenes/Endings/CoffeeEnding.tscn")
+	elif GameManager.pastis_in_bokal >= 6:
+		get_tree().change_scene_to_file("res://Scenes/Endings/PastisEnding.tscn")
+	elif GameManager.beer_in_bokal >= 6:
+		get_tree().change_scene_to_file("res://Scenes/Endings/BeerEnding.tscn")
+	elif (GameManager.beer_in_bokal + GameManager.pastis_in_bokal + GameManager.coffee_in_bokal) >= 6:
+		get_tree().change_scene_to_file("res://Scenes/Endings/IntoxicationEnding.tscn")
+	elif GameManager.money_count < 0:
+		get_tree().change_scene_to_file("res://Scenes/Endings/Defeat.tscn")
+	elif GameManager.money_count > 0:
+		get_tree().change_scene_to_file("res://Scenes/Endings/Victory.tscn")

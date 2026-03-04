@@ -1,7 +1,7 @@
 extends Node
 
 @onready var timer_bar: ProgressBar = $Timer_progress
-var accept_count_down: float = randi_range(5, 25)
+var accept_count_down: float = randi_range(GameManager.client_patience - 5, GameManager.client_patience + 5)
 var order_count_down: float = accept_count_down * 2
 @onready var timer: Timer = $Timer_leaving
 @export var client_id:int

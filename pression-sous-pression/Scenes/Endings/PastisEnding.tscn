@@ -1,0 +1,108 @@
+[gd_scene format=3 uid="uid://bisjfsys56r8h"]
+
+[ext_resource type="Script" uid="uid://bjyg8navwnwjy" path="res://Scripts/Menues/EndingManager.gd" id="1_2gpou"]
+[ext_resource type="Texture2D" uid="uid://4dd2aus5rxel" path="res://Assets/Sprites/GamingScene/BG.png" id="2_nowv1"]
+[ext_resource type="Texture2D" uid="uid://brgnmgfveud2f" path="res://Assets/Sprites/Ending/PakalOm.png" id="3_hcafx"]
+[ext_resource type="Texture2D" uid="uid://b3p5tr58c26vb" path="res://Assets/Sprites/GamingScene/Sheet.png" id="10_rpsqe"]
+[ext_resource type="FontFile" uid="uid://d37u2vjhyv1h3" path="res://Assets/Fonts/Kelvinch.otf" id="11_dan7f"]
+[ext_resource type="AudioStream" uid="uid://do28iowioh20d" path="res://Assets/Music/IntroSong.mp3" id="12_agjl6"]
+
+[sub_resource type="Theme" id="Theme_2gpou"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sb8jg"]
+
+[sub_resource type="GDScript" id="GDScript_emb40"]
+script/source = "extends Button
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	grab_focus()
+"
+
+[node name="Control" type="Control" unique_id=1782205152 node_paths=PackedStringArray("slides", "texts")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2gpou")
+slides = [NodePath("Slides/Slide1")]
+texts = [NodePath("Texts/RichTextLabel1")]
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1437490752]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_nowv1")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Slides" type="Control" parent="." unique_id=1360922282]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Slide1" type="TextureRect" parent="Slides" unique_id=1917305236]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_hcafx")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Texts" type="TextureRect" parent="." unique_id=999500121]
+self_modulate = Color(1, 1, 1, 0.83137256)
+layout_mode = 0
+offset_left = 1250.0
+offset_top = 510.0
+offset_right = 2577.0
+offset_bottom = 1608.0
+texture = ExtResource("10_rpsqe")
+expand_mode = 1
+
+[node name="RichTextLabel1" type="Label" parent="Texts" unique_id=1761172322]
+visible = false
+layout_mode = 0
+offset_left = 90.0
+offset_top = 212.0
+offset_right = 1222.0
+offset_bottom = 753.0
+theme = SubResource("Theme_2gpou")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_dan7f")
+theme_override_font_sizes/font_size = 48
+text = "Ever heard of overdoses? That's something you made Pakal immune to, yellow drinks-wise. The moment they left their little water bowl, they went to see sport matches and only wearing blue. And how you'd think a fish talking in bubble noise couldn'y possibly get an accent? They became the most mediterranean fish you could ever meet."
+autowrap_mode = 3
+
+[node name="next" type="Button" parent="." unique_id=415330654]
+layout_mode = 0
+offset_left = 2288.0
+offset_top = 1310.0
+offset_right = 2488.0
+offset_bottom = 1390.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_dan7f")
+theme_override_font_sizes/font_size = 43
+theme_override_styles/focus = SubResource("StyleBoxEmpty_sb8jg")
+text = "NEXT"
+flat = true
+script = SubResource("GDScript_emb40")
+
+[node name="IntroSong" type="AudioStreamPlayer" parent="." unique_id=197075161]
+stream = ExtResource("12_agjl6")
+autoplay = true
+
+[connection signal="pressed" from="next" to="." method="_on_next_pressed"]

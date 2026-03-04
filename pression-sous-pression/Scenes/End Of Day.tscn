@@ -10,7 +10,6 @@
 [ext_resource type="AudioStream" uid="uid://c0qfh7pcxfjun" path="res://Assets/Music/olivia_parker-crowd-boo-disapproval-demo-309882.mp3" id="5_ice5o"]
 [ext_resource type="FontFile" uid="uid://d37u2vjhyv1h3" path="res://Assets/Fonts/Kelvinch.otf" id="5_q8jam"]
 [ext_resource type="Script" uid="uid://bw0w4oc8saorq" path="res://Scripts/Game/EndOfDay/earnings_title.gd" id="6_bodib"]
-[ext_resource type="Texture2D" uid="uid://cg0wts3a4ssuy" path="res://Assets/Sprites/GamingScene/Fishbowl.png" id="6_hn8ea"]
 [ext_resource type="AudioStream" uid="uid://bwgie138gs8s5" path="res://Assets/Music/freesound_community-cough-82181.mp3" id="6_ice5o"]
 [ext_resource type="Texture2D" uid="uid://d4hwklr1kbnmy" path="res://Assets/Sprites/GamingScene/BarmanNice.png" id="7_fowem"]
 [ext_resource type="Script" uid="uid://cxbnfwffedki0" path="res://Scripts/Game/EndOfDay/rent_title.gd" id="7_hn8ea"]
@@ -21,6 +20,24 @@
 [ext_resource type="Script" uid="uid://q7ek5gnpfss0" path="res://Scripts/Game/EndOfDay/orders_fulfilled.gd" id="12_ewj7u"]
 [ext_resource type="Script" uid="uid://biycu63rn60hk" path="res://Scripts/Game/EndOfDay/orders_failed.gd" id="13_8n5i1"]
 [ext_resource type="Texture2D" uid="uid://xx134v8x0g56" path="res://Assets/Sprites/TitleScreen/ButtonA.png" id="16_7ga3h"]
+[ext_resource type="Script" uid="uid://dmfdtyajrrsyd" path="res://Scripts/Game/Animations/PakalWaterControl.gd" id="18_tsdiu"]
+[ext_resource type="Texture2D" uid="uid://bq5wu34i48go0" path="res://Assets/Sprites/GamingScene/Fishbowlback.png" id="19_xp28q"]
+[ext_resource type="Texture2D" uid="uid://dna7upqj22ftl" path="res://Assets/Pakal/Brown/brown1.png" id="20_gmh00"]
+[ext_resource type="Texture2D" uid="uid://c4fgrsyqqw5j4" path="res://Assets/Pakal/Brown/brown2.png" id="21_x6635"]
+[ext_resource type="Texture2D" uid="uid://das31t63aiucw" path="res://Assets/Pakal/Brown/brown3.png" id="22_rl0io"]
+[ext_resource type="Texture2D" uid="uid://2jklaq1yweqg" path="res://Assets/Pakal/Brown/brown4.png" id="23_q8cy2"]
+[ext_resource type="Texture2D" uid="uid://bgonvei7by11q" path="res://Assets/Pakal/Yellow/Yellow1.png" id="24_kg7d7"]
+[ext_resource type="Texture2D" uid="uid://y2if7tfls4m6" path="res://Assets/Pakal/Yellow/Yellow2.png" id="25_qinq5"]
+[ext_resource type="Texture2D" uid="uid://0sqy5kse15px" path="res://Assets/Pakal/Yellow/Yellow3.png" id="26_strbb"]
+[ext_resource type="Texture2D" uid="uid://dvukcxkwdtx61" path="res://Assets/Pakal/Yellow/Yellow4.png" id="27_us0i0"]
+[ext_resource type="Texture2D" uid="uid://cprj85tk456b5" path="res://Assets/Pakal/Black/Black1.png" id="28_1hnww"]
+[ext_resource type="Texture2D" uid="uid://r1u55e6lw4oo" path="res://Assets/Pakal/Black/Black2.png" id="29_g80e0"]
+[ext_resource type="Texture2D" uid="uid://bl84jl41klbeq" path="res://Assets/Pakal/Black/Black3.png" id="30_kru78"]
+[ext_resource type="Texture2D" uid="uid://rc53vy61asjx" path="res://Assets/Pakal/Black/Black4.png" id="31_ks08j"]
+[ext_resource type="Script" uid="uid://db7d5rdeogmdd" path="res://Scripts/Game/Animations/PakalBehaviour.gd" id="32_qhqho"]
+[ext_resource type="Texture2D" uid="uid://cpkpxyu25voqx" path="res://Assets/Sprites/GamingScene/FishSide.png" id="33_636ot"]
+[ext_resource type="Texture2D" uid="uid://btrbfn33hxjxw" path="res://Assets/Sprites/GamingScene/separator.png" id="35_rr7qb"]
+[ext_resource type="Texture2D" uid="uid://cmiic5bn65qf1" path="res://Assets/Pakal/FishbowlFront.png" id="36_2jdx5"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_opg7c"]
 
@@ -188,14 +205,199 @@ offset_bottom = 943.0
 texture = ExtResource("5_bodib")
 expand_mode = 2
 
-[node name="fish bowl" type="TextureRect" parent="." unique_id=322686622]
-offset_left = 2095.9998
-offset_top = 992.99994
-offset_right = 2167.054
-offset_bottom = 1058.061
-scale = Vector2(5.0384016, 5.948263)
-texture = ExtResource("6_hn8ea")
-expand_mode = 2
+[node name="Bokal" type="Control" parent="." unique_id=1098476631]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 2161.0
+offset_top = 1004.0
+offset_right = 2459.0
+offset_bottom = 1298.0
+
+[node name="Water Control" type="Control" parent="Bokal" unique_id=1387480915 node_paths=PackedStringArray("pipe")]
+anchors_preset = 0
+offset_right = 294.0
+offset_bottom = 294.0
+script = ExtResource("18_tsdiu")
+pipe = NodePath("../Pakal Side Pipe")
+
+[node name="Day1 Water" type="TextureRect" parent="Bokal/Water Control" unique_id=213428377]
+visible = false
+layout_mode = 0
+offset_right = 298.0
+offset_bottom = 294.0
+texture = ExtResource("19_xp28q")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Brown 1" type="TextureRect" parent="Bokal/Water Control" unique_id=1043435608]
+visible = false
+layout_mode = 0
+offset_right = 298.0
+offset_bottom = 294.0
+texture = ExtResource("20_gmh00")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Brown 2" type="TextureRect" parent="Bokal/Water Control" unique_id=1551766901]
+visible = false
+layout_mode = 0
+offset_right = 298.0
+offset_bottom = 294.0
+texture = ExtResource("21_x6635")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Brown 3" type="TextureRect" parent="Bokal/Water Control" unique_id=1516826990]
+visible = false
+layout_mode = 0
+offset_right = 298.0
+offset_bottom = 294.0
+texture = ExtResource("22_rl0io")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Brown 4" type="TextureRect" parent="Bokal/Water Control" unique_id=2146152826]
+visible = false
+layout_mode = 0
+offset_right = 298.0
+offset_bottom = 294.0
+texture = ExtResource("23_q8cy2")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Yellow 1" type="TextureRect" parent="Bokal/Water Control" unique_id=1586134278]
+visible = false
+layout_mode = 0
+offset_right = 298.0
+offset_bottom = 294.0
+texture = ExtResource("24_kg7d7")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Yellow 2" type="TextureRect" parent="Bokal/Water Control" unique_id=1652207065]
+visible = false
+layout_mode = 0
+offset_right = 298.0
+offset_bottom = 294.0
+texture = ExtResource("25_qinq5")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Yellow 3" type="TextureRect" parent="Bokal/Water Control" unique_id=1576580930]
+visible = false
+layout_mode = 0
+offset_right = 298.0
+offset_bottom = 294.0
+texture = ExtResource("26_strbb")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Yellow 4" type="TextureRect" parent="Bokal/Water Control" unique_id=1639324647]
+visible = false
+layout_mode = 0
+offset_right = 298.0
+offset_bottom = 294.0
+texture = ExtResource("27_us0i0")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Black 1" type="TextureRect" parent="Bokal/Water Control" unique_id=1410912106]
+visible = false
+layout_mode = 0
+offset_right = 298.0
+offset_bottom = 294.0
+texture = ExtResource("28_1hnww")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Black 2" type="TextureRect" parent="Bokal/Water Control" unique_id=587284030]
+visible = false
+layout_mode = 0
+offset_right = 298.0
+offset_bottom = 294.0
+texture = ExtResource("29_g80e0")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Black 3" type="TextureRect" parent="Bokal/Water Control" unique_id=1963292344]
+visible = false
+layout_mode = 0
+offset_right = 298.0
+offset_bottom = 294.0
+texture = ExtResource("30_kru78")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Black 4" type="TextureRect" parent="Bokal/Water Control" unique_id=390197117]
+visible = false
+layout_mode = 0
+offset_right = 298.0
+offset_bottom = 294.0
+texture = ExtResource("31_ks08j")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Pakal Control" type="Control" parent="Bokal" unique_id=1857095284 node_paths=PackedStringArray("side", "front", "sidepipe", "frontpipe")]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("32_qhqho")
+side = NodePath("Pakal side")
+front = NodePath("Pakal front")
+sidepipe = NodePath("../Pakal Side Pipe")
+frontpipe = NodePath("../Pakal Front Pipe")
+
+[node name="Pakal side" type="TextureRect" parent="Bokal/Pakal Control" unique_id=980240676]
+layout_mode = 0
+offset_left = 107.0
+offset_top = 96.0
+offset_right = 216.845
+offset_bottom = 174.345
+texture = ExtResource("33_636ot")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Pakal front" type="TextureRect" parent="Bokal/Pakal Control" unique_id=1378175480]
+visible = false
+layout_mode = 0
+offset_left = 107.0
+offset_top = 96.0
+offset_right = 216.845
+offset_bottom = 174.345
+texture = ExtResource("7_l2j3q")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Pakal Side Pipe" type="TextureRect" parent="Bokal" unique_id=1014956972]
+visible = false
+layout_mode = 0
+offset_left = 204.0
+offset_top = 145.0
+offset_right = 462.0
+offset_bottom = 199.0
+rotation = 0.23691818
+scale = Vector2(0.105, 0.105)
+texture = ExtResource("35_rr7qb")
+
+[node name="Pakal Front Pipe" type="TextureRect" parent="Bokal" unique_id=919391662]
+visible = false
+layout_mode = 0
+offset_left = 162.0
+offset_top = 143.0
+offset_right = 329.1499
+offset_bottom = 197.0
+rotation = 0.23691818
+scale = Vector2(0.105, 0.105)
+texture = ExtResource("35_rr7qb")
+expand_mode = 1
+
+[node name="Bokal" type="TextureRect" parent="Bokal" unique_id=300633802]
+layout_mode = 0
+offset_right = 294.0
+offset_bottom = 297.64
+texture = ExtResource("36_2jdx5")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="bajama" type="TextureRect" parent="." unique_id=1083015091]
 anchors_preset = 15

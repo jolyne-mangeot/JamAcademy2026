@@ -1,0 +1,108 @@
+[gd_scene format=3 uid="uid://gqcpd7j2lshj"]
+
+[ext_resource type="Script" uid="uid://bjyg8navwnwjy" path="res://Scripts/Menues/EndingManager.gd" id="1_4m2w8"]
+[ext_resource type="Texture2D" uid="uid://4dd2aus5rxel" path="res://Assets/Sprites/GamingScene/BG.png" id="2_s1gob"]
+[ext_resource type="Texture2D" uid="uid://dsbqulmqdq1q8" path="res://Assets/Sprites/Ending/PakalOmPakalMonster.png" id="3_4m2w8"]
+[ext_resource type="Texture2D" uid="uid://b3p5tr58c26vb" path="res://Assets/Sprites/GamingScene/Sheet.png" id="10_e2nay"]
+[ext_resource type="FontFile" uid="uid://d37u2vjhyv1h3" path="res://Assets/Fonts/Kelvinch.otf" id="11_ppqfk"]
+[ext_resource type="AudioStream" uid="uid://do28iowioh20d" path="res://Assets/Music/IntroSong.mp3" id="12_egrtf"]
+
+[sub_resource type="Theme" id="Theme_4m2w8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sb8jg"]
+
+[sub_resource type="GDScript" id="GDScript_emb40"]
+script/source = "extends Button
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	grab_focus()
+"
+
+[node name="Control" type="Control" unique_id=1782205152 node_paths=PackedStringArray("slides", "texts")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4m2w8")
+slides = [NodePath("Slides/Slide1")]
+texts = [NodePath("Texts/RichTextLabel1")]
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1437490752]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_s1gob")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Slides" type="Control" parent="." unique_id=1360922282]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Slide1" type="TextureRect" parent="Slides" unique_id=1917305236]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_4m2w8")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Texts" type="TextureRect" parent="." unique_id=377187542]
+self_modulate = Color(1, 1, 1, 0.83137256)
+layout_mode = 0
+offset_left = 1250.0
+offset_top = 510.0
+offset_right = 2577.0
+offset_bottom = 1606.0
+texture = ExtResource("10_e2nay")
+expand_mode = 1
+
+[node name="RichTextLabel1" type="Label" parent="Texts" unique_id=517343651]
+visible = false
+layout_mode = 0
+offset_left = 90.0
+offset_top = 212.0
+offset_right = 1222.0
+offset_bottom = 753.0
+theme = SubResource("Theme_4m2w8")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_ppqfk")
+theme_override_font_sizes/font_size = 48
+text = "Maybe you had a reason to dip Pakal in pure coffee. We hope you did, because now, the only thing running through their veins is pure caffeine. They discovered caffeinated drinks could sustain their now immenseful needs for constants heart throbbings, and now cannot leave their bowl of caffeine without a can in their palms. Yes, bowl of caffeine. If Bajama was already working as bartender, you got them a job of barista as a supplement."
+autowrap_mode = 3
+
+[node name="next" type="Button" parent="." unique_id=415330654]
+layout_mode = 0
+offset_left = 2288.0
+offset_top = 1310.0
+offset_right = 2488.0
+offset_bottom = 1390.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_ppqfk")
+theme_override_font_sizes/font_size = 43
+theme_override_styles/focus = SubResource("StyleBoxEmpty_sb8jg")
+text = "NEXT"
+flat = true
+script = SubResource("GDScript_emb40")
+
+[node name="IntroSong" type="AudioStreamPlayer" parent="." unique_id=197075161]
+stream = ExtResource("12_egrtf")
+autoplay = true
+
+[connection signal="pressed" from="next" to="." method="_on_next_pressed"]

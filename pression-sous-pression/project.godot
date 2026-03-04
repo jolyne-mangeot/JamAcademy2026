@@ -25,6 +25,8 @@ GameManager="*uid://c2n238skluvtt"
 window/size/viewport_width=2560
 window/size/viewport_height=1440
 window/stretch/mode="viewport"
+mouse_cursor/custom_image="uid://bwdtcm01r8w5k"
+mouse_cursor/tooltip_position_offset=Vector2(15, 15)
 
 [editor]
 
