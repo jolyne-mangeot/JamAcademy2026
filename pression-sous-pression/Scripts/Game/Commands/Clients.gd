@@ -5,6 +5,8 @@ var accept_count_down: float = randi_range(5, 25)
 var order_count_down: float = accept_count_down * 2
 @onready var timer: Timer = $Timer_leaving
 @export var client_id:int
+@export var skins:Array[Node]
+var current_skin: Node
 var client_alive:bool = false
 var order
 var order_time_left: float = order_count_down
@@ -23,10 +25,15 @@ signal order_over(id: int)
 signal drink_given(glass_type: String)
 signal wrong_drink_given()
 
+func _ready() -> void:
+	current_skin = skins[0]
 
 func init_client() -> void:
 	timer.wait_time = accept_count_down
 	timer.start()
+	current_skin.visible = false
+	current_skin = skins.pick_random()
+	current_skin.visible = true
 	client_alive = true
 	self.visible = true
 	timer_bar.value = 1.0

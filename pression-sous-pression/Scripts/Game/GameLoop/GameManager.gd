@@ -28,7 +28,7 @@ var max_drinks_ordered: int = 2
 var client_spawn_delay:float = 13.5
 var pourboire_enhancement:float = 1.0
 
-var day_duration:float
+var day_duration:float = 180.0
 
 
 func start_game() -> void:

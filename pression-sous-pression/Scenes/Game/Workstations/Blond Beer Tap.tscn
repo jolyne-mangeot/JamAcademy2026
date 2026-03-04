@@ -20,17 +20,17 @@ empty_glass = NodePath("Empty Glass")
 
 [node name="Logo" type="TextureRect" parent="." unique_id=693251319]
 layout_mode = 0
-offset_left = 24.0
+offset_left = 21.0
 offset_top = 50.0
-offset_right = 64.0
+offset_right = 61.0
 offset_bottom = 90.0
 texture = ExtResource("2_56ys3")
 expand_mode = 1
 
 [node name="Tap Texture" type="TextureRect" parent="." unique_id=1189930431]
 layout_mode = 0
-offset_left = 11.0
-offset_right = 78.0
+offset_left = 8.0
+offset_right = 75.0
 offset_bottom = 216.0
 texture = ExtResource("3_0xj4i")
 expand_mode = 1
@@ -39,9 +39,9 @@ stretch_mode = 4
 [node name="Empty Glass" type="TextureRect" parent="." unique_id=855018561]
 visible = false
 layout_mode = 0
-offset_left = 6.0
+offset_left = 2.9999995
 offset_top = 168.0
-offset_right = 1517.1111
+offset_right = 1514.1111
 offset_bottom = 1901.3333
 scale = Vector2(0.045, 0.045)
 texture = ExtResource("3_b0ms8")

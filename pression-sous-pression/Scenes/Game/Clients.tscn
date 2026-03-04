@@ -1,8 +1,12 @@
 [gd_scene format=3 uid="uid://blm4f15xoka3u"]
 
 [ext_resource type="Script" uid="uid://dkp4gb7ofgcer" path="res://Scripts/Game/Commands/Clients.gd" id="1_6myro"]
-[ext_resource type="Script" uid="uid://b6lyx1x5po76s" path="res://Scripts/Game/Commands/Commands.gd" id="2_k3ns6"]
 [ext_resource type="Texture2D" uid="uid://b744ulnvjtvfv" path="res://Assets/Sprites/GamingScene/Human_A_Sit.png" id="3_6myro"]
+[ext_resource type="Texture2D" uid="uid://dcxbphtedv7o0" path="res://Assets/Sprites/GamingScene/Human_B_Sit.png" id="3_j3npf"]
+[ext_resource type="Texture2D" uid="uid://daxry44k31g4j" path="res://Assets/Sprites/GamingScene/Human_C_Sit.png" id="4_dihau"]
+[ext_resource type="Texture2D" uid="uid://dvflpcuv2faht" path="res://Assets/Sprites/GamingScene/Human_D_Sit.png" id="5_ubgjt"]
+[ext_resource type="Texture2D" uid="uid://44v30hbhkjqo" path="res://Assets/Sprites/GamingScene/Human_E_Sit.png" id="6_552on"]
+[ext_resource type="Texture2D" uid="uid://d2kp4iqbf5wnn" path="res://Assets/Sprites/GamingScene/Human_F_Sit.png" id="7_pk7g8"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vjkiq"]
 
@@ -13,28 +17,27 @@
 [sub_resource type="GDScript" id="GDScript_vjkiq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6myro"]
-bg_color = Color(0.91, 0.20020004, 0.20020004, 0.7607843)
+bg_color = Color(0.91, 0.20020004, 0.20020004, 1)
 
-[node name="Node2D" type="Control" unique_id=1767717981]
+[node name="Node2D" type="Control" unique_id=1767717981 node_paths=PackedStringArray("skins")]
 layout_mode = 3
 anchors_preset = 0
 offset_top = 1.0
 offset_right = 198.0
 offset_bottom = 279.0
 script = ExtResource("1_6myro")
+skins = [NodePath("Textures/Client_texture1"), NodePath("Textures/Client_texture2"), NodePath("Textures/Client_texture3"), NodePath("Textures/Client_texture4"), NodePath("Textures/Client_texture5"), NodePath("Textures/Client_texture6")]
 
 [node name="Timer_leaving" type="Timer" parent="." unique_id=1770227453]
 one_shot = true
 
-[node name="orders" type="Control" parent="." unique_id=34469857]
+[node name="Textures" type="Control" parent="." unique_id=252581403]
 anchors_preset = 0
-offset_left = 4.0
-offset_top = -12.0
-offset_right = 4.0
-offset_bottom = -12.0
-script = ExtResource("2_k3ns6")
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="Client_texture" type="TextureRect" parent="." unique_id=194036211]
+[node name="Client_texture1" type="TextureRect" parent="Textures" unique_id=194036211 groups=["skins"]]
+visible = false
 layout_mode = 0
 offset_left = 17.0
 offset_top = 35.0
@@ -44,12 +47,67 @@ texture = ExtResource("3_6myro")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="Client_get_orders" type="Button" parent="Client_texture" unique_id=63892538]
+[node name="Client_texture2" type="TextureRect" parent="Textures" unique_id=1718514943 groups=["skins"]]
+visible = false
 layout_mode = 0
-offset_left = -16.0
-offset_top = -9.0
-offset_right = 157.0
-offset_bottom = 306.0
+offset_left = 17.0
+offset_top = 35.0
+offset_right = 203.0
+offset_bottom = 337.0
+texture = ExtResource("3_j3npf")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Client_texture3" type="TextureRect" parent="Textures" unique_id=912929874 groups=["skins"]]
+visible = false
+layout_mode = 0
+offset_left = 17.0
+offset_top = 35.0
+offset_right = 203.0
+offset_bottom = 337.0
+texture = ExtResource("4_dihau")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Client_texture4" type="TextureRect" parent="Textures" unique_id=622692879 groups=["skins"]]
+visible = false
+layout_mode = 0
+offset_left = 17.0
+offset_top = 35.0
+offset_right = 203.0
+offset_bottom = 337.0
+texture = ExtResource("5_ubgjt")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Client_texture5" type="TextureRect" parent="Textures" unique_id=1495017595 groups=["skins"]]
+visible = false
+layout_mode = 0
+offset_left = 17.0
+offset_top = 35.0
+offset_right = 203.0
+offset_bottom = 337.0
+texture = ExtResource("6_552on")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Client_texture6" type="TextureRect" parent="Textures" unique_id=2096385271 groups=["skins"]]
+visible = false
+layout_mode = 0
+offset_left = 17.0
+offset_top = 35.0
+offset_right = 203.0
+offset_bottom = 337.0
+texture = ExtResource("7_pk7g8")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Client_get_orders" type="Button" parent="." unique_id=63892538]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 26.0
+offset_right = 174.0
+offset_bottom = 341.0
 theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_disabled_color = Color(1, 1, 1, 0.5019608)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
@@ -62,7 +120,7 @@ script = SubResource("GDScript_vjkiq")
 [node name="Timer_progress" type="ProgressBar" parent="." unique_id=96709679]
 layout_mode = 0
 offset_left = 32.0
-offset_top = 222.0
+offset_top = 233.0
 offset_right = 186.0
 offset_bottom = 256.0
 theme_override_styles/fill = SubResource("StyleBoxFlat_6myro")
@@ -70,6 +128,6 @@ max_value = 1.0
 show_percentage = false
 
 [connection signal="timeout" from="Timer_leaving" to="." method="_on_timer_timeout"]
-[connection signal="mouse_entered" from="Client_texture/Client_get_orders" to="." method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Client_texture/Client_get_orders" to="." method="_on_mouse_exited"]
-[connection signal="pressed" from="Client_texture/Client_get_orders" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="Client_get_orders" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Client_get_orders" to="." method="_on_mouse_exited"]
+[connection signal="pressed" from="Client_get_orders" to="." method="_on_button_pressed"]

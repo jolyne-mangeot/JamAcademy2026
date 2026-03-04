@@ -6,11 +6,11 @@ signal drink_given(glass_type: String)
 
 func _ready() -> void:
 	if GameManager.pastis_in_bokal > 0 && GameManager.coffee_in_bokal == 0 && GameManager.beer_in_bokal == 0:
-		get_node("Yellow " + str(int(GameManager.pastis_in_bokal / 2))).visible = true
+		get_node(str("Yellow " + str(int(GameManager.pastis_in_bokal / 2)))).visible = true
 	elif GameManager.beer_in_bokal > 0 && GameManager.coffee_in_bokal == 0 && GameManager.pastis_in_bokal == 0:
-		get_node("Brown " + str(int(GameManager.pastis_in_bokal / 2))).visible = true
+		get_node(str("Brown " + str(int(GameManager.pastis_in_bokal / 2)))).visible = true
 	elif GameManager.coffee_in_bokal > 0 || GameManager.beer_in_bokal > 0 || GameManager.pastis_in_bokal > 0:
-		get_node("Black " + str(int(GameManager.coffee_in_bokal / 2))).visible = true
+		get_node(str("Black " + str(int(GameManager.coffee_in_bokal / 2)))).visible = true
 	else:
 		get_node("Day1 Water").visible = true
 

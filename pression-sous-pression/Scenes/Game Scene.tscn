@@ -43,6 +43,7 @@
 [ext_resource type="Script" uid="uid://b1b6wjf57suxg" path="res://Scripts/Game/GameLoop/CoinCount.gd" id="33_6crsu"]
 [ext_resource type="Texture2D" uid="uid://2jklaq1yweqg" path="res://Assets/Pakal/Brown/brown4.png" id="33_n6xri"]
 [ext_resource type="Texture2D" uid="uid://bgonvei7by11q" path="res://Assets/Pakal/Yellow/Yellow1.png" id="34_4hysa"]
+[ext_resource type="Texture2D" uid="uid://bbvb3yoxlmbv8" path="res://Assets/Sprites/GamingScene/Money.png" id="34_5e80b"]
 [ext_resource type="Texture2D" uid="uid://y2if7tfls4m6" path="res://Assets/Pakal/Yellow/Yellow2.png" id="35_a21ox"]
 [ext_resource type="Texture2D" uid="uid://0sqy5kse15px" path="res://Assets/Pakal/Yellow/Yellow3.png" id="36_i0afu"]
 [ext_resource type="Texture2D" uid="uid://dvukcxkwdtx61" path="res://Assets/Pakal/Yellow/Yellow4.png" id="37_xts02"]
@@ -154,10 +155,10 @@ happuy = NodePath("Bajama Happuy")
 
 [node name="Bajama Busuy" type="TextureRect" parent="Bajama Control" unique_id=1426634032]
 layout_mode = 0
-offset_left = 1066.0
-offset_top = 270.0
-offset_right = 1737.0
-offset_bottom = 1214.0
+offset_left = 1048.0
+offset_top = 264.0
+offset_right = 1719.0
+offset_bottom = 1208.0
 texture = ExtResource("5_te4bi")
 expand_mode = 4
 stretch_mode = 4
@@ -179,14 +180,14 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = -19.0
-offset_bottom = -19.0
+offset_bottom = 6.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_0rvqk")
 expand_mode = 2
-stretch_mode = 4
 
 [node name="CanvasLayer" parent="." unique_id=2086796289 instance=ExtResource("6_f4f5n")]
+visible = false
 
 [node name="Tables" type="TextureRect" parent="." unique_id=1571111971]
 layout_mode = 1
@@ -302,19 +303,19 @@ texture = ExtResource("13_pj0fw")
 
 [node name="Pipe" type="TextureRect" parent="." unique_id=1798864866]
 layout_mode = 0
-offset_left = 1748.0
-offset_top = 427.0
-offset_right = 2006.0
-offset_bottom = 481.0
+offset_left = 1801.0
+offset_top = 438.0
+offset_right = 2059.0
+offset_bottom = 492.0
 scale = Vector2(0.585, 0.585)
 texture = ExtResource("13_yqalu")
 
 [node name="Pipe2" type="TextureRect" parent="." unique_id=1727810473]
 layout_mode = 0
-offset_left = 1923.9999
-offset_top = 428.0
-offset_right = 2182.0
-offset_bottom = 482.0
+offset_left = 1976.9999
+offset_top = 439.0
+offset_right = 2235.0
+offset_bottom = 493.0
 scale = Vector2(0.585, 0.585)
 texture = ExtResource("13_yqalu")
 
@@ -331,10 +332,10 @@ layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 1999.0
-offset_top = 280.64
-offset_right = 2078.9995
-offset_bottom = 505.6402
+offset_left = 2069.0
+offset_top = 293.0
+offset_right = 2147.2864
+offset_bottom = 518.0002
 grow_horizontal = 1
 grow_vertical = 1
 scale = Vector2(2.335, 2.335)
@@ -343,45 +344,45 @@ beer_type = "brown"
 
 [node name="RedBeerTap" parent="." unique_id=1005572842 node_paths=PackedStringArray("full_glass") instance=ExtResource("10_te4bi")]
 layout_mode = 1
-offset_left = 1819.0
-offset_top = 280.64
-offset_right = -661.00037
-offset_bottom = -934.3596
+offset_left = 1879.0
+offset_top = 293.0
+offset_right = -603.1417
+offset_bottom = -921.99963
 scale = Vector2(2.335, 2.335)
 full_glass = NodePath("../Red Full Glass")
 beer_type = "red"
 
 [node name="BlondBeerTap" parent="." unique_id=1322661491 node_paths=PackedStringArray("full_glass") instance=ExtResource("11_26ygd")]
 layout_mode = 1
-offset_left = 1639.0
-offset_top = 280.64
-offset_right = -841.00037
-offset_bottom = -934.3596
+offset_left = 1689.0
+offset_top = 293.0
+offset_right = -791.00037
+offset_bottom = -921.99963
 scale = Vector2(2.335, 2.335)
 full_glass = NodePath("../Blond Full Glass")
 beer_type = "blond"
 
 [node name="CoffeeMachine" parent="." unique_id=1464255273 node_paths=PackedStringArray("full_glass") instance=ExtResource("11_s5gn0")]
 layout_mode = 1
-offset_left = 405.0
-offset_top = 519.0
-offset_right = -2047.0
-offset_bottom = -776.00037
+offset_left = 404.0
+offset_top = 531.36
+offset_right = -2048.0
+offset_bottom = -763.6404
 scale = Vector2(2.335, 2.335)
 full_glass = NodePath("../Coffee Full Cup")
 
 [node name="PastisBottle" parent="." unique_id=1198390330 node_paths=PackedStringArray("full_glass") instance=ExtResource("12_11pef")]
 layout_mode = 1
-offset_left = 2285.0002
-offset_top = 282.00003
-offset_right = -195.99976
-offset_bottom = -925.9996
+offset_left = 2284.0002
+offset_top = 294.36002
+offset_right = -196.99976
+offset_bottom = -913.6396
 scale = Vector2(2.335, 2.335)
 full_glass = NodePath("../Pastis Full Glass")
 
 [node name="Brown Full Glass" type="Sprite2D" parent="." unique_id=1755523614]
 visible = false
-position = Vector2(2091, 750)
+position = Vector2(2154, 762)
 scale = Vector2(0.10779163, 0.108)
 texture = ExtResource("13_jelqd")
 script = ExtResource("8_s5gn0")
@@ -389,7 +390,7 @@ glass_type = "brown"
 
 [node name="Red Full Glass" type="Sprite2D" parent="." unique_id=1012011842]
 visible = false
-position = Vector2(1911, 751)
+position = Vector2(1964, 762)
 scale = Vector2(0.10779163, 0.108)
 texture = ExtResource("15_aldvi")
 script = ExtResource("8_s5gn0")
@@ -397,7 +398,7 @@ glass_type = "red"
 
 [node name="Blond Full Glass" type="Sprite2D" parent="." unique_id=369252389]
 visible = false
-position = Vector2(1732, 750)
+position = Vector2(1774, 762)
 scale = Vector2(0.10779163, 0.108)
 texture = ExtResource("16_te4bi")
 script = ExtResource("8_s5gn0")
@@ -405,7 +406,7 @@ glass_type = "blond"
 
 [node name="Coffee Full Cup" type="Sprite2D" parent="." unique_id=1360055253]
 visible = false
-position = Vector2(494.6875, 803.822)
+position = Vector2(494.6875, 822.182)
 scale = Vector2(0.185, 0.185)
 texture = ExtResource("17_26ygd")
 script = ExtResource("8_s5gn0")
@@ -413,7 +414,7 @@ glass_type = "coffee"
 
 [node name="Pastis Full Glass" type="Sprite2D" parent="." unique_id=1403460008]
 visible = false
-position = Vector2(2382.6875, 764.822)
+position = Vector2(2382.6875, 783.182)
 scale = Vector2(0.165, 0.165)
 texture = ExtResource("18_gaucp")
 script = ExtResource("8_s5gn0")
@@ -464,9 +465,9 @@ client_id = 4
 [node name="Bokal" type="TextureRect" parent="." unique_id=1409635287]
 layout_mode = 0
 offset_left = 54.0
-offset_top = 557.0
+offset_top = 575.36
 offset_right = 352.0
-offset_bottom = 851.0
+offset_bottom = 869.36
 texture = ExtResource("27_ryxql")
 expand_mode = 1
 stretch_mode = 4
@@ -699,14 +700,29 @@ autoplay = true
 
 [node name="CoinCount" type="Label" parent="." unique_id=1910615106]
 layout_mode = 0
-offset_left = 2179.0
-offset_top = 20.0
-offset_right = 2547.0
-offset_bottom = 80.0
+offset_left = 2305.0
+offset_top = 7.0
+offset_right = 2525.0
+offset_bottom = 142.0
 theme_override_fonts/font = ExtResource("31_yqalu")
-theme_override_font_sizes/font_size = 35
-text = "COIN COUNT:"
+theme_override_font_sizes/font_size = 100
+text = "1000"
 script = ExtResource("33_6crsu")
+
+[node name="countdown_time" type="Label" parent="." unique_id=810052963]
+layout_mode = 0
+offset_left = 1160.0
+offset_top = 17.0
+offset_right = 1423.0
+offset_bottom = 154.0
+theme_override_fonts/font = ExtResource("31_yqalu")
+theme_override_font_sizes/font_size = 100
+text = "03.00"
+
+[node name="Money" type="Sprite2D" parent="." unique_id=26300496]
+position = Vector2(2233, 81)
+scale = Vector2(0.09570321, 0.09667969)
+texture = ExtResource("34_5e80b")
 
 [connection signal="order_accepted" from="Command Hook 1" to="Client Chairs/Client 1" method="_on_command_hook_order_accepted"]
 [connection signal="order_accepted" from="Command Hook 1" to="Client Chairs/Client 2" method="_on_command_hook_order_accepted"]
@@ -827,4 +843,9 @@ script = ExtResource("33_6crsu")
 [connection signal="glass_dropped" from="Glasses/Beer Glass 2" to="RedBeerTap" method="_on_beer_glass_dropped"]
 [connection signal="glass_dropped" from="Glasses/Beer Glass 2" to="BlondBeerTap" method="_on_beer_glass_dropped"]
 [connection signal="glass_dropped" from="Glasses/Pastis Glass" to="PastisBottle" method="_on_pastis_glass_dropped"]
+[connection signal="timeout" from="timer_day" to="." method="_on_timer_day_timeout"]
+[connection signal="timeout" from="timer_day" to="Client Chairs/Client 1" method="_on_timer_timeout"]
+[connection signal="timeout" from="timer_day" to="Client Chairs/Client 2" method="_on_timer_timeout"]
+[connection signal="timeout" from="timer_day" to="Client Chairs/Client 3" method="_on_timer_timeout"]
+[connection signal="timeout" from="timer_day" to="Client Chairs/Client 4" method="_on_timer_timeout"]
 [connection signal="timeout" from="Client Spawn Manager/client_delay" to="Client Spawn Manager" method="_on_timer_timeout"]
