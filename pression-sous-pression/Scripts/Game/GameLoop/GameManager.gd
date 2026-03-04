@@ -13,7 +13,7 @@ var customer_present: int = 0
 var accepted_orders: int = 0
 var fulfilled_orders: int = 0
 var failed_orders: int = 0
-var money_count: int = 0
+var money_count: int = 150
 var daily_rent: int = 30
 var client_patience: float = 40
 
@@ -28,7 +28,7 @@ var max_drinks_ordered: int = 2
 var client_spawn_delay:float = 13.5
 var pourboire_enhancement:float = 1.0
 
-var day_duration:float = 180.0
+var day_duration:float = 120.0
 
 
 func start_game() -> void:
@@ -43,7 +43,7 @@ func start_game() -> void:
 	failed_orders = 0
 	money_count = 0
 	daily_rent = 30
-	day_duration = 180.0
+	day_duration = 120.0
 
 	pakal_smoked_days = 0
 	coffee_in_bokal = 0
