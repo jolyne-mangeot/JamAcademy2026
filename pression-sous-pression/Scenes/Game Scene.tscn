@@ -30,7 +30,6 @@
 [ext_resource type="Texture2D" uid="uid://dnh8n2oacvfh3" path="res://Assets/Sprites/GamingScene/BeerBlonde.png" id="16_te4bi"]
 [ext_resource type="Texture2D" uid="uid://cl6e2l150x6vw" path="res://Assets/Sprites/GamingScene/CofeeMug.png" id="17_26ygd"]
 [ext_resource type="Texture2D" uid="uid://bktvw45be5kok" path="res://Assets/Sprites/GamingScene/PastisGlass.png" id="18_gaucp"]
-[ext_resource type="Texture2D" uid="uid://c3mimjxdfc52k" path="res://Assets/Sprites/GamingScene/FishbowlFront.png" id="27_ryxql"]
 [ext_resource type="Script" uid="uid://dmfdtyajrrsyd" path="res://Scripts/Game/Animations/PakalWaterControl.gd" id="28_dy3ug"]
 [ext_resource type="Texture2D" uid="uid://bq5wu34i48go0" path="res://Assets/Sprites/GamingScene/Fishbowlback.png" id="28_sf4n0"]
 [ext_resource type="Script" uid="uid://db7d5rdeogmdd" path="res://Scripts/Game/Animations/PakalBehaviour.gd" id="29_dy3ug"]
@@ -51,6 +50,8 @@
 [ext_resource type="Texture2D" uid="uid://r1u55e6lw4oo" path="res://Assets/Pakal/Black/Black2.png" id="39_aemtc"]
 [ext_resource type="Texture2D" uid="uid://bl84jl41klbeq" path="res://Assets/Pakal/Black/Black3.png" id="40_vr6vh"]
 [ext_resource type="Texture2D" uid="uid://rc53vy61asjx" path="res://Assets/Pakal/Black/Black4.png" id="41_2feie"]
+[ext_resource type="Texture2D" uid="uid://cmiic5bn65qf1" path="res://Assets/Pakal/FishbowlFront.png" id="44_xfd74"]
+[ext_resource type="Texture2D" uid="uid://xx134v8x0g56" path="res://Assets/Sprites/TitleScreen/ButtonA.png" id="52_xfd74"]
 
 [sub_resource type="Gradient" id="Gradient_pj0fw"]
 colors = PackedColorArray(0.5343956, 0.25409824, 0.1394135, 1, 1, 1, 1, 1)
@@ -187,6 +188,7 @@ texture = ExtResource("2_0rvqk")
 expand_mode = 2
 
 [node name="CanvasLayer" parent="." unique_id=2086796289 instance=ExtResource("6_f4f5n")]
+visible = false
 
 [node name="Tables" type="TextureRect" parent="." unique_id=1571111971]
 layout_mode = 1
@@ -466,15 +468,12 @@ scale = Vector2(-2.165, 2.165)
 size_flags_horizontal = 3
 client_id = 4
 
-[node name="Bokal" type="TextureRect" parent="." unique_id=1409635287]
-layout_mode = 0
+[node name="Bokal" type="Control" parent="." unique_id=1260629378]
+anchors_preset = 0
 offset_left = 54.0
 offset_top = 575.36
 offset_right = 352.0
 offset_bottom = 869.36
-texture = ExtResource("27_ryxql")
-expand_mode = 1
-stretch_mode = 4
 
 [node name="Water Control" type="Control" parent="Bokal" unique_id=1266441023 node_paths=PackedStringArray("pipe")]
 anchors_preset = 0
@@ -484,7 +483,6 @@ script = ExtResource("28_dy3ug")
 pipe = NodePath("../Pakal Side Pipe")
 
 [node name="Day1 Water" type="TextureRect" parent="Bokal/Water Control" unique_id=1358619396]
-visible = false
 layout_mode = 0
 offset_right = 298.0
 offset_bottom = 294.0
@@ -654,6 +652,14 @@ scale = Vector2(0.105, 0.105)
 texture = ExtResource("13_yqalu")
 expand_mode = 1
 
+[node name="Bokal" type="TextureRect" parent="Bokal" unique_id=800826591]
+layout_mode = 0
+offset_right = 294.0
+offset_bottom = 297.64
+texture = ExtResource("44_xfd74")
+expand_mode = 1
+stretch_mode = 4
+
 [node name="Glasses" type="Node" parent="." unique_id=996044032]
 
 [node name="Coffee Cup" type="Sprite2D" parent="Glasses" unique_id=957678165]
@@ -734,6 +740,47 @@ text = "03.00"
 position = Vector2(2233, 81)
 scale = Vector2(0.09570321, 0.09667969)
 texture = ExtResource("34_5e80b")
+
+[node name="DayAnnouncement" type="CanvasLayer" parent="." unique_id=425691507]
+visible = false
+
+[node name="DayBackground" type="ColorRect" parent="DayAnnouncement" unique_id=1940584297]
+modulate = Color(0, 0, 0, 0.7019608)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DayPlaque" type="TextureRect" parent="DayAnnouncement" unique_id=575212504]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -332.5
+offset_top = -73.5
+offset_right = 332.5
+offset_bottom = 73.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("52_xfd74")
+
+[node name="Day" type="Label" parent="DayAnnouncement" unique_id=2023953368]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -46.0
+offset_right = 120.0
+offset_bottom = 46.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("31_yqalu")
+theme_override_font_sizes/font_size = 78
+text = "Monday"
 
 [connection signal="order_accepted" from="Command Hook 1" to="Client Chairs/Client 1" method="_on_command_hook_order_accepted"]
 [connection signal="order_accepted" from="Command Hook 1" to="Client Chairs/Client 2" method="_on_command_hook_order_accepted"]
@@ -839,13 +886,13 @@ texture = ExtResource("34_5e80b")
 [connection signal="order_over" from="Client Chairs/Client 4" to="Command Hook 3" method="_on_client_order_over"]
 [connection signal="order_over" from="Client Chairs/Client 4" to="CoinCount" method="_on_client_order_over"]
 [connection signal="wrong_drink_given" from="Client Chairs/Client 4" to="Bokal/Pakal Control" method="_on_client_wrong_drink_given"]
+[connection signal="mouse_entered" from="Bokal" to="Bokal/Water Control" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Bokal" to="Bokal/Water Control" method="_on_mouse_exited"]
 [connection signal="drink_given" from="Bokal/Water Control" to="BrownBeerTap" method="_on_client_drink_given"]
 [connection signal="drink_given" from="Bokal/Water Control" to="RedBeerTap" method="_on_client_drink_given"]
 [connection signal="drink_given" from="Bokal/Water Control" to="BlondBeerTap" method="_on_client_drink_given"]
 [connection signal="drink_given" from="Bokal/Water Control" to="CoffeeMachine" method="_on_client_drink_given"]
 [connection signal="drink_given" from="Bokal/Water Control" to="PastisBottle" method="_on_client_drink_given"]
-[connection signal="mouse_entered" from="Bokal/Water Control" to="Bokal/Water Control" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Bokal/Water Control" to="Bokal/Water Control" method="_on_mouse_exited"]
 [connection signal="glass_dropped" from="Glasses/Coffee Cup" to="CoffeeMachine" method="_on_coffee_cup_dropped"]
 [connection signal="glass_dropped" from="Glasses/Beer Glass 1" to="BrownBeerTap" method="_on_beer_glass_dropped"]
 [connection signal="glass_dropped" from="Glasses/Beer Glass 1" to="RedBeerTap" method="_on_beer_glass_dropped"]
