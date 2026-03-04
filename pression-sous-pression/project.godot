@@ -13,6 +13,7 @@ config_version=5
 config/name="Pression Sous Pression"
 run/main_scene="uid://qre40qf4tm58"
 config/features=PackedStringArray("4.6", "Forward Plus")
+boot_splash/bg_color=Color(0.13925782, 0.1231414, 0.2323097, 1)
 config/icon="res://icon.svg"
 
 [autoload]
@@ -24,7 +25,6 @@ GameManager="*uid://c2n238skluvtt"
 window/size/viewport_width=2560
 window/size/viewport_height=1440
 window/stretch/mode="viewport"
-window/stretch/aspect="expand"
 
 [editor]
 

@@ -1,13 +1,23 @@
 extends Node
 
 @onready var pause_menu: Control = $Control/PauseMenu/PauseMenu
+@onready var shop_button: Button = $buttons/shop_button
+@onready var defeat_button: Button = $buttons/defeat_button
 
 func _ready():
 	GameManager.money_count -= GameManager.daily_rent
-	if GameManager.money_count < 0 || GameManager.day_count == 7:
-		get_node("buttons/defeat_button").visible = true
+	if GameManager.money_count < 0:
+		#get_node("buttons/defeat_button").visible = true
+		defeat_button.visible = true
+		_on_defeat_button_pressed()
+	elif GameManager.day_count == 7:
+		#get_node("buttons/defeat_button").visible = true
+		defeat_button.visible = true
+		_on_defeat_button_pressed()
 	else:
-		get_node("buttons/shop_button").visible = true
+		#get_node("buttons/shop_button").visible = true
+		shop_button.visible = true
+		_on_shop_button_pressed()
  
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
@@ -20,7 +30,4 @@ func _on_shop_button_pressed() -> void:
 
 
 func _on_defeat_button_pressed() -> void:
-	if GameManager.day_count == 7:
-		get_tree().change_scene_to_file("res://Thx.tscn")
-	else:
-		get_tree().change_scene_to_file("res://Upgrade.tscn")
+	get_tree().change_scene_to_file("res://Thx.tscn")

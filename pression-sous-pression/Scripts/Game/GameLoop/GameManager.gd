@@ -57,8 +57,6 @@ func start_game() -> void:
 	pourboire_enhancement = 1.0
 
 func _next_day()-> void:
-	if day_count == 7:
-		call_ending()
 	pakal_fed = false
 	customer_present = 1
 	accepted_orders = 0
@@ -69,6 +67,3 @@ func _next_day()-> void:
 	client_patience -= 3.5
 	day_count += 1
 	current_day = days[day_count - 1]
-
-func call_ending():
-	pass
