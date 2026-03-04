@@ -3,10 +3,10 @@ extends Control
 @onready var pause: Control = $PauseMenu/PauseMenu
 @onready var next_button: Button = $CanvasLayer/Next_day_button
 
-@onready var delay_button: Button = $CanvasLayer/VBoxContainer/delay_client_button
+@onready var time_button: Button = $CanvasLayer/VBoxContainer/Time_enhancement_tap
 @onready var pourboire_button: Button = $CanvasLayer/VBoxContainer/Pourboire_enhancement
 @onready var max_order_button: Button = $CanvasLayer/VBoxContainer/max_order_button
-@onready var time_button: Button = $CanvasLayer/VBoxContainer/Time_enhancement_tap
+@onready var delay_button: Button = $CanvasLayer/VBoxContainer/delay_client_button
 
 @export var Price_patience: int 
 @export var Price_max_order: int
