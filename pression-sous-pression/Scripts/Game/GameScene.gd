@@ -34,4 +34,4 @@ func _input(event: InputEvent) -> void:
 
 
 func _on_timer_day_timeout() -> void:
-	get_tree().change_scene_to_file("res://Upgrade.tscn")
+	get_tree().change_scene_to_file("res://Scenes/End Of Day.tscn")
