@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b3p5tr58c26vb" path="res://Assets/Sprites/GamingScene/Sheet.png" id="1_sb8jg"]
 [ext_resource type="FontFile" uid="uid://d37u2vjhyv1h3" path="res://Assets/Fonts/Kelvinch.otf" id="2_fas08"]
 [ext_resource type="Script" uid="uid://bh1j7p3r5ct0b" path="res://Scripts/Menues/IntroButton.gd" id="2_sb8jg"]
-[ext_resource type="AudioStream" uid="uid://dr7a8kb02khx1" path="res://Assets/Music/Quirky Dog.mp3" id="3_iwjj0"]
+[ext_resource type="AudioStream" uid="uid://do28iowioh20d" path="res://Assets/Music/IntroSong.mp3" id="4_fas08"]
 
 [sub_resource type="Theme" id="Theme_vltdc"]
 
@@ -69,9 +69,8 @@ text = "NEXT"
 flat = true
 script = ExtResource("2_sb8jg")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=197075161]
-stream = ExtResource("3_iwjj0")
-volume_db = -10.0
+[node name="IntroSong" type="AudioStreamPlayer" parent="." unique_id=197075161]
+stream = ExtResource("4_fas08")
 autoplay = true
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

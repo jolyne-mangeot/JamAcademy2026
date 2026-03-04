@@ -587,7 +587,7 @@ parameters/looping = true
 
 [node name="MusicBar" type="AudioStreamPlayer" parent="AudioManager" unique_id=942091044]
 stream = ExtResource("45_52dda")
-volume_db = -15.0
+volume_db = -13.0
 autoplay = true
 parameters/looping = true
 
