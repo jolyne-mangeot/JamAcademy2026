@@ -219,7 +219,6 @@ texture = ExtResource("2_0rvqk")
 expand_mode = 2
 
 [node name="CanvasLayer" parent="." unique_id=2086796289 instance=ExtResource("6_f4f5n")]
-visible = false
 
 [node name="Tables" type="TextureRect" parent="." unique_id=1571111971]
 layout_mode = 1
@@ -798,7 +797,6 @@ scale = Vector2(0.09570321, 0.09667969)
 texture = ExtResource("50_r6see")
 
 [node name="DayAnnouncement" type="CanvasLayer" parent="." unique_id=425691507]
-visible = false
 
 [node name="DayBackground" type="ColorRect" parent="DayAnnouncement" unique_id=1940584297]
 modulate = Color(0, 0, 0, 0.7019608)
