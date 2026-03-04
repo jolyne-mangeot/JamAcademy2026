@@ -1,30 +1,31 @@
 [gd_scene format=3 uid="uid://bhsyfqyb4h382"]
 
 [ext_resource type="Texture2D" uid="uid://4dd2aus5rxel" path="res://Assets/Sprites/GamingScene/BG.png" id="1_btlme"]
+[ext_resource type="Script" uid="uid://dviwqfknt33vq" path="res://Scripts/Menues/IntroManager.gd" id="1_kujll"]
 [ext_resource type="Texture2D" uid="uid://b3p5tr58c26vb" path="res://Assets/Sprites/GamingScene/Sheet.png" id="1_sb8jg"]
+[ext_resource type="Texture2D" uid="uid://dwyhc7sojmhq" path="res://Assets/Sprites/Intro/01.png" id="2_emb40"]
 [ext_resource type="FontFile" uid="uid://d37u2vjhyv1h3" path="res://Assets/Fonts/Kelvinch.otf" id="2_fas08"]
-[ext_resource type="Script" uid="uid://bh1j7p3r5ct0b" path="res://Scripts/Menues/IntroButton.gd" id="2_sb8jg"]
+[ext_resource type="Texture2D" uid="uid://uoa8fu0iikwk" path="res://Assets/Sprites/Intro/02.png" id="3_kujll"]
+[ext_resource type="Texture2D" uid="uid://cd78invvch0e4" path="res://Assets/Sprites/Intro/03.png" id="4_3j3d0"]
 [ext_resource type="AudioStream" uid="uid://do28iowioh20d" path="res://Assets/Music/IntroSong.mp3" id="4_fas08"]
+[ext_resource type="Texture2D" uid="uid://dlfbsi3pdhan7" path="res://Assets/Sprites/Intro/04.png" id="5_l71ac"]
+[ext_resource type="Texture2D" uid="uid://blmh8wabtvyiw" path="res://Assets/Sprites/Intro/06.png" id="6_x61ia"]
+[ext_resource type="Texture2D" uid="uid://caqq8ikwvsmcg" path="res://Assets/Sprites/Intro/07.png" id="7_20vok"]
+[ext_resource type="Texture2D" uid="uid://besm3s758gqtd" path="res://Assets/Sprites/Intro/05.png" id="8_0q2yq"]
 
 [sub_resource type="Theme" id="Theme_vltdc"]
 
-[sub_resource type="GDScript" id="GDScript_33sem"]
-script/source = "extends RichTextLabel
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sb8jg"]
 
+[sub_resource type="GDScript" id="GDScript_emb40"]
+script/source = "extends Button
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	grab_focus()
 "
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sb8jg"]
-
-[node name="Control" type="Control" unique_id=1782205152]
+[node name="Control" type="Control" unique_id=1782205152 node_paths=PackedStringArray("slides", "texts")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -32,6 +33,9 @@ anchor_bottom = 1.0
 offset_right = 21.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_kujll")
+slides = [NodePath("Slides/Slide1"), NodePath("Slides/Slide2"), NodePath("Slides/Slide3"), NodePath("Slides/Slide4"), NodePath("Slides/Slide5"), NodePath("Slides/Slide6"), NodePath("Slides/Slide7")]
+texts = [NodePath("Texts/RichTextLabel1"), NodePath("Texts/RichTextLabel2"), NodePath("Texts/RichTextLabel3"), NodePath("Texts/RichTextLabel4"), NodePath("Texts/RichTextLabel5"), NodePath("Texts/RichTextLabel6"), NodePath("Texts/RichTextLabel7")]
 
 [node name="TextureRect2" type="TextureRect" parent="." unique_id=1437490752]
 layout_mode = 1
@@ -44,35 +48,212 @@ texture = ExtResource("1_btlme")
 expand_mode = 2
 stretch_mode = 4
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1095603637]
+[node name="Slides" type="Control" parent="." unique_id=1360922282]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Slide1" type="TextureRect" parent="Slides" unique_id=1917305236]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_emb40")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Slide2" type="TextureRect" parent="Slides" unique_id=443448618]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_kujll")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Slide3" type="TextureRect" parent="Slides" unique_id=769986719]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_3j3d0")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Slide4" type="TextureRect" parent="Slides" unique_id=1555186852]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_l71ac")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Slide5" type="TextureRect" parent="Slides" unique_id=1387434987]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_x61ia")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Slide6" type="TextureRect" parent="Slides" unique_id=1294687437]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_20vok")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Slide7" type="TextureRect" parent="Slides" unique_id=48197762]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_0q2yq")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Texts" type="TextureRect" parent="." unique_id=1095603637]
+self_modulate = Color(1, 1, 1, 0.83137256)
 layout_mode = 0
-offset_left = 1213.0
-offset_top = 816.0
-offset_right = 2540.0
-offset_bottom = 1504.0
+offset_left = 1250.0
+offset_top = 861.0
+offset_right = 2577.0
+offset_bottom = 1549.0
 texture = ExtResource("1_sb8jg")
 expand_mode = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="TextureRect" unique_id=43439088]
+[node name="RichTextLabel1" type="Label" parent="Texts" unique_id=599897540]
+visible = false
 layout_mode = 0
-offset_left = 90.0
+offset_left = 85.0
 offset_top = 148.0
-offset_right = 1231.0
+offset_right = 1217.0
 offset_bottom = 449.0
 theme = SubResource("Theme_vltdc")
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("2_fas08")
-theme_override_fonts/bold_font = ExtResource("2_fas08")
-bbcode_enabled = true
-text = "[font_size=40]Bajama, a human-fish, and their son Pakal, a fish, suffer from a difficult divorce. But Bajama won't let themself be defeated and decides to work hard to provide for their child. From now on, Bajama works as a barman in a human submarine and will have to bust a gut to show their worth. [/font_size]"
-script = SubResource("GDScript_33sem")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_fas08")
+theme_override_font_sizes/font_size = 48
+text = "Bajama, a human-fish, and their offspring Pakal, a fish, suffer from a difficult divorce. Their fishy partner left them for another, and with nothing to care for their child."
+autowrap_mode = 3
+
+[node name="RichTextLabel2" type="Label" parent="Texts" unique_id=1229478028]
+visible = false
+layout_mode = 0
+offset_left = 85.0
+offset_top = 148.0
+offset_right = 1217.0
+offset_bottom = 449.0
+theme = SubResource("Theme_vltdc")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_fas08")
+theme_override_font_sizes/font_size = 48
+text = "Bajama immediately suffer an insurmountable pain, letting themself rot on the ocean rock bottom, their only trace on life bubbly tears that fade away as quick as their partner did."
+autowrap_mode = 3
+
+[node name="RichTextLabel3" type="Label" parent="Texts" unique_id=629420414]
+visible = false
+layout_mode = 0
+offset_left = 85.0
+offset_top = 148.0
+offset_right = 1217.0
+offset_bottom = 449.0
+theme = SubResource("Theme_vltdc")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_fas08")
+theme_override_font_sizes/font_size = 48
+text = "Bajama spend their last savings on adult beverages, trying everything to forget this heartbreak and tend to their child as they should."
+autowrap_mode = 3
+
+[node name="RichTextLabel4" type="Label" parent="Texts" unique_id=490320688]
+visible = false
+layout_mode = 0
+offset_left = 85.0
+offset_top = 148.0
+offset_right = 1217.0
+offset_bottom = 449.0
+theme = SubResource("Theme_vltdc")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_fas08")
+theme_override_font_sizes/font_size = 48
+text = "But they couldn't just drop them. Their perfect and incredible partner they swore on life to spend their everyday-life with."
+autowrap_mode = 3
+
+[node name="RichTextLabel5" type="Label" parent="Texts" unique_id=798009098]
+visible = false
+layout_mode = 0
+offset_left = 85.0
+offset_top = 148.0
+offset_right = 1217.0
+offset_bottom = 449.0
+theme = SubResource("Theme_vltdc")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_fas08")
+theme_override_font_sizes/font_size = 48
+text = " So, with just an idea and strong arms, they spend days and days working on a project that was their last hope. Of seeing their partner once again eye-to-eye, of feeling life in their heart."
+autowrap_mode = 3
+
+[node name="RichTextLabel6" type="Label" parent="Texts" unique_id=893135872]
+visible = false
+layout_mode = 0
+offset_left = 85.0
+offset_top = 148.0
+offset_right = 1217.0
+offset_bottom = 449.0
+theme = SubResource("Theme_vltdc")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_fas08")
+theme_override_font_sizes/font_size = 48
+text = "In less time than it could be imagined by anyone else, Bajama built themself a submarine. A subbar, if you will, to launch a business and inevitably gain their partner's heart again."
+autowrap_mode = 3
+
+[node name="RichTextLabel7" type="Label" parent="Texts" unique_id=792116265]
+visible = false
+layout_mode = 0
+offset_left = 85.0
+offset_top = 148.0
+offset_right = 1217.0
+offset_bottom = 449.0
+theme = SubResource("Theme_vltdc")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_fas08")
+theme_override_font_sizes/font_size = 48
+text = "Equipping themself to withstand the neighbouring of humans, they went ahead unafraid and courageous, braving one last gamble on love."
+autowrap_mode = 3
 
 [node name="next" type="Button" parent="." unique_id=415330654]
 layout_mode = 0
-offset_left = 2259.0
-offset_top = 1281.0
-offset_right = 2459.0
-offset_bottom = 1361.0
+offset_left = 2288.0
+offset_top = 1310.0
+offset_right = 2488.0
+offset_bottom = 1390.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_fas08")
@@ -80,10 +261,10 @@ theme_override_font_sizes/font_size = 43
 theme_override_styles/focus = SubResource("StyleBoxEmpty_sb8jg")
 text = "NEXT"
 flat = true
-script = ExtResource("2_sb8jg")
+script = SubResource("GDScript_emb40")
 
 [node name="IntroSong" type="AudioStreamPlayer" parent="." unique_id=197075161]
 stream = ExtResource("4_fas08")
 autoplay = true
 
-[connection signal="pressed" from="next" to="next" method="_on_pressed"]
+[connection signal="pressed" from="next" to="." method="_on_next_pressed"]
