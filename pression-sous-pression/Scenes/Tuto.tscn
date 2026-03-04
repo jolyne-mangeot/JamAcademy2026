@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://d28lhi0p1sy8b"]
+
+[ext_resource type="Texture2D" uid="uid://bovrwxfmkrayd" path="res://Assets/Sprites/Tutorial/Screenshot.png" id="1_or3k3"]
+[ext_resource type="FontFile" uid="uid://d37u2vjhyv1h3" path="res://Assets/Fonts/Kelvinch.otf" id="2_n8g1e"]
+[ext_resource type="Script" uid="uid://d3tqfygpoqnc7" path="res://Scenes/TutoButton.gd" id="2_vv1sr"]
+
+[node name="Control" type="Control" unique_id=1904200241]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 396.0
+offset_top = 185.0
+offset_right = -417.0
+offset_bottom = -339.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1745089488]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 181.0
+offset_top = 132.0
+offset_right = -132.0
+offset_bottom = -63.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_or3k3")
+expand_mode = 2
+
+[node name="Button" type="Button" parent="." unique_id=1348461435]
+layout_mode = 0
+offset_left = 1782.0
+offset_top = 1092.0
+offset_right = 2110.0
+offset_bottom = 1200.0
+theme_override_fonts/font = ExtResource("2_n8g1e")
+theme_override_font_sizes/font_size = 35
+text = "NEXT"
+script = ExtResource("2_vv1sr")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
