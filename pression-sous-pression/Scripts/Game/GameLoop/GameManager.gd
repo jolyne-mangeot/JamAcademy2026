@@ -16,7 +16,7 @@ var incomplete_orders: int = 0
 var money_count: int = 0
 var daily_rent: int = 30
 var client_patience: float = 40
-var satisfaction: int = 100
+var satisfaction: int = 51
 
 var pakal_fed: bool = false
 var pakal_smoked_days: int = 0
@@ -60,7 +60,7 @@ func _next_day()-> void:
 	if day_count == 7:
 		call_ending()
 	pakal_fed = false
-	customer_present = 0
+	customer_present = 1
 	accepted_orders = 0
 	fulfilled_orders = 0
 	incomplete_orders = 0
@@ -69,9 +69,6 @@ func _next_day()-> void:
 	client_patience -= 3.5
 	day_count += 1
 	current_day = days[day_count - 1]
-
-func calculate_satisfaction() -> int:
-	return int((fulfilled_orders + (incomplete_orders / 2)) / customer_present * 100)
 
 func call_ending():
 	pass
