@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dcvb5jbtgeml4"
+path="res://.godot/imported/CRWDCheer_Cris et applaudissements d ados 2 (ID 0237)_LaSonotheque.fr.mp3-2423cd08047b03f25e56d7aa5a3a04e8.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/CRWDCheer_Cris et applaudissements d ados 2 (ID 0237)_LaSonotheque.fr.mp3"
+dest_files=["res://.godot/imported/CRWDCheer_Cris et applaudissements d ados 2 (ID 0237)_LaSonotheque.fr.mp3-2423cd08047b03f25e56d7aa5a3a04e8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
