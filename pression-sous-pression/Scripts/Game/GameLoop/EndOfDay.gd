@@ -4,7 +4,7 @@ extends Node
 
 func _ready():
 	GameManager.money_count -= GameManager.daily_rent
-	if GameManager.money_count < 0:
+	if GameManager.money_count < 0 || GameManager.day_count == 7:
 		get_node("buttons/defeat_button").visible = true
 	else:
 		get_node("buttons/shop_button").visible = true
