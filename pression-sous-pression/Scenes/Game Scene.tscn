@@ -4,7 +4,6 @@
 [ext_resource type="Script" uid="uid://bridn1eq17kg1" path="res://Scripts/Game/GameScene.gd" id="1_gaucp"]
 [ext_resource type="Texture2D" uid="uid://4dd2aus5rxel" path="res://Assets/Sprites/GamingScene/BG.png" id="1_hlnq6"]
 [ext_resource type="Texture2D" uid="uid://bfqf2ajkcevxs" path="res://Assets/Sprites/GamingScene/Bar_Front.png" id="2_0rvqk"]
-[ext_resource type="AudioStream" uid="uid://dr7a8kb02khx1" path="res://Assets/Music/Quirky Dog.mp3" id="2_ovske"]
 [ext_resource type="PackedScene" uid="uid://h2ofuvb2raus" path="res://Scenes/Game/Workstations/Brown Beer Tap.tscn" id="4_h35fg"]
 [ext_resource type="Script" uid="uid://byumfj7j1wfvs" path="res://Scripts/Game/Animations/BajamaBehaviour.gd" id="5_f4f5n"]
 [ext_resource type="Texture2D" uid="uid://cnxoahf07js8s" path="res://Assets/Sprites/GamingScene/Hook.png" id="5_s4ps2"]
@@ -52,6 +51,19 @@
 [ext_resource type="Texture2D" uid="uid://rc53vy61asjx" path="res://Assets/Pakal/Black/Black4.png" id="41_2feie"]
 [ext_resource type="Texture2D" uid="uid://cmiic5bn65qf1" path="res://Assets/Pakal/FishbowlFront.png" id="44_xfd74"]
 [ext_resource type="Texture2D" uid="uid://xx134v8x0g56" path="res://Assets/Sprites/TitleScreen/ButtonA.png" id="52_xfd74"]
+[ext_resource type="AudioStream" uid="uid://c675xx7aw5jc7" path="res://Assets/Music/Ambiance de bar.mp3" id="34_5e80b"]
+[ext_resource type="AudioStream" uid="uid://1xjc6hs2mar5" path="res://Assets/Music/Biere service.mp3" id="35_5qs78"]
+[ext_resource type="AudioStream" uid="uid://d02dxdyrncpwq" path="res://Assets/Music/Glacons dans un verre.mp3" id="35_5vel0"]
+[ext_resource type="AudioStream" uid="uid://e6v4d7gygxx7" path="res://Assets/Music/CoffeeSound.mp3" id="35_sf4n0"]
+[ext_resource type="AudioStream" uid="uid://urjcc2v3ol5c" path="res://Assets/Music/BellSound.mp3" id="36_sf4n0"]
+[ext_resource type="AudioStream" uid="uid://bjtl1qqh7hc7j" path="res://Assets/Music/CoinSound.mp3" id="37_dy3ug"]
+[ext_resource type="AudioStream" uid="uid://ca6lsfw6qyx2l" path="res://Assets/Music/GlassSound1.mp3" id="38_i3po2"]
+[ext_resource type="AudioStream" uid="uid://dhwl2brr4w2gi" path="res://Assets/Music/GlassSound2.mp3" id="39_7b35j"]
+[ext_resource type="AudioStream" uid="uid://bphdwet2gbu7g" path="res://Assets/Music/GlassSound3.mp3" id="40_6c0fh"]
+[ext_resource type="AudioStream" uid="uid://bpaiv5vbrhs08" path="res://Assets/Music/GlassSound4.mp3" id="41_52dda"]
+[ext_resource type="AudioStream" uid="uid://dcxh0agepmvb1" path="res://Assets/Music/PastisSound.mp3" id="42_6c0fh"]
+[ext_resource type="AudioStream" uid="uid://ck18avkbvnvuq" path="res://Assets/Music/Annoyed.mp3" id="43_52dda"]
+[ext_resource type="AudioStream" uid="uid://pe4fddwa7w4" path="res://Assets/Music/BarTheme.mp3" id="45_52dda"]
 
 [sub_resource type="Gradient" id="Gradient_pj0fw"]
 colors = PackedColorArray(0.5343956, 0.25409824, 0.1394135, 1, 1, 1, 1, 1)
@@ -710,11 +722,6 @@ clients_slots = [NodePath("../Client Chairs/Client 1"), NodePath("../Client Chai
 wait_time = 3.0
 autostart = true
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=942091044]
-stream = ExtResource("2_ovske")
-volume_db = -10.0
-autoplay = true
-
 [node name="CoinCount" type="Label" parent="." unique_id=1910615106]
 layout_mode = 0
 offset_left = 2305.0
@@ -781,6 +788,74 @@ grow_vertical = 2
 theme_override_fonts/font = ExtResource("31_yqalu")
 theme_override_font_sizes/font_size = 78
 text = "Monday"
+[node name="AudioManager" type="AudioStreamPlayer" parent="." unique_id=158461676]
+
+[node name="IceCubeSound" type="AudioStreamPlayer" parent="AudioManager" unique_id=671153827]
+unique_name_in_owner = true
+stream = ExtResource("35_5vel0")
+volume_db = -15.0
+
+[node name="BeerTapSound" type="AudioStreamPlayer" parent="AudioManager" unique_id=1273464194]
+unique_name_in_owner = true
+stream = ExtResource("35_5qs78")
+volume_db = -16.0
+
+[node name="CoffeeSound" type="AudioStreamPlayer" parent="AudioManager" unique_id=1963940910]
+unique_name_in_owner = true
+stream = ExtResource("35_sf4n0")
+volume_db = -10.0
+
+[node name="BellOrder" type="AudioStreamPlayer" parent="AudioManager" unique_id=1228713029]
+unique_name_in_owner = true
+stream = ExtResource("36_sf4n0")
+volume_db = -15.0
+
+[node name="CoinSound" type="AudioStreamPlayer" parent="AudioManager" unique_id=1474035707]
+unique_name_in_owner = true
+stream = ExtResource("37_dy3ug")
+volume_db = -12.0
+
+[node name="GlassSound" type="AudioStreamPlayer" parent="AudioManager" unique_id=1447013190]
+unique_name_in_owner = true
+stream = ExtResource("38_i3po2")
+volume_db = -12.0
+
+[node name="GlassSound2" type="AudioStreamPlayer" parent="AudioManager" unique_id=2143832516]
+unique_name_in_owner = true
+stream = ExtResource("39_7b35j")
+volume_db = -12.0
+
+[node name="GlassSound3" type="AudioStreamPlayer" parent="AudioManager" unique_id=816891974]
+unique_name_in_owner = true
+stream = ExtResource("40_6c0fh")
+volume_db = -12.0
+
+[node name="GlassSound4" type="AudioStreamPlayer" parent="AudioManager" unique_id=1093163076]
+unique_name_in_owner = true
+stream = ExtResource("41_52dda")
+volume_db = -12.0
+
+[node name="PastisSound" type="AudioStreamPlayer" parent="AudioManager" unique_id=1549019844]
+unique_name_in_owner = true
+stream = ExtResource("42_6c0fh")
+volume_db = -16.0
+
+[node name="AnnoyedSound" type="AudioStreamPlayer" parent="AudioManager" unique_id=199256389]
+unique_name_in_owner = true
+stream = ExtResource("43_52dda")
+volume_db = -9.0
+
+[node name="AmbiantSound" type="AudioStreamPlayer" parent="AudioManager" unique_id=1128196301]
+stream = ExtResource("34_5e80b")
+volume_db = -19.0
+autoplay = true
+parameters/looping = true
+
+[node name="MusicBar" type="AudioStreamPlayer" parent="AudioManager" unique_id=942091044]
+stream = ExtResource("45_52dda")
+volume_db = -13.0
+autoplay = true
+parameters/looping = true
 
 [connection signal="order_accepted" from="Command Hook 1" to="Client Chairs/Client 1" method="_on_command_hook_order_accepted"]
 [connection signal="order_accepted" from="Command Hook 1" to="Client Chairs/Client 2" method="_on_command_hook_order_accepted"]
