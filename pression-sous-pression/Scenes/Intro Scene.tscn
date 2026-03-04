@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://blmh8wabtvyiw" path="res://Assets/Sprites/Intro/06.png" id="6_x61ia"]
 [ext_resource type="Texture2D" uid="uid://caqq8ikwvsmcg" path="res://Assets/Sprites/Intro/07.png" id="7_20vok"]
 [ext_resource type="Texture2D" uid="uid://besm3s758gqtd" path="res://Assets/Sprites/Intro/05.png" id="8_0q2yq"]
+[ext_resource type="AudioStream" uid="uid://bo7n3tjbs0yu7" path="res://Assets/Music/ccry.mp3" id="13_kujll"]
+[ext_resource type="AudioStream" uid="uid://c8m4rgeldtwnk" path="res://Assets/Music/Sonar.mp3" id="14_3j3d0"]
 
 [sub_resource type="Theme" id="Theme_vltdc"]
 
@@ -266,5 +268,15 @@ script = SubResource("GDScript_emb40")
 [node name="IntroSong" type="AudioStreamPlayer" parent="." unique_id=197075161]
 stream = ExtResource("4_fas08")
 autoplay = true
+
+[node name="cry" type="AudioStreamPlayer" parent="IntroSong" unique_id=1213080846]
+unique_name_in_owner = true
+stream = ExtResource("13_kujll")
+autoplay = true
+
+[node name="sonar" type="AudioStreamPlayer" parent="IntroSong" unique_id=220059892]
+unique_name_in_owner = true
+stream = ExtResource("14_3j3d0")
+volume_db = -10.0
 
 [connection signal="pressed" from="next" to="." method="_on_next_pressed"]
