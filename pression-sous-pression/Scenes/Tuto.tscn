@@ -49,14 +49,27 @@ scale = Vector2(0.62934875, 0.6248104)
 texture = ExtResource("1_n8g1e")
 
 [node name="Label" type="Label" parent="ScreenshotFrom20260304090917" unique_id=1870389976]
-offset_left = -985.1454
-offset_top = 793.8408
-offset_right = 1080.8546
-offset_bottom = 962.8408
+offset_left = -1021.6911
+offset_top = 694.6107
+offset_right = 1044.3088
+offset_bottom = 863.6107
 theme_override_fonts/font = ExtResource("2_n8g1e")
 theme_override_font_sizes/font_size = 60
-text = "You must take the order of the client by clicking on him before the time
+text = "You must take the order of the clients by clicking on them 
+before the time
 runs out."
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="ScreenshotFrom20260304090917" unique_id=365855297]
+offset_left = -1921.0333
+offset_top = -398.52094
+offset_right = -617.0333
+offset_bottom = -188.52094
+theme_override_fonts/font = ExtResource("2_n8g1e")
+theme_override_font_sizes/font_size = 50
+text = "The orders will spawn here on the hook,
+with the number of the table on the top,
+ and the number of drinks need to complete it on the bottom"
 horizontal_alignment = 1
 
 [node name="ButtonA" type="Sprite2D" parent="." unique_id=635443146]
