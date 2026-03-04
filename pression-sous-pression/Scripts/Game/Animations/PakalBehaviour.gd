@@ -23,6 +23,7 @@ func _process(delta: float) -> void:
 
 func _on_client_wrong_drink_given() -> void:
 	cooldown = 1.0
+	%Buble.play()
 	if sidepipe.visible == true:
 		pipe = true
 		sidepipe.visible = false
