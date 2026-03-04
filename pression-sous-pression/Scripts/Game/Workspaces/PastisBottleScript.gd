@@ -20,12 +20,16 @@ func _process(delta: float) -> void:
 			progress.visible = false
 			empty_glass.visible = false
 			full_glass.visible = true
+			%PastisSound.stop()
+			%IceCubeSound.stop()
 
 
 func _on_pastis_glass_dropped(glass_type: String) -> void:
 	if glass_type == "pastis glass" && is_occupied == false && is_pouring == false && mouse_hovering == true:
 		empty_glass.visible = true
 		is_pouring = true
+		%IceCubeSound.play()
+		%PastisSound.play()
 		is_occupied = true
 		progress.value = 0.0
 		progress.visible = true

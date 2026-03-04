@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c675xx7aw5jc7"
+path="res://.godot/imported/Ambiance de bar.mp3-1911cfea8064a56a4e59d3eba75737d3.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/Ambiance de bar.mp3"
+dest_files=["res://.godot/imported/Ambiance de bar.mp3-1911cfea8064a56a4e59d3eba75737d3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

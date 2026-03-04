@@ -72,6 +72,7 @@ func _on_timer_timeout() -> void:
 			GameManager.money_count += int(5 * drinks_paid * GameManager.pourboire_enhancement)
 		else:
 			GameManager.money_count += int(3 * drinks_paid * GameManager.pourboire_enhancement)
+		%CoinSound.play()
 	order_over.emit(client_id)
 	order.free()
 	client_alive = false
@@ -98,6 +99,7 @@ func _on_button_pressed() -> void:
 
 func _on_command_hook_order_accepted(id: int) -> void:
 	if id == client_id && client_alive == true:
+		%BellOrder.play()
 		timer.stop()
 		timer_bar.visible = false
 		order_in_progress = true
@@ -110,10 +112,20 @@ func _on_glass_dropped(glass_type: String) -> void:
 	if is_hovered == true:
 		drink_given.emit(glass_type)
 		if order.check_drink(glass_type) == false:
+			%AnnoyedSound.play()
 			order_failed.emit()
 			wrong_drink_given.emit()
 			_on_timer_timeout()
 		else:
+			var sound = RandomNumberGenerator.new().randi_range(1,4)
+			if sound == 1:
+				%GlassSound.play()
+			elif sound == 2:
+				%GlassSound2.play()
+			elif sound == 3:
+				%GlassSound3.play()
+			elif sound == 4:
+				%GlassSound4.play()
 			order.update_order()
 			if order.drink_amount <= 0:
 				order_fulfilled.emit()

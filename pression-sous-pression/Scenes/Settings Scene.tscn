@@ -46,7 +46,8 @@ offset_bottom = 690.0
 texture = ExtResource("2_sbpj2")
 expand_mode = 1
 
-[node name="CheckButton" type="CheckButton" parent="." unique_id=580038096]
+[node name="VolumeButton" type="CheckButton" parent="." unique_id=580038096]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 403.0
 offset_top = 212.0
@@ -80,4 +81,5 @@ stream = ExtResource("4_shka7")
 volume_db = -10.0
 autoplay = true
 
+[connection signal="pressed" from="VolumeButton" to="." method="_on_volume_button_pressed"]
 [connection signal="pressed" from="backMenu_button" to="." method="_on_back_menu_button_pressed"]
