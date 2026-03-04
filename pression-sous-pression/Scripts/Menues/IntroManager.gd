@@ -18,5 +18,9 @@ func _on_next_pressed() -> void:
 		if slide_index > 0:
 			slides[slide_index - 1].visible = false
 			texts[slide_index - 1].visible = false
+		if slide_index == 5:
+			%sonar.play()
+		if slide_index == 6:
+			%sonar.stop()
 		slides[slide_index].visible = true
 		texts[slide_index].visible = true
