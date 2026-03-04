@@ -31,7 +31,6 @@
 [ext_resource type="Texture2D" uid="uid://dnh8n2oacvfh3" path="res://Assets/Sprites/GamingScene/BeerBlonde.png" id="16_te4bi"]
 [ext_resource type="Texture2D" uid="uid://cl6e2l150x6vw" path="res://Assets/Sprites/GamingScene/CofeeMug.png" id="17_26ygd"]
 [ext_resource type="Texture2D" uid="uid://bktvw45be5kok" path="res://Assets/Sprites/GamingScene/PastisGlass.png" id="18_gaucp"]
-[ext_resource type="Texture2D" uid="uid://3rk83t1jpetf" path="res://Assets/Sprites/GamingScene/BeerGrid.png" id="21_ydj8b"]
 [ext_resource type="Script" uid="uid://dmfdtyajrrsyd" path="res://Scripts/Game/Animations/PakalWaterControl.gd" id="28_dy3ug"]
 [ext_resource type="Texture2D" uid="uid://bq5wu34i48go0" path="res://Assets/Sprites/GamingScene/Fishbowlback.png" id="28_sf4n0"]
 [ext_resource type="Script" uid="uid://db7d5rdeogmdd" path="res://Scripts/Game/Animations/PakalBehaviour.gd" id="29_dy3ug"]
@@ -415,36 +414,6 @@ grow_horizontal = 1
 grow_vertical = 1
 scale = Vector2(2, 2)
 full_glass = NodePath("../Pastis Full Glass")
-
-[node name="BeerBar" type="TextureRect" parent="." unique_id=1364429824]
-layout_mode = 0
-offset_left = 1712.0
-offset_top = 715.0
-offset_right = 1865.0
-offset_bottom = 887.0
-texture = ExtResource("21_ydj8b")
-expand_mode = 1
-stretch_mode = 4
-
-[node name="BeerBar2" type="TextureRect" parent="." unique_id=1489309850]
-layout_mode = 0
-offset_left = 1900.0
-offset_top = 715.0
-offset_right = 2053.0
-offset_bottom = 887.0
-texture = ExtResource("21_ydj8b")
-expand_mode = 1
-stretch_mode = 4
-
-[node name="BeerBar3" type="TextureRect" parent="." unique_id=2042831224]
-layout_mode = 0
-offset_left = 2091.0
-offset_top = 716.0
-offset_right = 2244.0
-offset_bottom = 888.0
-texture = ExtResource("21_ydj8b")
-expand_mode = 1
-stretch_mode = 4
 
 [node name="Brown Full Glass" type="Sprite2D" parent="." unique_id=1755523614]
 visible = false

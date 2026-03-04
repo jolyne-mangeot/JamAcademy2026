@@ -251,6 +251,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_tuadv")
 text = "Go to Shop"
 
 [node name="defeat_button" type="Button" parent="buttons" unique_id=1811379234]
+visible = false
 layout_mode = 0
 offset_left = 839.0
 offset_top = 1212.0
