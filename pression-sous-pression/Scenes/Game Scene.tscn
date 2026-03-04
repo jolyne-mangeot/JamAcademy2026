@@ -34,10 +34,22 @@
 [ext_resource type="Script" uid="uid://dmfdtyajrrsyd" path="res://Scripts/Game/Animations/PakalWaterControl.gd" id="28_dy3ug"]
 [ext_resource type="Texture2D" uid="uid://bq5wu34i48go0" path="res://Assets/Sprites/GamingScene/Fishbowlback.png" id="28_sf4n0"]
 [ext_resource type="Script" uid="uid://db7d5rdeogmdd" path="res://Scripts/Game/Animations/PakalBehaviour.gd" id="29_dy3ug"]
+[ext_resource type="Texture2D" uid="uid://dna7upqj22ftl" path="res://Assets/Pakal/Brown/brown1.png" id="30_7fart"]
 [ext_resource type="Texture2D" uid="uid://cpkpxyu25voqx" path="res://Assets/Sprites/GamingScene/FishSide.png" id="30_i3po2"]
+[ext_resource type="Texture2D" uid="uid://c4fgrsyqqw5j4" path="res://Assets/Pakal/Brown/brown2.png" id="31_1dy46"]
 [ext_resource type="Texture2D" uid="uid://33nr4f716deb" path="res://Assets/Sprites/GamingScene/FishFront.png" id="31_2l4ht"]
 [ext_resource type="FontFile" uid="uid://d37u2vjhyv1h3" path="res://Assets/Fonts/Kelvinch.otf" id="31_yqalu"]
+[ext_resource type="Texture2D" uid="uid://das31t63aiucw" path="res://Assets/Pakal/Brown/brown3.png" id="32_xfd74"]
 [ext_resource type="Script" uid="uid://b1b6wjf57suxg" path="res://Scripts/Game/GameLoop/CoinCount.gd" id="33_6crsu"]
+[ext_resource type="Texture2D" uid="uid://2jklaq1yweqg" path="res://Assets/Pakal/Brown/brown4.png" id="33_n6xri"]
+[ext_resource type="Texture2D" uid="uid://bgonvei7by11q" path="res://Assets/Pakal/Yellow/Yellow1.png" id="34_4hysa"]
+[ext_resource type="Texture2D" uid="uid://y2if7tfls4m6" path="res://Assets/Pakal/Yellow/Yellow2.png" id="35_a21ox"]
+[ext_resource type="Texture2D" uid="uid://0sqy5kse15px" path="res://Assets/Pakal/Yellow/Yellow3.png" id="36_i0afu"]
+[ext_resource type="Texture2D" uid="uid://dvukcxkwdtx61" path="res://Assets/Pakal/Yellow/Yellow4.png" id="37_xts02"]
+[ext_resource type="Texture2D" uid="uid://cprj85tk456b5" path="res://Assets/Pakal/Black/Black1.png" id="38_bxh6b"]
+[ext_resource type="Texture2D" uid="uid://r1u55e6lw4oo" path="res://Assets/Pakal/Black/Black2.png" id="39_aemtc"]
+[ext_resource type="Texture2D" uid="uid://bl84jl41klbeq" path="res://Assets/Pakal/Black/Black3.png" id="40_vr6vh"]
+[ext_resource type="Texture2D" uid="uid://rc53vy61asjx" path="res://Assets/Pakal/Black/Black4.png" id="41_2feie"]
 
 [sub_resource type="Gradient" id="Gradient_pj0fw"]
 colors = PackedColorArray(0.5343956, 0.25409824, 0.1394135, 1, 1, 1, 1, 1)
@@ -461,16 +473,125 @@ stretch_mode = 4
 
 [node name="Water Control" type="Control" parent="Bokal" unique_id=1266441023 node_paths=PackedStringArray("pipe")]
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 294.0
+offset_bottom = 294.0
 script = ExtResource("28_dy3ug")
 pipe = NodePath("../Pakal Side Pipe")
 
 [node name="Day1 Water" type="TextureRect" parent="Bokal/Water Control" unique_id=1358619396]
+visible = false
 layout_mode = 0
 offset_right = 298.0
 offset_bottom = 294.0
 texture = ExtResource("28_sf4n0")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Brown 1" type="TextureRect" parent="Bokal/Water Control" unique_id=4563429]
+visible = false
+layout_mode = 0
+offset_right = 298.0
+offset_bottom = 294.0
+texture = ExtResource("30_7fart")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Brown 2" type="TextureRect" parent="Bokal/Water Control" unique_id=2068126749]
+visible = false
+layout_mode = 0
+offset_right = 298.0
+offset_bottom = 294.0
+texture = ExtResource("31_1dy46")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Brown 3" type="TextureRect" parent="Bokal/Water Control" unique_id=885755848]
+visible = false
+layout_mode = 0
+offset_right = 298.0
+offset_bottom = 294.0
+texture = ExtResource("32_xfd74")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Brown 4" type="TextureRect" parent="Bokal/Water Control" unique_id=1542236479]
+visible = false
+layout_mode = 0
+offset_right = 298.0
+offset_bottom = 294.0
+texture = ExtResource("33_n6xri")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Yellow 1" type="TextureRect" parent="Bokal/Water Control" unique_id=163210393]
+visible = false
+layout_mode = 0
+offset_right = 298.0
+offset_bottom = 294.0
+texture = ExtResource("34_4hysa")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Yellow 2" type="TextureRect" parent="Bokal/Water Control" unique_id=1186211429]
+visible = false
+layout_mode = 0
+offset_right = 298.0
+offset_bottom = 294.0
+texture = ExtResource("35_a21ox")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Yellow 3" type="TextureRect" parent="Bokal/Water Control" unique_id=1145397419]
+visible = false
+layout_mode = 0
+offset_right = 298.0
+offset_bottom = 294.0
+texture = ExtResource("36_i0afu")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Yellow 4" type="TextureRect" parent="Bokal/Water Control" unique_id=1506683847]
+visible = false
+layout_mode = 0
+offset_right = 298.0
+offset_bottom = 294.0
+texture = ExtResource("37_xts02")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Black 1" type="TextureRect" parent="Bokal/Water Control" unique_id=1869228948]
+visible = false
+layout_mode = 0
+offset_right = 298.0
+offset_bottom = 294.0
+texture = ExtResource("38_bxh6b")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Black 2" type="TextureRect" parent="Bokal/Water Control" unique_id=2062411604]
+visible = false
+layout_mode = 0
+offset_right = 298.0
+offset_bottom = 294.0
+texture = ExtResource("39_aemtc")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Black 3" type="TextureRect" parent="Bokal/Water Control" unique_id=543308661]
+visible = false
+layout_mode = 0
+offset_right = 298.0
+offset_bottom = 294.0
+texture = ExtResource("40_vr6vh")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Black 4" type="TextureRect" parent="Bokal/Water Control" unique_id=1509221473]
+visible = false
+layout_mode = 0
+offset_right = 298.0
+offset_bottom = 294.0
+texture = ExtResource("41_2feie")
 expand_mode = 1
 stretch_mode = 4
 
