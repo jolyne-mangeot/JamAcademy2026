@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvflpcuv2faht"
-path="res://.godot/imported/Human_D_Sit.png-7ecea0833af82ba6f9ba862e2ff17453.ctex"
+uid="uid://jq3nsjhtulje"
+path="res://.godot/imported/Human_B_Sit.png-509c016a5dbeb7f95dedc92792aecf40.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/GamingScene/Human_D_Sit.png"
-dest_files=["res://.godot/imported/Human_D_Sit.png-7ecea0833af82ba6f9ba862e2ff17453.ctex"]
+source_file="res://Assets/Sprites/GamingScene/Humans/Human_B_Sit.png"
+dest_files=["res://.godot/imported/Human_B_Sit.png-509c016a5dbeb7f95dedc92792aecf40.ctex"]
 
 [params]
 

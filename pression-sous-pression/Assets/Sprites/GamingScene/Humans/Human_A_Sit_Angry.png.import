@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://44v30hbhkjqo"
-path="res://.godot/imported/Human_E_Sit.png-8151beb00f481cd625111fa8da7538e9.ctex"
+uid="uid://c1u6rpmyqhwr7"
+path="res://.godot/imported/Human_A_Sit_Angry.png-ed0d17fc27a2263b47a4b7950f9dd2a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/GamingScene/Human_E_Sit.png"
-dest_files=["res://.godot/imported/Human_E_Sit.png-8151beb00f481cd625111fa8da7538e9.ctex"]
+source_file="res://Assets/Sprites/GamingScene/Humans/Human_A_Sit_Angry.png"
+dest_files=["res://.godot/imported/Human_A_Sit_Angry.png-ed0d17fc27a2263b47a4b7950f9dd2a3.ctex"]
 
 [params]
 
