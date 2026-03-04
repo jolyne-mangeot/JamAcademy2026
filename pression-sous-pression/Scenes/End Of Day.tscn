@@ -3,15 +3,27 @@
 [ext_resource type="Script" uid="uid://dnxkamo4mpmg6" path="res://Scripts/Game/GameLoop/EndOfDay.gd" id="1_55r4e"]
 [ext_resource type="AudioStream" uid="uid://bvyeq7vuuivp1" path="res://Assets/Music/at_work.mp3" id="1_kssu7"]
 [ext_resource type="Texture2D" uid="uid://4dd2aus5rxel" path="res://Assets/Sprites/GamingScene/BG.png" id="3_fowem"]
+[ext_resource type="PackedScene" uid="uid://poifjhi42r6a" path="res://Scenes/Game/PauseMenu.tscn" id="3_l2j3q"]
 [ext_resource type="Texture2D" uid="uid://b3p5tr58c26vb" path="res://Assets/Sprites/GamingScene/Sheet.png" id="4_q8jam"]
 [ext_resource type="Texture2D" uid="uid://bbvb3yoxlmbv8" path="res://Assets/Sprites/GamingScene/Money.png" id="5_bodib"]
 [ext_resource type="FontFile" uid="uid://d37u2vjhyv1h3" path="res://Assets/Fonts/Kelvinch.otf" id="5_q8jam"]
+[ext_resource type="Script" uid="uid://bw0w4oc8saorq" path="res://Scenes/earnings_title.gd" id="6_bodib"]
 [ext_resource type="Texture2D" uid="uid://cg0wts3a4ssuy" path="res://Assets/Sprites/GamingScene/Fishbowl.png" id="6_hn8ea"]
 [ext_resource type="Texture2D" uid="uid://d4hwklr1kbnmy" path="res://Assets/Sprites/GamingScene/BarmanNice.png" id="7_fowem"]
+[ext_resource type="Script" uid="uid://cxbnfwffedki0" path="res://Scenes/rent_title.gd" id="7_hn8ea"]
 [ext_resource type="Texture2D" uid="uid://33nr4f716deb" path="res://Assets/Sprites/GamingScene/FishFront.png" id="7_l2j3q"]
+[ext_resource type="Script" uid="uid://dvkf3bbcifdx7" path="res://Scenes/satisfaction_title.gd" id="9_opg7c"]
 
 [node name="End Of Day" type="Node" unique_id=2144417167]
 script = ExtResource("1_55r4e")
+
+[node name="Control" type="Control" parent="." unique_id=1983257144]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PauseMenu" parent="Control" unique_id=2086796289 instance=ExtResource("3_l2j3q")]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1199638123]
 stream = ExtResource("1_kssu7")
@@ -32,10 +44,10 @@ stretch_mode = 4
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -4.0
-offset_top = -23.0
-offset_right = -4.0
-offset_bottom = -23.0
+offset_left = 589.0
+offset_top = 62.0
+offset_right = -531.0
+offset_bottom = -75.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("4_q8jam")
@@ -48,58 +60,66 @@ offset_right = 1822.0
 offset_bottom = 207.0
 theme_override_fonts/font = ExtResource("5_q8jam")
 theme_override_font_sizes/font_size = 150
-text = "Day's Report:"
+text = "Final report: "
 
 [node name="Earnings Title" type="Label" parent="." unique_id=1461458327]
-offset_left = 58.0
-offset_top = 87.0
-offset_right = 134.0
-offset_bottom = 110.0
+offset_left = 677.0
+offset_top = 951.0
+offset_right = 1048.0
+offset_bottom = 1073.0
+theme_override_fonts/font = ExtResource("5_q8jam")
+theme_override_font_sizes/font_size = 90
 text = "Earnings:"
+script = ExtResource("6_bodib")
 
 [node name="Rent Title" type="Label" parent="." unique_id=2001075867]
-offset_left = 872.0
-offset_top = 351.0
-offset_right = 1023.0
-offset_bottom = 434.0
-theme_override_font_sizes/font_size = 60
+offset_left = 681.0
+offset_top = 344.0
+offset_right = 910.0
+offset_bottom = 466.0
+theme_override_fonts/font = ExtResource("5_q8jam")
+theme_override_font_sizes/font_size = 90
 text = "Rent :"
+script = ExtResource("7_hn8ea")
 
 [node name="message" type="Label" parent="." unique_id=2107215797]
-offset_left = 813.0
-offset_top = 578.0
-offset_right = 1056.0
-offset_bottom = 627.0
+offset_left = 115.0
+offset_top = 94.0
+offset_right = 358.0
+offset_bottom = 143.0
 horizontal_alignment = 1
 
 [node name="satisfaction title" type="Label" parent="." unique_id=521213653]
-offset_left = 62.0
-offset_top = 171.0
-offset_right = 252.0
-offset_bottom = 194.0
+offset_left = 668.0
+offset_top = 629.0
+offset_right = 1614.0
+offset_bottom = 751.0
+theme_override_fonts/font = ExtResource("5_q8jam")
+theme_override_font_sizes/font_size = 90
 text = "Customer's satisfaction: "
+script = ExtResource("9_opg7c")
 
 [node name="money" type="TextureRect" parent="." unique_id=800522061]
-offset_left = 185.0
-offset_top = 78.0
-offset_right = 225.0
-offset_bottom = 118.0
+offset_left = 1306.0
+offset_top = 955.0
+offset_right = 1432.0
+offset_bottom = 1075.0
 texture = ExtResource("5_bodib")
 expand_mode = 2
 
 [node name="moneyy" type="TextureRect" parent="." unique_id=2131490459]
-offset_left = 1374.0
-offset_top = 332.0
-offset_right = 1525.0
-offset_bottom = 434.0
+offset_left = 1192.0
+offset_top = 344.0
+offset_right = 1317.0
+offset_bottom = 453.0
 texture = ExtResource("5_bodib")
 expand_mode = 2
 
 [node name="fish bowl" type="TextureRect" parent="." unique_id=322686622]
-offset_left = 2105.0
-offset_top = 852.00006
-offset_right = 2145.0
-offset_bottom = 892.00006
+offset_left = 2121.0
+offset_top = 938.0
+offset_right = 2192.0542
+offset_bottom = 1003.0611
 scale = Vector2(5.0384016, 5.948263)
 texture = ExtResource("6_hn8ea")
 expand_mode = 2
@@ -108,10 +128,10 @@ expand_mode = 2
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 136.0
-offset_top = 293.0
-offset_right = -1874.0
-offset_bottom = -374.0
+offset_left = 18.0
+offset_top = 712.0
+offset_right = -1992.0
+offset_bottom = 45.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("7_fowem")
@@ -119,10 +139,15 @@ expand_mode = 1
 stretch_mode = 4
 
 [node name="pacal" type="TextureRect" parent="." unique_id=455969433]
-offset_left = 1853.0002
-offset_top = 35.0
-offset_right = 1893.0002
-offset_bottom = 75.0
+offset_left = 1775.0
+offset_top = 33.000004
+offset_right = 1815.0
+offset_bottom = 73.0
 scale = Vector2(4.0092425, 4.0343566)
 texture = ExtResource("7_l2j3q")
 expand_mode = 2
+
+[node name="Money" type="Sprite2D" parent="." unique_id=242775417]
+position = Vector2(1896.9999, 693)
+scale = Vector2(0.124999955, 0.11523436)
+texture = ExtResource("5_bodib")
