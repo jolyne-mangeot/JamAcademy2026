@@ -4,6 +4,19 @@
 [ext_resource type="Texture2D" uid="uid://dweb1o0x164xc" path="res://Assets/Sprites/GamingScene/PastisBottle.png" id="2_lhs42"]
 [ext_resource type="Texture2D" uid="uid://bmu8q62xumpp0" path="res://Assets/Sprites/GamingScene/PastisGlassEmpty.png" id="3_lhs42"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_56ys3"]
+bg_color = Color(0.30600002, 0.85, 0.41480005, 0.93333334)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.62537843, 0.39191866, 0.27553627, 1)
+border_blend = true
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
 [node name="BeerTap" type="Control" unique_id=1463512649 node_paths=PackedStringArray("progress", "empty_glass")]
 layout_mode = 3
 anchors_preset = 15
@@ -31,10 +44,10 @@ stretch_mode = 4
 [node name="Empty Glass" type="TextureRect" parent="." unique_id=855018561]
 visible = false
 layout_mode = 0
-offset_left = 20.0
-offset_top = 174.0
-offset_right = 646.0
-offset_bottom = 1126.0
+offset_left = 16.0
+offset_top = 169.0
+offset_right = 773.1428
+offset_bottom = 1283.2859
 scale = Vector2(0.07, 0.07)
 texture = ExtResource("3_lhs42")
 stretch_mode = 4
@@ -43,8 +56,9 @@ stretch_mode = 4
 visible = false
 layout_mode = 0
 offset_left = 1.0
-offset_top = -26.0
+offset_top = -20.0
 offset_right = 85.23
 offset_bottom = -7.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_56ys3")
 max_value = 1.0
 show_percentage = false

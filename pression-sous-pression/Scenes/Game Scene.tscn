@@ -155,10 +155,10 @@ happuy = NodePath("Bajama Happuy")
 
 [node name="Bajama Busuy" type="TextureRect" parent="Bajama Control" unique_id=1426634032]
 layout_mode = 0
-offset_left = 1048.0
-offset_top = 264.0
-offset_right = 1719.0
-offset_bottom = 1208.0
+offset_left = 1015.0
+offset_top = 273.0
+offset_right = 1686.0
+offset_bottom = 1217.0
 texture = ExtResource("5_te4bi")
 expand_mode = 4
 stretch_mode = 4
@@ -187,7 +187,6 @@ texture = ExtResource("2_0rvqk")
 expand_mode = 2
 
 [node name="CanvasLayer" parent="." unique_id=2086796289 instance=ExtResource("6_f4f5n")]
-visible = false
 
 [node name="Tables" type="TextureRect" parent="." unique_id=1571111971]
 layout_mode = 1
@@ -335,7 +334,7 @@ anchor_bottom = 0.0
 offset_left = 2069.0
 offset_top = 293.0
 offset_right = 2147.2864
-offset_bottom = 518.0002
+offset_bottom = 546.1049
 grow_horizontal = 1
 grow_vertical = 1
 scale = Vector2(2.335, 2.335)
@@ -344,10 +343,10 @@ beer_type = "brown"
 
 [node name="RedBeerTap" parent="." unique_id=1005572842 node_paths=PackedStringArray("full_glass") instance=ExtResource("10_te4bi")]
 layout_mode = 1
-offset_left = 1879.0
+offset_left = 1877.065
 offset_top = 293.0
-offset_right = -603.1417
-offset_bottom = -921.99963
+offset_right = -602.449
+offset_bottom = -893.8951
 scale = Vector2(2.335, 2.335)
 full_glass = NodePath("../Red Full Glass")
 beer_type = "red"
@@ -356,8 +355,8 @@ beer_type = "red"
 layout_mode = 1
 offset_left = 1689.0
 offset_top = 293.0
-offset_right = -791.00037
-offset_bottom = -921.99963
+offset_right = -791.7709
+offset_bottom = -895.1799
 scale = Vector2(2.335, 2.335)
 full_glass = NodePath("../Blond Full Glass")
 beer_type = "blond"
@@ -366,18 +365,23 @@ beer_type = "blond"
 layout_mode = 1
 offset_left = 404.0
 offset_top = 531.36
-offset_right = -2048.0
-offset_bottom = -763.6404
+offset_right = -2078.484
+offset_bottom = -758.90125
 scale = Vector2(2.335, 2.335)
 full_glass = NodePath("../Coffee Full Cup")
 
 [node name="PastisBottle" parent="." unique_id=1198390330 node_paths=PackedStringArray("full_glass") instance=ExtResource("12_11pef")]
-layout_mode = 1
-offset_left = 2284.0002
-offset_top = 294.36002
-offset_right = -196.99976
-offset_bottom = -913.6396
-scale = Vector2(2.335, 2.335)
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 2306.0
+offset_top = 388.0
+offset_right = 2389.5
+offset_bottom = 635.5
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(2, 2)
 full_glass = NodePath("../Pastis Full Glass")
 
 [node name="Brown Full Glass" type="Sprite2D" parent="." unique_id=1755523614]
@@ -414,7 +418,7 @@ glass_type = "coffee"
 
 [node name="Pastis Full Glass" type="Sprite2D" parent="." unique_id=1403460008]
 visible = false
-position = Vector2(2382.6875, 783.182)
+position = Vector2(2390, 804)
 scale = Vector2(0.165, 0.165)
 texture = ExtResource("18_gaucp")
 script = ExtResource("8_s5gn0")
@@ -667,14 +671,21 @@ script = ExtResource("8_s5gn0")
 glass_type = "beer"
 
 [node name="Beer Glass 2" type="Sprite2D" parent="Glasses" unique_id=1340793118]
-position = Vector2(922.34875, 680.95)
+position = Vector2(911.564, 680.95)
 scale = Vector2(0.10779163, 0.108)
 texture = ExtResource("7_4ad7p")
 script = ExtResource("8_s5gn0")
 glass_type = "beer"
 
-[node name="Pastis Glass" type="Sprite2D" parent="Glasses" unique_id=724972156]
+[node name="Pastis Glass 1" type="Sprite2D" parent="Glasses" unique_id=724972156]
 position = Vector2(802.05884, 487.95)
+scale = Vector2(0.165, 0.165)
+texture = ExtResource("10_8ca1q")
+script = ExtResource("8_s5gn0")
+glass_type = "pastis glass"
+
+[node name="Pastis Glass 2" type="Sprite2D" parent="Glasses" unique_id=842248784]
+position = Vector2(954.194, 487.95)
 scale = Vector2(0.165, 0.165)
 texture = ExtResource("10_8ca1q")
 script = ExtResource("8_s5gn0")
@@ -842,7 +853,8 @@ texture = ExtResource("34_5e80b")
 [connection signal="glass_dropped" from="Glasses/Beer Glass 2" to="BrownBeerTap" method="_on_beer_glass_dropped"]
 [connection signal="glass_dropped" from="Glasses/Beer Glass 2" to="RedBeerTap" method="_on_beer_glass_dropped"]
 [connection signal="glass_dropped" from="Glasses/Beer Glass 2" to="BlondBeerTap" method="_on_beer_glass_dropped"]
-[connection signal="glass_dropped" from="Glasses/Pastis Glass" to="PastisBottle" method="_on_pastis_glass_dropped"]
+[connection signal="glass_dropped" from="Glasses/Pastis Glass 1" to="PastisBottle" method="_on_pastis_glass_dropped"]
+[connection signal="glass_dropped" from="Glasses/Pastis Glass 2" to="PastisBottle" method="_on_pastis_glass_dropped"]
 [connection signal="timeout" from="timer_day" to="." method="_on_timer_day_timeout"]
 [connection signal="timeout" from="timer_day" to="Client Chairs/Client 1" method="_on_timer_timeout"]
 [connection signal="timeout" from="timer_day" to="Client Chairs/Client 2" method="_on_timer_timeout"]

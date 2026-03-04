@@ -9,6 +9,19 @@
 [ext_resource type="Texture2D" uid="uid://dnh8n2oacvfh3" path="res://Assets/Sprites/GamingScene/BeerBlonde.png" id="5_5vg42"]
 [ext_resource type="FontFile" uid="uid://d37u2vjhyv1h3" path="res://Assets/Fonts/Kelvinch.otf" id="5_wyg4n"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wyg4n"]
+bg_color = Color(0.68, 0.5914867, 0.19720002, 0.95686275)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.15, 0.11880001, 0.0060000033, 1)
+border_blend = true
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
 [node name="Order" type="Control" unique_id=1545625154]
 visible = false
 layout_mode = 3
@@ -115,5 +128,6 @@ offset_top = 190.7336
 offset_right = 84.229996
 offset_bottom = 209.7336
 scale = Vector2(1.295, 1.295)
+theme_override_styles/fill = SubResource("StyleBoxFlat_wyg4n")
 max_value = 1.0
 show_percentage = false

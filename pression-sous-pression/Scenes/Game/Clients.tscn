@@ -17,7 +17,17 @@
 [sub_resource type="GDScript" id="GDScript_vjkiq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6myro"]
-bg_color = Color(0.91, 0.20020004, 0.20020004, 1)
+bg_color = Color(0.81, 0.06479999, 0.06479999, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.17, 0.092026666, 0.023799999, 1)
+border_blend = true
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
 
 [node name="Node2D" type="Control" unique_id=1767717981 node_paths=PackedStringArray("skins")]
 layout_mode = 3
