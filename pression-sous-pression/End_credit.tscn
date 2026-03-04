@@ -14,6 +14,16 @@
 [ext_resource type="Texture2D" uid="uid://33nr4f716deb" path="res://Assets/Sprites/GamingScene/FishFront.png" id="10_tkd8h"]
 [ext_resource type="Texture2D" uid="uid://btrbfn33hxjxw" path="res://Assets/Sprites/GamingScene/separator.png" id="11_8h0vc"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wqdnx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_np6ab"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dfbyh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8did2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uu6ul"]
+
 [node name="Control" type="Control" unique_id=1097713460]
 layout_mode = 3
 anchors_preset = 15
@@ -24,6 +34,7 @@ grow_vertical = 2
 script = ExtResource("1_wqdnx")
 
 [node name="PauseMenu" parent="." unique_id=2086796289 instance=ExtResource("1_w1hqp")]
+visible = false
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=447423211]
 layout_mode = 0
@@ -165,3 +176,25 @@ position = Vector2(1294, 848)
 rotation = 0.2932153
 scale = Vector2(0.45323524, 0.51233757)
 texture = ExtResource("11_8h0vc")
+
+[node name="ButtonA3" type="Sprite2D" parent="." unique_id=870517616]
+position = Vector2(1198, 1298)
+texture = ExtResource("4_lmpcg")
+
+[node name="Back_button" type="Button" parent="." unique_id=1467698657]
+layout_mode = 0
+offset_left = 856.0
+offset_top = 1238.0
+offset_right = 1523.0
+offset_bottom = 1347.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_hjx88")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wqdnx")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_np6ab")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_dfbyh")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_8did2")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uu6ul")
+text = "Back to menu"
+
+[connection signal="pressed" from="Back_button" to="." method="_on_back_button_pressed"]
