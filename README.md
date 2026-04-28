@@ -1,5 +1,8 @@
 # JamAcademy2026
 
+Obtained 5th place out of 41 submitted projects !
+[Jury's comments](https://www.youtube.com/watch?v=7yN_nlvvNGY)
+
 ## PRESSION SOUS-PRESSION
 
 *Bajama is a fish man, and they and their child Pakal (who is a fish), suffer a great loss after the parent's divorce...*
